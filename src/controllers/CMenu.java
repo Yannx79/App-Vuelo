@@ -60,7 +60,6 @@ public class CMenu implements ActionListener, ObligacionControlador, WindowListe
     public void construirVista() {
         this.vista.setVisible(true);
         this.vista.setTitle("App de venta de paquetes de viajes");
-        this.vista.setResizable(false);
         this.vista.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
     

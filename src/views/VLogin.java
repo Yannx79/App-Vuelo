@@ -1,17 +1,14 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package views;
 
-/**
- *
- * @author yanni
- */
 public class VLogin extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form VLogin
+     * Creates new form IniciarSesion
      */
     public VLogin() {
         initComponents();
@@ -26,55 +23,206 @@ public class VLogin extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bgUser = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        lblTitulo = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btnRegistrar = new javax.swing.JButton();
         txtEmail = new javax.swing.JTextField();
-        btnLogin = new javax.swing.JButton();
         txtPassword = new javax.swing.JPasswordField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        rbAdministrador = new javax.swing.JRadioButton();
+        rbCliente = new javax.swing.JRadioButton();
+        rbEmpleado = new javax.swing.JRadioButton();
+        btnLogin = new javax.swing.JButton();
 
-        setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtEmail.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        txtEmail.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "USER", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(250, 250, 250));
 
-        btnLogin.setBackground(new java.awt.Color(153, 0, 153));
-        btnLogin.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
-        btnLogin.setText("Loguin");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(222, 222, 222)
-                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(168, 168, 168)
-                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(39, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(115, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 620));
+
+        jPanel2.setBackground(new java.awt.Color(33, 45, 62));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTitulo.setFont(new java.awt.Font("Gotham Thin", 0, 40)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitulo.setText("Iniciar Sesión");
+        jPanel2.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 275, 53));
+
+        jLabel4.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("CORREO ELECTRÓNICO");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("CONTRASEÑA");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
+
+        btnRegistrar.setBackground(new java.awt.Color(250, 250, 250));
+        btnRegistrar.setFont(new java.awt.Font("Gotham Extra Light", 0, 18)); // NOI18N
+        btnRegistrar.setForeground(new java.awt.Color(10, 10, 10));
+        btnRegistrar.setText("Registrar");
+        btnRegistrar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnRegistrar.setContentAreaFilled(false);
+        btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegistrar.setFocusPainted(false);
+        btnRegistrar.setFocusable(false);
+        btnRegistrar.setOpaque(true);
+        btnRegistrar.setRequestFocusEnabled(false);
+        btnRegistrar.setVerifyInputWhenFocusTarget(false);
+        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 210, 60));
+
+        txtEmail.setBackground(new java.awt.Color(33, 45, 62));
+        txtEmail.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(250, 250, 250));
+        txtEmail.setBorder(null);
+        txtEmail.setCaretColor(new java.awt.Color(220, 95, 0));
+        jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 270, 40));
+
+        txtPassword.setBackground(new java.awt.Color(33, 45, 62));
+        txtPassword.setFont(txtPassword.getFont().deriveFont(txtPassword.getFont().getSize()+7f));
+        txtPassword.setForeground(new java.awt.Color(250, 250, 250));
+        txtPassword.setBorder(null);
+        txtPassword.setCaretColor(new java.awt.Color(220, 95, 0));
+        jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 270, 36));
+
+        jSeparator1.setBackground(new java.awt.Color(207, 10, 10));
+        jSeparator1.setForeground(new java.awt.Color(73, 181, 172));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 310, 10));
+
+        jSeparator2.setBackground(new java.awt.Color(207, 10, 10));
+        jSeparator2.setForeground(new java.awt.Color(73, 181, 172));
+        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 310, 10));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 48, 36));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 48, 42));
+
+        jCheckBox1.setBackground(new java.awt.Color(33, 45, 62));
+        jCheckBox1.setFont(new java.awt.Font("Gotham Thin", 0, 14)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setText("Recuérdame");
+        jCheckBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel2.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 160, -1));
+
+        bgUser.add(rbAdministrador);
+        rbAdministrador.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        rbAdministrador.setForeground(new java.awt.Color(250, 250, 250));
+        rbAdministrador.setText("Administrador");
+        rbAdministrador.setOpaque(false);
+        jPanel2.add(rbAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, 120, -1));
+
+        bgUser.add(rbCliente);
+        rbCliente.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        rbCliente.setForeground(new java.awt.Color(250, 250, 250));
+        rbCliente.setText("Cliente");
+        rbCliente.setOpaque(false);
+        jPanel2.add(rbCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 90, -1));
+
+        bgUser.add(rbEmpleado);
+        rbEmpleado.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        rbEmpleado.setForeground(new java.awt.Color(250, 250, 250));
+        rbEmpleado.setText("Empleado");
+        rbEmpleado.setOpaque(false);
+        rbEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbEmpleadoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rbEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 90, -1));
+
+        btnLogin.setBackground(new java.awt.Color(33, 45, 62));
+        btnLogin.setFont(new java.awt.Font("Gotham Extra Light", 0, 18)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("Ingresar");
+        btnLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnLogin.setContentAreaFilled(false);
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogin.setFocusPainted(false);
+        btnLogin.setFocusable(false);
+        btnLogin.setOpaque(true);
+        btnLogin.setRequestFocusEnabled(false);
+        btnLogin.setVerifyInputWhenFocusTarget(false);
+        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 210, 60));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 400, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void rbEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbEmpleadoActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bgUser;
     public javax.swing.JButton btnLogin;
+    public javax.swing.JButton btnRegistrar;
+    public javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    public javax.swing.JLabel lblTitulo;
+    public javax.swing.JRadioButton rbAdministrador;
+    public javax.swing.JRadioButton rbCliente;
+    public javax.swing.JRadioButton rbEmpleado;
     public javax.swing.JTextField txtEmail;
     public javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables

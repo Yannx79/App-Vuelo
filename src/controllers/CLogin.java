@@ -27,6 +27,7 @@ public class CLogin implements ObligacionControlador, ActionListener {
     public void construirVista() {
         this.vista.setVisible(true);
         this.vista.setTitle("Login");
+        this.vista.rbCliente.setSelected(true);
     }
 
     @Override
@@ -34,6 +35,7 @@ public class CLogin implements ObligacionControlador, ActionListener {
         this.vista.btnLogin.addActionListener(this);
         this.vista.txtPassword.addActionListener(this);
         this.vista.txtEmail.addActionListener(this);
+        this.vista.btnRegistrar.addActionListener(this);
     }
 
     @Override
@@ -46,9 +48,16 @@ public class CLogin implements ObligacionControlador, ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.btnLogin) {
             this.loguear();
+        } if (e.getSource() == this.vista.btnRegistrar) {
+            this.registrar();
         }
     }
 
+    private void registrar(){
+        this.vista.lblTitulo.setText("Registrar");
+        this.vista.setTitle("Registrar");
+    }
+    
     private void loguear() {
         String email = this.vista.txtEmail.getText();
         String password = Encriptar.toMD5(this.vista.txtPassword.getText());
