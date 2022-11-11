@@ -36,7 +36,7 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         jPanel4 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txaDatosExtra = new javax.swing.JTextArea();
         jPanel7 = new javax.swing.JPanel();
         txtIdAlojamiento = new javax.swing.JTextField();
         txtCostoAlojamiento = new javax.swing.JTextField();
@@ -92,11 +92,11 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MIS PAQUETES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
         jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 490, 60));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS DEL EXTRA", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jScrollPane1.setViewportView(jTextArea1);
+        txaDatosExtra.setColumns(20);
+        txaDatosExtra.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        txaDatosExtra.setRows(5);
+        txaDatosExtra.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS DEL EXTRA", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        jScrollPane1.setViewportView(txaDatosExtra);
 
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 490, 190));
 
@@ -199,12 +199,12 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     public javax.swing.JLabel lblCantidadRegistros;
     public javax.swing.JLabel lblNombrePaquete;
     public javax.swing.JLabel lblPortadaSecundaria;
     public javax.swing.JLabel lblPortadoPrincipal;
     public javax.swing.JLabel lblTitulo;
+    public javax.swing.JTextArea txaDatosExtra;
     public javax.swing.JTextField txtCostoAlojamiento;
     public javax.swing.JTextField txtIdAlojamiento;
     public javax.swing.JTextField txtIdHotel;

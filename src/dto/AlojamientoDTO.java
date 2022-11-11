@@ -31,12 +31,12 @@ public class AlojamientoDTO {
 
     @Override
     public String toString() {
-        return "******************************************************" 
-                + "\nId Alojamiento         : " + idAlojamiento 
-                + "\nCosto Alojamiento      : " + costoAlojamiento 
-                + "\nNumero Personas        : " + numeroPersonas 
-                + "\nNumero Habitaciones    : " + numeroHabitaciones 
-                + "\nId Hotel               : " + idHotel;
+        return "********************* DATOS HOTEL ***********************" 
+                + "\n Id Alojamiento         : " + idAlojamiento 
+                + "\n Costo Alojamiento      : " + costoAlojamiento 
+                + "\n Numero Personas        : " + numeroPersonas 
+                + "\n Numero Habitaciones    : " + numeroHabitaciones 
+                + "\n Id Hotel               : " + idHotel;
     }
 
     public int getPortadoPrincipal() {
