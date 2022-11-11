@@ -1,0 +1,161 @@
+package dao;
+
+import conexion.Conexion;
+import dto.MiPaqueteDTO;
+import dto.PaqueteDTO;
+import interfaces.ObjectIDAO;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
+
+    private static final String SQL_INSERT = ""
+            + "INSERT INTO mis_paquetes (id_alojamiento, id_vuelo, "
+            + "id_origen, id_destino, fecha_salida, "
+            + "fecha_regreso, id_actividad, portada_principal, portada_secundaria, "
+            + "id_usuario) VALUES (?,?,?,?,?,?,?,?,?)";
+    private static final String SQL_READ = ""
+            + "SELECT * FROM mis_paquetes WHERE id_paquete=?";
+    private static final String SQL_READ_ALL = ""
+            + "SELECT * FROM mis_paquetes";
+    private static final String SQL_UPDATE = ""
+            + "UPDATE paquetes SET id_alojamiento=?, id_vuelo=?, "
+            + "id_origen=?, id_destino=?, fecha_salida=?, "
+            + "fecha_regreso=?, id_actividad=?, portada_principal=?, "
+            + "portada_secundaria=?, id_usuario=? WHERE id_mis_paquete=?";
+    private static final String SQL_DELELE = ""
+            + "DELETE FROM paquetes WHERE id_mis_paquete=?";
+    private static final Conexion CONEXION = Conexion.getConexion();
+
+    @Override
+    public boolean create(MiPaqueteDTO t) {
+        try {
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_INSERT);
+            ps.setInt(1, t.getIdAlojamiento());
+            ps.setInt(2, t.getIdVuelo());
+            ps.setInt(3, t.getIdOrigen());
+            ps.setInt(4, t.getIdDestino());
+            ps.setString(5, t.getFechaSalida());
+            ps.setString(6, t.getFechaRegreso());
+            ps.setInt(7, t.getIdActividad());
+            ps.setInt(8, t.getPortadaPrincipal());
+            ps.setInt(9, t.getPortadaSecundaria());
+            ps.setInt(10, t.getIdUsuario());
+            if (ps.executeUpdate() > 0) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PaqueteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return false;
+    }
+
+    @Override
+    public MiPaqueteDTO read(Object key) {
+        MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
+        try {
+            ResultSet rs = null;
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_READ);
+            ps.setInt(1, Integer.parseInt(key.toString()));
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                miPaqueteDTO.setIdPaquete(rs.getInt(1));
+                miPaqueteDTO.setIdAlojamiento(rs.getInt(2));
+                miPaqueteDTO.setIdVuelo(rs.getInt(3));
+                miPaqueteDTO.setIdOrigen(rs.getInt(4));
+                miPaqueteDTO.setIdDestino(rs.getInt(5));
+                miPaqueteDTO.setFechaSalida(rs.getString(6));
+                miPaqueteDTO.setFechaRegreso(rs.getString(7));
+                miPaqueteDTO.setIdActividad(rs.getInt(8));
+                miPaqueteDTO.setPortadaPrincipal(rs.getInt(9));
+                miPaqueteDTO.setPortadaSecundaria(rs.getInt(10));
+                miPaqueteDTO.setIdUsuario(rs.getInt(11));
+            }
+            return miPaqueteDTO;
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return miPaqueteDTO;
+    }
+
+    @Override
+    public List<MiPaqueteDTO> readAll() {
+        List<MiPaqueteDTO> listPaquetes = new LinkedList<>();
+        try {
+            ResultSet rs = null;
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_READ_ALL);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
+                miPaqueteDTO.setIdPaquete(rs.getInt(1));
+                miPaqueteDTO.setIdAlojamiento(rs.getInt(2));
+                miPaqueteDTO.setIdVuelo(rs.getInt(3));
+                miPaqueteDTO.setIdOrigen(rs.getInt(4));
+                miPaqueteDTO.setIdDestino(rs.getInt(5));
+                miPaqueteDTO.setFechaSalida(rs.getString(6));
+                miPaqueteDTO.setFechaRegreso(rs.getString(7));
+                miPaqueteDTO.setIdActividad(rs.getInt(8));
+                miPaqueteDTO.setPortadaPrincipal(rs.getInt(9));
+                miPaqueteDTO.setPortadaSecundaria(rs.getInt(10));
+                miPaqueteDTO.setIdUsuario(rs.getInt(11));
+                listPaquetes.add(miPaqueteDTO);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return listPaquetes;
+    }
+
+    @Override
+    public boolean update(MiPaqueteDTO t) {
+        try {
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_UPDATE);
+            ps.setInt(1, t.getIdAlojamiento());
+            ps.setInt(2, t.getIdVuelo());
+            ps.setInt(3, t.getIdOrigen());
+            ps.setInt(4, t.getIdDestino());
+            ps.setString(5, t.getFechaSalida());
+            ps.setString(6, t.getFechaRegreso());
+            ps.setInt(7, t.getIdActividad());
+            ps.setInt(8, t.getPortadaPrincipal());
+            ps.setInt(9, t.getPortadaSecundaria());
+            ps.setInt(10, t.getIdPaquete());
+            ps.setInt(10, t.getIdUsuario());
+            if (ps.executeUpdate() > 0) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PaqueteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean delete(Object key) {
+        try {
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_DELELE);
+            ps.setInt(1, Integer.parseInt(key.toString()));
+            if (ps.executeUpdate() > 0) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PaqueteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return false;
+    }
+}

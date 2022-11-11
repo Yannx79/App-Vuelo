@@ -1,0 +1,119 @@
+package controllers;
+
+import interfaces.ObligacionControlador;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import views.*;
+import dto.*;
+import java.util.List;
+import dao.*;
+import java.util.LinkedList;
+import rsscalelabel.RSScaleLabel;
+
+public class CVerPaquetes implements ActionListener, ObligacionControlador {
+
+    private VVerPaquetes vista;
+    private PaqueteDAO paqueteDAO;
+    private PortadaDAO portadaDAO;
+    private AlojamientoDAO alojamientoDAO;
+    private ActividadDAO actividadDAO;
+    private VueloDAO vueloDAO;
+    private List<PaqueteDTO> listPaquetes;
+    private int index;
+
+    public CVerPaquetes(VVerPaquetes f) {
+        this.vista = f;
+        this.agregarTodosListeners();
+        this.inicializarObjetos();
+        this.construirVista();
+    }
+
+    @Override
+    public void construirVista() {
+        this.vista.setVisible(true);
+        this.vista.setTitle("Ver Paquetes");
+        this.vista.lblTitulo.setText("Ver Paquetes");
+        this.vista.lblCantidadRegistros.setText("Cantidad de Paquetes   : " + listPaquetes.size());
+    }
+
+    @Override
+    public void agregarTodosListeners() {
+        this.vista.btnAgregar.addActionListener(this);
+        this.vista.btnLeft.addActionListener(this);
+        this.vista.btnRight.addActionListener(this);
+    }
+
+    @Override
+    public void inicializarObjetos() {
+        paqueteDAO = new PaqueteDAO();
+        portadaDAO = new PortadaDAO();
+        alojamientoDAO = new AlojamientoDAO();
+        actividadDAO = new ActividadDAO();
+        vueloDAO = new VueloDAO();
+        listPaquetes = new LinkedList<>();
+        listPaquetes = paqueteDAO.readAll();
+        index = 0;
+//        completarInformacionPaquete();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == this.vista.btnRight) {
+            this.moveRight();
+        } else if (e.getSource() == this.vista.btnLeft) {
+            this.moveLeft();
+        } else if (e.getSource() == this.vista.btnAgregar) {
+            this.agregarPaquete();
+        }
+    }
+
+    private void agregarPaquete(){
+        
+    }
+    
+    private void moveLeft() {
+        if (index > 0) {
+            index--;
+        } else {
+            index = listPaquetes.size() - 1;
+        }
+        completarInformacionPaquete();
+    }
+
+    private void moveRight() {
+        if (index < listPaquetes.size() - 1) {
+            index++;
+        } else {
+            index = 0;
+        }
+        completarInformacionPaquete();
+    }
+
+    private void completarInformacionPaquete() {
+        //establecer img portada
+        PaqueteDTO paqueteDTO = listPaquetes.get(index);
+        PortadaDTO portadaDTO = portadaDAO.read(paqueteDTO.getPortadaPrincipal());
+        RSScaleLabel.setScaleLabel(
+                this.vista.lblPaquete, "imagenes/paquetes/" + portadaDTO.getPath());
+        this.vista.txtDatosPaquete.setText(paqueteDTO.toString());
+        //establecer img alojamiento
+        AlojamientoDTO alojamientoDTO = alojamientoDAO.read(paqueteDTO.getIdAlojamiento());
+        portadaDTO = portadaDAO.read(alojamientoDTO.getPortadoPrincipal());
+        RSScaleLabel.setScaleLabel(
+                this.vista.lblAlojamiento, "imagenes/alojamientos/" + portadaDTO.getPath());
+        this.vista.txtDatosAlojamiento.setText(alojamientoDTO.toString());
+        //establecer img vuelo
+        VueloDTO vueloDTO = vueloDAO.read(paqueteDTO.getIdVuelo());
+        portadaDTO = portadaDAO.read(vueloDTO.getPortadaPrincipal());
+        RSScaleLabel.setScaleLabel(
+                this.vista.lblVuelo, "imagenes/vuelos/" + portadaDTO.getPath());
+        this.vista.txtDatosVuelo.setText(vueloDTO.toString());
+        //establecer img actividad
+        ActividadDTO actividadDTO = actividadDAO.read(paqueteDTO.getIdActividad());
+        portadaDTO = portadaDAO.read(actividadDTO.getPortadoPrincipal());
+        RSScaleLabel.setScaleLabel(
+                this.vista.lblActividad, "imagenes/actividades/" + portadaDTO.getPath());
+        this.vista.txtDatosActividad.setText(actividadDTO.toString());
+    }
+
+}
