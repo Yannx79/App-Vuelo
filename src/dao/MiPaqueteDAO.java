@@ -2,7 +2,6 @@ package dao;
 
 import conexion.Conexion;
 import dto.MiPaqueteDTO;
-import dto.PaqueteDTO;
 import interfaces.ObjectIDAO;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +17,7 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
             + "INSERT INTO mis_paquetes (id_alojamiento, id_vuelo, "
             + "id_origen, id_destino, fecha_salida, "
             + "fecha_regreso, id_actividad, portada_principal, portada_secundaria, "
-            + "id_usuario) VALUES (?,?,?,?,?,?,?,?,?)";
+            + "id_usuario) VALUES (?,?,?,?,?,?,?,?,?,?)";
     private static final String SQL_READ = ""
             + "SELECT * FROM mis_paquetes WHERE id_paquete=?";
     private static final String SQL_READ_ALL = ""

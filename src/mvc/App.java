@@ -2,6 +2,9 @@ package mvc;
 
 import views.VMenu;
 import controllers.CMenu;
+import dao.MiPaqueteDAO;
+import dto.MiPaqueteDTO;
+import java.util.List;
 
 public class App {
 
@@ -11,6 +14,9 @@ public class App {
     public static void main(String[] args) {
         vista = new VMenu();
         controlador = new CMenu(vista);
+//        MiPaqueteDAO miPaqueteDAO = new MiPaqueteDAO();
+//        List<MiPaqueteDTO> list = miPaqueteDAO.readAll();
+//        list.forEach(System.out::println);
     }
 
 }

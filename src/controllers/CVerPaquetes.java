@@ -7,17 +7,24 @@ import views.*;
 import dto.*;
 import java.util.List;
 import dao.*;
+import process.*;
 import java.util.LinkedList;
 import rsscalelabel.RSScaleLabel;
 
 public class CVerPaquetes implements ActionListener, ObligacionControlador {
 
     private VVerPaquetes vista;
+    //dao
     private PaqueteDAO paqueteDAO;
+    private MiPaqueteDAO miPaqueteDAO;
     private PortadaDAO portadaDAO;
     private AlojamientoDAO alojamientoDAO;
     private ActividadDAO actividadDAO;
     private VueloDAO vueloDAO;
+    //dto
+    private PaqueteDTO paqueteDTO;
+    private MiPaqueteDTO miPaqueteDTO;
+    //otros
     private List<PaqueteDTO> listPaquetes;
     private int index;
 
@@ -46,10 +53,15 @@ public class CVerPaquetes implements ActionListener, ObligacionControlador {
     @Override
     public void inicializarObjetos() {
         paqueteDAO = new PaqueteDAO();
+        miPaqueteDAO = new MiPaqueteDAO();
         portadaDAO = new PortadaDAO();
         alojamientoDAO = new AlojamientoDAO();
         actividadDAO = new ActividadDAO();
         vueloDAO = new VueloDAO();
+        
+        paqueteDTO = new PaqueteDTO();
+        miPaqueteDTO = new MiPaqueteDTO();
+        
         listPaquetes = new LinkedList<>();
         listPaquetes = paqueteDAO.readAll();
         index = 0;
@@ -68,7 +80,9 @@ public class CVerPaquetes implements ActionListener, ObligacionControlador {
     }
 
     private void agregarPaquete(){
-        
+        miPaqueteDTO = Parse.parsePaqueteToMiPaquete(paqueteDTO);
+        miPaqueteDTO.setIdUsuario(CMenu.usuario.getIdUsuario());
+        miPaqueteDAO.create(miPaqueteDTO);
     }
     
     private void moveLeft() {
@@ -91,7 +105,7 @@ public class CVerPaquetes implements ActionListener, ObligacionControlador {
 
     private void completarInformacionPaquete() {
         //establecer img portada
-        PaqueteDTO paqueteDTO = listPaquetes.get(index);
+        paqueteDTO = listPaquetes.get(index);
         PortadaDTO portadaDTO = portadaDAO.read(paqueteDTO.getPortadaPrincipal());
         RSScaleLabel.setScaleLabel(
                 this.vista.lblPaquete, "imagenes/paquetes/" + portadaDTO.getPath());
