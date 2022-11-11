@@ -38,7 +38,7 @@ public class CVerPaquetes implements ActionListener, ObligacionControlador {
     @Override
     public void construirVista() {
         this.vista.setVisible(true);
-        this.vista.setTitle("Ver Paquetes");
+        this.vista.setTitle("VER PAQUETES");
         this.vista.lblTitulo.setText("Ver Paquetes");
         this.vista.lblCantidadRegistros.setText("Cantidad de Paquetes   : " + listPaquetes.size());
     }

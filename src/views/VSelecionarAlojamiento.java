@@ -32,7 +32,7 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        lblPortadoPrincipal = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -44,9 +44,13 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         txtNumeroHabitaciones = new javax.swing.JTextField();
         txtIdHotel = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblPortadaSecundaria = new javax.swing.JLabel();
         btnAgregar = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        lblTitulo = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        lblCantidadRegistros = new javax.swing.JLabel();
+        lblNombrePaquete = new javax.swing.JLabel();
 
         setClosable(true);
 
@@ -61,22 +65,20 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         btnLeft.setText("<");
         jPanel1.add(btnLeft, java.awt.BorderLayout.LINE_START);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel2.setBackground(new java.awt.Color(250, 250, 250));
         jPanel2.setLayout(new java.awt.GridLayout(2, 3, 1, 0));
 
         jPanel3.setLayout(new javax.swing.BoxLayout(jPanel3, javax.swing.BoxLayout.PAGE_AXIS));
-
-        jLabel2.setText("imagen 1");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
+            .addComponent(lblPortadoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+            .addComponent(lblPortadoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
         );
 
         jPanel3.add(jPanel6);
@@ -91,7 +93,9 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 490, 60));
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
         jTextArea1.setRows(5);
+        jTextArea1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS DEL EXTRA", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 490, 190));
@@ -122,32 +126,48 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
 
         jPanel2.add(jPanel7);
 
-        jLabel3.setText("imagen 1");
-
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
+            .addComponent(lblPortadaSecundaria, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+            .addComponent(lblPortadaSecundaria, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
         );
 
         jPanel2.add(jPanel8);
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 22)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, java.awt.BorderLayout.PAGE_START);
-
         btnAgregar.setBackground(new java.awt.Color(153, 0, 153));
         btnAgregar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         btnAgregar.setText("AGREGAR");
         jPanel1.add(btnAgregar, java.awt.BorderLayout.PAGE_END);
+
+        jPanel5.setBackground(new java.awt.Color(250, 250, 250));
+        jPanel5.setLayout(new java.awt.GridLayout(2, 0));
+
+        lblTitulo.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 20)); // NOI18N
+        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo.setText("jLabel1");
+        jPanel5.add(lblTitulo);
+
+        jPanel9.setBackground(new java.awt.Color(250, 250, 250));
+        jPanel9.setLayout(new java.awt.GridLayout(1, 2));
+
+        lblCantidadRegistros.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblCantidadRegistros.setText("jLabel2");
+        jPanel9.add(lblCantidadRegistros);
+
+        lblNombrePaquete.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblNombrePaquete.setText("jLabel2");
+        jPanel9.add(lblNombrePaquete);
+
+        jPanel5.add(jPanel9);
+
+        jPanel1.add(jPanel5, java.awt.BorderLayout.PAGE_START);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -157,7 +177,7 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
         );
 
         pack();
@@ -169,18 +189,22 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnLeft;
     public javax.swing.JButton btnRight;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JLabel lblCantidadRegistros;
+    public javax.swing.JLabel lblNombrePaquete;
+    public javax.swing.JLabel lblPortadaSecundaria;
+    public javax.swing.JLabel lblPortadoPrincipal;
+    public javax.swing.JLabel lblTitulo;
     public javax.swing.JTextField txtCostoAlojamiento;
     public javax.swing.JTextField txtIdAlojamiento;
     public javax.swing.JTextField txtIdHotel;

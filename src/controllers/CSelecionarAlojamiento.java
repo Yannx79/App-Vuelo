@@ -8,24 +8,33 @@ import dto.*;
 import interfaces.*;
 import java.util.LinkedList;
 import java.util.List;
+import rsscalelabel.RSScaleLabel;
 
 public class CSelecionarAlojamiento implements ActionListener, ObligacionControlador {
 
     private VSelecionarAlojamiento vista;
     private List<AlojamientoDTO> list;
+
     private AlojamientoDAO alojamientoDAO;
+    private PortadaDAO portadaDAO;
+    private VueloDAO vueloDAO;
+
     private int index;
 
     public CSelecionarAlojamiento(VSelecionarAlojamiento f) {
         this.vista = f;
-        this.construirVista();
         this.agregarTodosListeners();
         this.inicializarObjetos();
+        this.construirVista();
     }
 
     @Override
     public void construirVista() {
         this.vista.setVisible(true);
+        this.vista.setTitle("SELECCIONAR ALOJAMIENTO");
+        this.vista.lblTitulo.setText("Seleccionar Alojamientos");
+        this.vista.lblCantidadRegistros.setText("Cantidad de alojamientos "
+                + "disponibles " + list.size());
     }
 
     @Override
@@ -38,6 +47,7 @@ public class CSelecionarAlojamiento implements ActionListener, ObligacionControl
     @Override
     public void inicializarObjetos() {
         alojamientoDAO = new AlojamientoDAO();
+        portadaDAO = new PortadaDAO();
         this.list = new LinkedList<>();
         this.list = alojamientoDAO.readAll();
         this.index = 0;
@@ -48,39 +58,41 @@ public class CSelecionarAlojamiento implements ActionListener, ObligacionControl
         if (e.getSource() == this.vista.btnRight) {
             this.moveRight();
         } else if (e.getSource() == this.vista.btnLeft) {
-
+            this.moveLeft();
         } else if (e.getSource() == this.vista.btnAgregar) {
 
         }
     }
 
     private void moveLeft() {
-//        if (index > 0) {
-//            index--;
-//        } else {
-//            index = list.size() - 1;
-//        }
-        this.index = (index > 0) ? index-- : list.size() - 1;
-        this.llenarCasillas();
+        if (index > 0) {
+            index--;
+        } else {
+            index = list.size() - 1;
+        }
+        this.completarInformacionAlojamiento();
     }
 
     private void moveRight() {
-//        if (index < list.size() - 1) {
-//            index++;
-//        } else {
-//            index = 0;
-//        }
-        this.index = (index < list.size() - 1) ? index++ : 0;
-        this.llenarCasillas();
+        if (index < list.size() - 1) {
+            index++;
+        } else {
+            index = 0;
+        }
+        this.completarInformacionAlojamiento();
     }
 
-    private void llenarCasillas() {
-        AlojamientoDTO adto = list.get(index);
-        this.vista.txtIdAlojamiento.setText(String.valueOf(adto.getIdAlojamiento()));
-        this.vista.txtCostoAlojamiento.setText(String.valueOf(adto.getCostoAlojamiento()));
-        this.vista.txtIdHotel.setText(String.valueOf(adto.getIdHotel()));
-        this.vista.txtNumeroHabitaciones.setText(String.valueOf(adto.getNumeroHabitaciones()));
-        this.vista.txtNumeroPersonas.setText(String.valueOf(adto.getNumeroPersonas()));
+    private void completarInformacionAlojamiento() {
+        AlojamientoDTO alojamientoDTO = list.get(index);
+        this.vista.txtIdAlojamiento.setText(String.valueOf(alojamientoDTO.getIdAlojamiento()));
+        this.vista.txtCostoAlojamiento.setText(String.valueOf(alojamientoDTO.getCostoAlojamiento()));
+        this.vista.txtIdHotel.setText(String.valueOf(alojamientoDTO.getIdHotel()));
+        this.vista.txtNumeroHabitaciones.setText(String.valueOf(alojamientoDTO.getNumeroHabitaciones()));
+        this.vista.txtNumeroPersonas.setText(String.valueOf(alojamientoDTO.getNumeroPersonas()));
+        PortadaDTO portadaDTO = portadaDAO.read(alojamientoDTO.getPortadoPrincipal());
+        RSScaleLabel.setScaleLabel(this.vista.lblPortadoPrincipal, "imagenes/alojamientos/" + portadaDTO.getPath());
+        portadaDTO = portadaDAO.read(alojamientoDTO.getPortadaSecundaria());
+        RSScaleLabel.setScaleLabel(this.vista.lblPortadaSecundaria, "imagenes/alojamientos/" + portadaDTO.getPath());
     }
 
 }

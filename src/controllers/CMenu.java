@@ -12,48 +12,50 @@ import java.awt.event.WindowListener;
 import views.*;
 
 public class CMenu implements ActionListener, ObligacionControlador, WindowListener {
-
+    
     private VMenu vista;
     public static ClienteDTO usuario;
-
+    
     public CMenu(VMenu vmenu) {
         this.vista = vmenu;
         this.agregarTodosListeners();
         this.inicializarObjetos();
         this.construirVista();
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.miLogout) {
-
+            
         } else if (e.getSource() == this.vista.miLogin) {
-
+            
         } else if (e.getSource() == this.vista.miVerMisPaquetes) {
-
+            
         } else if (e.getSource() == this.vista.miVerPaquetes) {
             VVerPaquetes vvp = new VVerPaquetes();
             CVerPaquetes cvp = new CVerPaquetes(vvp);
             Desktop.agregarAlDesktop(this.vista.desktopMenu, vvp);
         } else if (e.getSource() == this.vista.miPaquetesPersonalizados) {
-
+            
         } else if (e.getSource() == this.vista.miSeleccionarAlojamiento) {
-
+            VSelecionarAlojamiento vsa = new VSelecionarAlojamiento();
+            CSelecionarAlojamiento csa = new CSelecionarAlojamiento(vsa);
+            Desktop.agregarAlDesktop(this.vista.desktopMenu, vsa);
         } else if (e.getSource() == this.vista.miSeleccionarVuelo) {
-
+            
         } else if (e.getSource() == this.vista.miSeleccionarActividad) {
-
+            
         } else if (e.getSource() == this.vista.miCrearPaquete) {
-
+            
         } else if (e.getSource() == this.vista.miCrearAlojamiento) {
-
+            
         } else if (e.getSource() == this.vista.miCrearVuelo) {
-
+            
         } else if (e.getSource() == this.vista.miCrearActividad) {
-
+            
         }
     }
-
+    
     @Override
     public void construirVista() {
         this.vista.setVisible(true);
@@ -61,12 +63,12 @@ public class CMenu implements ActionListener, ObligacionControlador, WindowListe
         this.vista.setResizable(false);
         this.vista.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
-
+    
     @Override
     public void inicializarObjetos() {
         usuario = new ClienteDTO();
     }
-
+    
     @Override
     public void agregarTodosListeners() {
         this.vista.addWindowListener(this);
@@ -98,30 +100,30 @@ public class CMenu implements ActionListener, ObligacionControlador, WindowListe
             Desktop.agregarAlDesktop(this.vista.desktopMenu, vLogin);
         }
     }
-
+    
     @Override
     public void windowClosing(WindowEvent e) {
-
+        
     }
-
+    
     @Override
     public void windowClosed(WindowEvent e) {
     }
-
+    
     @Override
     public void windowIconified(WindowEvent e) {
     }
-
+    
     @Override
     public void windowDeiconified(WindowEvent e) {
     }
-
+    
     @Override
     public void windowActivated(WindowEvent e) {
     }
-
+    
     @Override
     public void windowDeactivated(WindowEvent e) {
     }
-
+    
 }
