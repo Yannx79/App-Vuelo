@@ -11,7 +11,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import views.*;
 
-public class CMenu implements ActionListener, ObligacionControlador, WindowListener {
+public class CMenu extends ObligacionControlador implements ActionListener, WindowListener {
     
     private VMenu vista;
     public static ClienteDTO usuario;

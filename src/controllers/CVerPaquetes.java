@@ -11,7 +11,7 @@ import process.*;
 import java.util.LinkedList;
 import rsscalelabel.RSScaleLabel;
 
-public class CVerPaquetes implements ActionListener, ObligacionControlador {
+public class CVerPaquetes extends ObligacionControlador implements ActionListener {
 
     private VVerPaquetes vista;
     //dao

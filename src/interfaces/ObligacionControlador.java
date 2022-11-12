@@ -6,7 +6,7 @@ package interfaces;
  *
  * @autor x
  */
-public interface ObligacionControlador {
+public abstract class ObligacionControlador {
 
     public abstract void construirVista();
 

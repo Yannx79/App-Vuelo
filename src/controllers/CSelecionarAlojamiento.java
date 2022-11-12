@@ -10,7 +10,7 @@ import java.util.LinkedList;
 import java.util.List;
 import rsscalelabel.RSScaleLabel;
 
-public class CSelecionarAlojamiento implements ActionListener, ObligacionControlador {
+public class CSelecionarAlojamiento extends ObligacionControlador implements ActionListener {
 
     private VSelecionarAlojamiento vista;
     private List<AlojamientoDTO> list;

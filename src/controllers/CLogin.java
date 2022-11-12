@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import formato.Encriptar;
 
-public class CLogin implements ObligacionControlador, ActionListener {
+public class CLogin extends ObligacionControlador implements ActionListener {
 
     private VLogin vista;
     private ClienteDAO clienteDAO;

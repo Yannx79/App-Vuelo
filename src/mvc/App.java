@@ -14,9 +14,6 @@ public class App {
     public static void main(String[] args) {
         vista = new VMenu();
         controlador = new CMenu(vista);
-//        MiPaqueteDAO miPaqueteDAO = new MiPaqueteDAO();
-//        List<MiPaqueteDTO> list = miPaqueteDAO.readAll();
-//        list.forEach(System.out::println);
     }
 
 }
