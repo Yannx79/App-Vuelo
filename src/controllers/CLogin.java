@@ -60,7 +60,7 @@ public class CLogin implements ObligacionControlador, ActionListener {
     
     private void loguear() {
         String email = this.vista.txtEmail.getText();
-        String password = Encriptar.toMD5(this.vista.txtPassword.getText());
+        String password = Encriptar.toMD5(String.valueOf(this.vista.txtPassword.getPassword()));
         boolean estaLogueado = false;
         for (ClienteDTO c : list) {
             if (c.getEmail().equals(email) && c.getPassword().equals(password)) {

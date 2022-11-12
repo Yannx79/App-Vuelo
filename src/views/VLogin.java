@@ -45,6 +45,7 @@ public class VLogin extends javax.swing.JInternalFrame {
         rbEmpleado = new javax.swing.JRadioButton();
         btnLogin = new javax.swing.JButton();
 
+        setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -133,11 +134,11 @@ public class VLogin extends javax.swing.JInternalFrame {
         jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 270, 36));
 
         jSeparator1.setBackground(new java.awt.Color(207, 10, 10));
-        jSeparator1.setForeground(new java.awt.Color(73, 181, 172));
+        jSeparator1.setForeground(new java.awt.Color(220, 95, 0));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 310, 10));
 
         jSeparator2.setBackground(new java.awt.Color(207, 10, 10));
-        jSeparator2.setForeground(new java.awt.Color(73, 181, 172));
+        jSeparator2.setForeground(new java.awt.Color(220, 95, 0));
         jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 310, 10));
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 48, 36));
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 48, 42));

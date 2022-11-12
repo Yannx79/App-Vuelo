@@ -30,7 +30,9 @@ public class CMenu implements ActionListener, ObligacionControlador, WindowListe
         } else if (e.getSource() == this.vista.miLogin) {
             
         } else if (e.getSource() == this.vista.miVerMisPaquetes) {
-            
+            VMisPaquetes vmp = new VMisPaquetes();
+            CMisPaquetes cmp = new CMisPaquetes(vmp);
+            Desktop.agregarAlDesktop(this.vista.desktopMenu, vmp);
         } else if (e.getSource() == this.vista.miVerPaquetes) {
             VVerPaquetes vvp = new VVerPaquetes();
             CVerPaquetes cvp = new CVerPaquetes(vvp);

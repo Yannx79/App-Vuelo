@@ -6,6 +6,7 @@
     </Component>
   </NonVisualComponents>
   <Properties>
+    <Property name="closable" type="boolean" value="true"/>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
@@ -261,7 +262,7 @@
               <Color blue="a" green="a" red="cf" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ac" green="b5" red="49" type="rgb"/>
+              <Color blue="0" green="5f" red="dc" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -276,7 +277,7 @@
               <Color blue="a" green="a" red="cf" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ac" green="b5" red="49" type="rgb"/>
+              <Color blue="0" green="5f" red="dc" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
