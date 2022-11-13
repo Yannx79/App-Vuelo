@@ -17,7 +17,7 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
             + "INSERT INTO mis_paquetes (id_alojamiento, id_vuelo, "
             + "id_origen, id_destino, fecha_salida, "
             + "fecha_regreso, id_actividad, portada_principal, portada_secundaria, "
-            + "id_usuario) VALUES (?,?,?,?,?,?,?,?,?,?)";
+            + "id_usuario, nombre_paquete) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
     private static final String SQL_READ = ""
             + "SELECT * FROM mis_paquetes WHERE id_paquete=?";
     private static final String SQL_READ_ALL = ""
@@ -26,7 +26,8 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
             + "UPDATE paquetes SET id_alojamiento=?, id_vuelo=?, "
             + "id_origen=?, id_destino=?, fecha_salida=?, "
             + "fecha_regreso=?, id_actividad=?, portada_principal=?, "
-            + "portada_secundaria=?, id_usuario=? WHERE id_mis_paquete=?";
+            + "portada_secundaria=?, id_usuario=?, nombre_paquete=?"
+            + "WHERE id_mis_paquete=?";
     private static final String SQL_DELELE = ""
             + "DELETE FROM paquetes WHERE id_mis_paquete=?";
     private static final Conexion CONEXION = Conexion.getConexion();
@@ -45,6 +46,7 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
             ps.setInt(8, t.getPortadaPrincipal());
             ps.setInt(9, t.getPortadaSecundaria());
             ps.setInt(10, t.getIdUsuario());
+            ps.setString(11, t.getNombrePaquete());
             if (ps.executeUpdate() > 0) {
                 return true;
             }
@@ -76,6 +78,7 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
                 miPaqueteDTO.setPortadaPrincipal(rs.getInt(9));
                 miPaqueteDTO.setPortadaSecundaria(rs.getInt(10));
                 miPaqueteDTO.setIdUsuario(rs.getInt(11));
+                miPaqueteDTO.setNombrePaquete(rs.getString(12));
             }
             return miPaqueteDTO;
         } catch (Exception e) {
@@ -106,6 +109,7 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
                 miPaqueteDTO.setPortadaPrincipal(rs.getInt(9));
                 miPaqueteDTO.setPortadaSecundaria(rs.getInt(10));
                 miPaqueteDTO.setIdUsuario(rs.getInt(11));
+                miPaqueteDTO.setNombrePaquete(rs.getString(12));
                 listPaquetes.add(miPaqueteDTO);
             }
         } catch (Exception e) {
@@ -130,7 +134,8 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
             ps.setInt(8, t.getPortadaPrincipal());
             ps.setInt(9, t.getPortadaSecundaria());
             ps.setInt(10, t.getIdPaquete());
-            ps.setInt(10, t.getIdUsuario());
+            ps.setInt(11, t.getIdUsuario());
+            ps.setString(12, t.getNombrePaquete());
             if (ps.executeUpdate() > 0) {
                 return true;
             }

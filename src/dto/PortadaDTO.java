@@ -18,6 +18,14 @@ public class PortadaDTO {
         this.idTipoPortada = idTipoPortada;
     }
 
+    @Override
+    public String toString() {
+        return "************ DATOS DE LA PORTADA ****************" 
+                + "\n Id Portada         : " + idPortada 
+                + "\n Ruta               : " + path 
+                + "\n Id Tipo Portada    : " + idTipoPortada;
+    }
+
     public PortadaDTO(int idPortada) {
         this.idPortada = idPortada;
     }

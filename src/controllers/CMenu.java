@@ -18,9 +18,7 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
     
     public CMenu(VMenu vmenu) {
         this.vista = vmenu;
-        this.agregarTodosListeners();
-        this.inicializarObjetos();
-        this.construirVista();
+        super.constructor();
     }
     
     @Override
@@ -38,7 +36,9 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
             CVerPaquetes cvp = new CVerPaquetes(vvp);
             Desktop.agregarAlDesktop(this.vista.desktopMenu, vvp);
         } else if (e.getSource() == this.vista.miPaquetesPersonalizados) {
-            
+            VPaquetePersonalizado vpp = new VPaquetePersonalizado();
+            CPaquetePersonalizado cpp = new CPaquetePersonalizado(vpp);
+            Desktop.agregarAlDesktop(this.vista.desktopMenu, vpp);
         } else if (e.getSource() == this.vista.miSeleccionarAlojamiento) {
             VSelecionarAlojamiento vsa = new VSelecionarAlojamiento();
             CSelecionarAlojamiento csa = new CSelecionarAlojamiento(vsa);

@@ -12,11 +12,12 @@ public class PaqueteDTO {
     private int idActividad;
     private int portadaPrincipal;
     private int portadaSecundaria;
+    private String nombrePaquete;
 
     /*Para la lectura*/
     public PaqueteDTO(int idPaquete, int idAlojamiento, int idVuelo, int idOrigen,
             int idDestino, String fechaSalida, String fechaRegreso, int idActividad,
-            int portadaPrincipal, int portadaSecundaria) {
+            int portadaPrincipal, int portadaSecundaria, String nombrePaquete) {
         this.idPaquete = idPaquete;
         this.idAlojamiento = idAlojamiento;
         this.idVuelo = idVuelo;
@@ -27,12 +28,13 @@ public class PaqueteDTO {
         this.idActividad = idActividad;
         this.portadaPrincipal = portadaPrincipal;
         this.portadaSecundaria = portadaSecundaria;
+        this.nombrePaquete = nombrePaquete;
     }
 
     /*Insert no necesitan un key porque es AI*/
     public PaqueteDTO(int idAlojamiento, int idVuelo, int idOrigen, int idDestino,
             String fechaSalida, String fechaRegreso, int idActividad, int portadaPrincipal,
-            int portadaSecundaria) {
+            int portadaSecundaria, String nombrePaquete) {
         this.idAlojamiento = idAlojamiento;
         this.idVuelo = idVuelo;
         this.idOrigen = idOrigen;
@@ -42,6 +44,7 @@ public class PaqueteDTO {
         this.idActividad = idActividad;
         this.portadaPrincipal = portadaPrincipal;
         this.portadaSecundaria = portadaSecundaria;
+        this.nombrePaquete = nombrePaquete;
     }
 
     public PaqueteDTO(int idPaquete) {
@@ -55,6 +58,7 @@ public class PaqueteDTO {
     @Override
     public String toString() {
         return "**********************************************"
+                + "\nNombre Paquete     : " + nombrePaquete
                 + "\nId Paquete         : " + idPaquete
                 + "\nId Alojamiento     : " + idAlojamiento
                 + "\nId Vuelo           : " + idVuelo
@@ -62,6 +66,14 @@ public class PaqueteDTO {
                 + "\nId Destino         : " + idDestino
                 + "\nFecha Salida       : " + fechaSalida
                 + "\nFecha Regreso      : " + fechaRegreso;
+    }
+
+    public String getNombrePaquete() {
+        return nombrePaquete;
+    }
+
+    public void setNombrePaquete(String nombrePaquete) {
+        this.nombrePaquete = nombrePaquete;
     }
 
     public int getPortadaPrincipal() {

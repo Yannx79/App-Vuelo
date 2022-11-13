@@ -27,137 +27,270 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnRight = new javax.swing.JButton();
-        btnLeft = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jPanel7 = new javax.swing.JPanel();
-        txtIdAlojamiento = new javax.swing.JTextField();
-        txtCostoAlojamiento = new javax.swing.JTextField();
-        txtNumeroPersonas = new javax.swing.JTextField();
-        txtNumeroHabitaciones = new javax.swing.JTextField();
-        txtIdHotel = new javax.swing.JTextField();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        btnAgregar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        txtNombrePaquete = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel13 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        chFechaRegreso = new com.toedter.calendar.JDateChooser();
+        dcFechaPartida = new com.toedter.calendar.JDateChooser();
+        cbxLugarPartida = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        cbxLugarDestino = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        cbxPortadaPrincipal = new javax.swing.JComboBox<>();
+        jLabel17 = new javax.swing.JLabel();
+        cbxPortadaSecundaria = new javax.swing.JComboBox<>();
+        lblPortadaSecundaria = new javax.swing.JLabel();
+        lblPortadaPrincipal = new javax.swing.JLabel();
 
         setClosable(true);
 
-        jPanel1.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnRight.setBackground(new java.awt.Color(153, 0, 153));
-        btnRight.setText(">");
-        jPanel1.add(btnRight, java.awt.BorderLayout.LINE_END);
+        jPanel2.setBackground(new java.awt.Color(33, 45, 62));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnLeft.setBackground(new java.awt.Color(153, 0, 153));
-        btnLeft.setText("<");
-        jPanel1.add(btnLeft, java.awt.BorderLayout.LINE_START);
+        jPanel3.setBackground(new java.awt.Color(42, 39, 41));
+        jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel3.setOpaque(false);
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 0));
-        jPanel2.setLayout(new java.awt.GridLayout(2, 3, 1, 0));
+        jLabel2.setBackground(new java.awt.Color(207, 10, 10));
+        jLabel2.setOpaque(true);
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jPanel3.setLayout(new javax.swing.BoxLayout(jPanel3, javax.swing.BoxLayout.PAGE_AXIS));
+        jButton2.setBackground(new java.awt.Color(250, 250, 250));
+        jButton2.setForeground(new java.awt.Color(250, 250, 250));
+        jButton2.setText("VER DETALLE");
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        jButton2.setContentAreaFilled(false);
+        jButton2.setVerifyInputWhenFocusTarget(false);
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        jLabel2.setText("imagen 1");
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 180, 50));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-        );
-
-        jPanel3.add(jPanel6);
-
-        jPanel2.add(jPanel3);
-
+        jPanel4.setBackground(new java.awt.Color(42, 39, 41));
+        jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel4.setOpaque(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
-        jComboBox1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MIS PAQUETES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 490, 60));
+        jLabel5.setBackground(new java.awt.Color(192, 27, 54));
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jButton3.setBackground(new java.awt.Color(250, 250, 250));
+        jButton3.setForeground(new java.awt.Color(250, 250, 250));
+        jButton3.setText("AGREGAR");
+        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        jButton3.setContentAreaFilled(false);
+        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 490, 190));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 180, 50));
 
-        jPanel2.add(jPanel4);
+        jPanel5.setBackground(new java.awt.Color(42, 39, 41));
+        jPanel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel5.setOpaque(false);
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
-        jPanel7.setLayout(new javax.swing.BoxLayout(jPanel7, javax.swing.BoxLayout.PAGE_AXIS));
+        jLabel8.setBackground(new java.awt.Color(192, 27, 54));
+        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        txtIdAlojamiento.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        txtIdAlojamiento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID ALOJAMIENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel7.add(txtIdAlojamiento);
+        jButton4.setBackground(new java.awt.Color(250, 250, 250));
+        jButton4.setForeground(new java.awt.Color(250, 250, 250));
+        jButton4.setText("MODIFICAR");
+        jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        jButton4.setContentAreaFilled(false);
+        jPanel5.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        txtCostoAlojamiento.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        txtCostoAlojamiento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "COSTO ALOJAMIENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel7.add(txtCostoAlojamiento);
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 180, 50));
 
-        txtNumeroPersonas.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        txtNumeroPersonas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "NUMERO DE PERSONAS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel7.add(txtNumeroPersonas);
+        jPanel6.setBackground(new java.awt.Color(42, 39, 41));
+        jPanel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel6.setOpaque(false);
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
-        txtNumeroHabitaciones.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        txtNumeroHabitaciones.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "NUMERO DE HABITACIONES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel7.add(txtNumeroHabitaciones);
+        jLabel11.setBackground(new java.awt.Color(192, 27, 54));
+        jPanel6.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        txtIdHotel.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        txtIdHotel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID HOTEL", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel7.add(txtIdHotel);
+        jButton5.setBackground(new java.awt.Color(250, 250, 250));
+        jButton5.setForeground(new java.awt.Color(250, 250, 250));
+        jButton5.setText("ELIMINAR ULTIMO REGISTRO");
+        jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        jButton5.setContentAreaFilled(false);
+        jPanel6.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        jPanel2.add(jPanel7);
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 180, 50));
 
-        jLabel3.setText("imagen 1");
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 1000, 90));
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-        );
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.add(jPanel8);
+        jLabel20.setBackground(new java.awt.Color(207, 10, 10));
+        jLabel20.setOpaque(true);
+        jPanel9.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 10));
 
-        jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
+        jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel9.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 30, 30));
+        jPanel9.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 30, 30));
+        jPanel9.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 30, 30));
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 22)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, java.awt.BorderLayout.PAGE_START);
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("PAQUETES");
+        jPanel9.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 105, -1));
 
-        btnAgregar.setBackground(new java.awt.Color(153, 0, 153));
-        btnAgregar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
-        btnAgregar.setText("AGREGAR");
-        jPanel1.add(btnAgregar, java.awt.BorderLayout.PAGE_END);
+        jLabel21.setBackground(new java.awt.Color(207, 10, 10));
+        jLabel21.setOpaque(true);
+        jPanel9.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 105, 105));
+
+        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 120));
+
+        txtNombrePaquete.setBackground(new java.awt.Color(33, 45, 62));
+        txtNombrePaquete.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        txtNombrePaquete.setForeground(new java.awt.Color(220, 95, 0));
+        txtNombrePaquete.setBorder(null);
+        txtNombrePaquete.setCaretColor(new java.awt.Color(220, 95, 0));
+        txtNombrePaquete.setOpaque(false);
+        jPanel1.add(txtNombrePaquete, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 270, 40));
+
+        jSeparator1.setBackground(new java.awt.Color(207, 10, 10));
+        jSeparator1.setForeground(new java.awt.Color(220, 95, 0));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 310, 10));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 48, 36));
+
+        jLabel9.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(10, 10, 10));
+        jLabel9.setText("LUGAR DE PARTIDA");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 310, -1));
+
+        jLabel12.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(10, 10, 10));
+        jLabel12.setText("FECHA DE PARTIDAD");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
+
+        jSeparator2.setBackground(new java.awt.Color(207, 10, 10));
+        jSeparator2.setForeground(new java.awt.Color(220, 95, 0));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 310, 10));
+
+        jLabel13.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(10, 10, 10));
+        jLabel13.setText("FECHA DE REGRESO");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
+
+        jSeparator3.setBackground(new java.awt.Color(207, 10, 10));
+        jSeparator3.setForeground(new java.awt.Color(220, 95, 0));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 310, 10));
+
+        chFechaRegreso.setForeground(new java.awt.Color(220, 95, 0));
+        chFechaRegreso.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
+        chFechaRegreso.setOpaque(false);
+        jPanel1.add(chFechaRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 310, 50));
+
+        dcFechaPartida.setForeground(new java.awt.Color(220, 95, 0));
+        dcFechaPartida.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
+        dcFechaPartida.setOpaque(false);
+        jPanel1.add(dcFechaPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 310, 50));
+
+        cbxLugarPartida.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxLugarPartida.setForeground(new java.awt.Color(220, 95, 0));
+        cbxLugarPartida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxLugarPartida.setBorder(null);
+        cbxLugarPartida.setOpaque(false);
+        jPanel1.add(cbxLugarPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 310, 50));
+
+        jLabel14.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(10, 10, 10));
+        jLabel14.setText("NOMBRE PAQUETE");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(10, 10, 10));
+        jLabel15.setText("LUGAR DE DESTINO");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 130, 310, -1));
+
+        cbxLugarDestino.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxLugarDestino.setForeground(new java.awt.Color(220, 95, 0));
+        cbxLugarDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxLugarDestino.setBorder(null);
+        cbxLugarDestino.setOpaque(false);
+        jPanel1.add(cbxLugarDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, 310, 50));
+
+        jLabel16.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(10, 10, 10));
+        jLabel16.setText("PORTADA PRINCIPAL");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 310, -1));
+
+        cbxPortadaPrincipal.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxPortadaPrincipal.setForeground(new java.awt.Color(220, 95, 0));
+        cbxPortadaPrincipal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxPortadaPrincipal.setBorder(null);
+        cbxPortadaPrincipal.setOpaque(false);
+        jPanel1.add(cbxPortadaPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 310, 50));
+
+        jLabel17.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(10, 10, 10));
+        jLabel17.setText("PORTADA SECUNDARIA");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 310, -1));
+
+        cbxPortadaSecundaria.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxPortadaSecundaria.setForeground(new java.awt.Color(220, 95, 0));
+        cbxPortadaSecundaria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxPortadaSecundaria.setBorder(null);
+        cbxPortadaSecundaria.setOpaque(false);
+        jPanel1.add(cbxPortadaSecundaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 260, 310, 50));
+
+        lblPortadaSecundaria.setText("jLabel3");
+        jPanel1.add(lblPortadaSecundaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, 310, 110));
+
+        lblPortadaPrincipal.setText("jLabel3");
+        jPanel1.add(lblPortadaPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 310, 110));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1140, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -165,26 +298,50 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAgregar;
-    public javax.swing.JButton btnLeft;
-    public javax.swing.JButton btnRight;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JComboBox<String> cbxLugarDestino;
+    public javax.swing.JComboBox<String> cbxLugarPartida;
+    public javax.swing.JComboBox<String> cbxPortadaPrincipal;
+    public javax.swing.JComboBox<String> cbxPortadaSecundaria;
+    public com.toedter.calendar.JDateChooser chFechaRegreso;
+    public com.toedter.calendar.JDateChooser dcFechaPartida;
+    private javax.swing.JButton jButton2;
+    public javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    public javax.swing.JTextField txtCostoAlojamiento;
-    public javax.swing.JTextField txtIdAlojamiento;
-    public javax.swing.JTextField txtIdHotel;
-    public javax.swing.JTextField txtNumeroHabitaciones;
-    public javax.swing.JTextField txtNumeroPersonas;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    public javax.swing.JLabel lblPortadaPrincipal;
+    public javax.swing.JLabel lblPortadaSecundaria;
+    public javax.swing.JTextField txtNombrePaquete;
     // End of variables declaration//GEN-END:variables
 }
