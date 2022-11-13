@@ -59,7 +59,7 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel13 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        chFechaRegreso = new com.toedter.calendar.JDateChooser();
+        dcFechaRegreso = new com.toedter.calendar.JDateChooser();
         dcFechaPartida = new com.toedter.calendar.JDateChooser();
         cbxLugarPartida = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
@@ -217,12 +217,14 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
         jSeparator3.setForeground(new java.awt.Color(220, 95, 0));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 310, 10));
 
-        chFechaRegreso.setForeground(new java.awt.Color(220, 95, 0));
-        chFechaRegreso.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
-        chFechaRegreso.setOpaque(false);
-        jPanel1.add(chFechaRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 310, 50));
+        dcFechaRegreso.setForeground(new java.awt.Color(220, 95, 0));
+        dcFechaRegreso.setDateFormatString("YYYY-MM-dd");
+        dcFechaRegreso.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
+        dcFechaRegreso.setOpaque(false);
+        jPanel1.add(dcFechaRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 310, 50));
 
         dcFechaPartida.setForeground(new java.awt.Color(220, 95, 0));
+        dcFechaPartida.setDateFormatString("YYYY-MM-dd");
         dcFechaPartida.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
         dcFechaPartida.setOpaque(false);
         jPanel1.add(dcFechaPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 310, 50));
@@ -304,8 +306,8 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
     public javax.swing.JComboBox<String> cbxLugarPartida;
     public javax.swing.JComboBox<String> cbxPortadaPrincipal;
     public javax.swing.JComboBox<String> cbxPortadaSecundaria;
-    public com.toedter.calendar.JDateChooser chFechaRegreso;
     public com.toedter.calendar.JDateChooser dcFechaPartida;
+    public com.toedter.calendar.JDateChooser dcFechaRegreso;
     public javax.swing.JButton jButton2;
     public javax.swing.JButton jButton4;
     public javax.swing.JButton jButton5;

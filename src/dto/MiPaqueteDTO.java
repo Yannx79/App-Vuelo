@@ -35,7 +35,8 @@ public class MiPaqueteDTO extends PaqueteDTO {
     @Override
     public String toString() {
         return ""
-                + "\n Id Usuario        : " + idUsuario;
+                + super.toString()
+                + "\n Id Usuario             : " + idUsuario;
     }
 
     public int getIdUsuario() {

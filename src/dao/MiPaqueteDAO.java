@@ -11,13 +11,17 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
+public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO> {
 
     private static final String SQL_INSERT = ""
             + "INSERT INTO mis_paquetes (id_alojamiento, id_vuelo, "
             + "id_origen, id_destino, fecha_salida, "
             + "fecha_regreso, id_actividad, portada_principal, portada_secundaria, "
             + "id_usuario, nombre_paquete) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+    private static final String SQL_INSERT_PAQUETE = ""
+            + "INSERT INTO mis_paquetes ( id_origen, id_destino, fecha_salida, "
+            + "fecha_regreso, portada_principal, portada_secundaria, "
+            + "id_usuario, nombre_paquete) VALUES (?,?,?,?,?,?,?,?)";
     private static final String SQL_READ = ""
             + "SELECT * FROM mis_paquetes WHERE id_paquete=?";
     private static final String SQL_READ_ALL = ""
@@ -31,6 +35,28 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO>{
     private static final String SQL_DELELE = ""
             + "DELETE FROM paquetes WHERE id_mis_paquete=?";
     private static final Conexion CONEXION = Conexion.getConexion();
+
+    public boolean createPaquete(MiPaqueteDTO t) {
+        try {
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_INSERT_PAQUETE);
+            ps.setInt(1, t.getIdOrigen());
+            ps.setInt(2, t.getIdDestino());
+            ps.setString(3, t.getFechaSalida());
+            ps.setString(4, t.getFechaRegreso());
+            ps.setInt(5, t.getPortadaPrincipal());
+            ps.setInt(6, t.getPortadaSecundaria());
+            ps.setInt(7, t.getIdUsuario());
+            ps.setString(8, t.getNombrePaquete());
+            if (ps.executeUpdate() > 0) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PaqueteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return false;
+    }
 
     @Override
     public boolean create(MiPaqueteDTO t) {

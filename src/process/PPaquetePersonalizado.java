@@ -4,7 +4,8 @@ import controllers.CMenu;
 import views.*;
 import dao.*;
 import dto.*;
-import java.util.LinkedList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -47,14 +48,20 @@ public class PPaquetePersonalizado {
 
     public static MiPaqueteDTO instanciar(VPaquetePersonalizado f){
         MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
+        miPaqueteDTO.setNombrePaquete(f.txtNombrePaquete.getText());
         miPaqueteDTO.setIdOrigen(getPK(f.cbxLugarPartida.getSelectedItem().toString()));     
         miPaqueteDTO.setIdDestino(getPK(f.cbxLugarDestino.getSelectedItem().toString()));
         miPaqueteDTO.setPortadaPrincipal(getPK(f.cbxPortadaPrincipal.getSelectedItem().toString()));
         miPaqueteDTO.setPortadaSecundaria(getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
-        miPaqueteDTO.setFechaRegreso(f.chFechaRegreso.getDate().toString());
-        miPaqueteDTO.setFechaSalida(f.dcFechaPartida.getDate().toString());
+        miPaqueteDTO.setFechaRegreso(formatearFecha(f.dcFechaRegreso.getDate()));
+        miPaqueteDTO.setFechaSalida(formatearFecha(f.dcFechaPartida.getDate()));
         miPaqueteDTO.setIdUsuario(CMenu.usuario.getIdUsuario());
         return miPaqueteDTO;
+    }
+    
+    private static String formatearFecha(Date date){
+        SimpleDateFormat formato = new SimpleDateFormat("YYYY-MM-dd");
+        return formato.format(date);
     }
     
     private static int getPK(String valor){

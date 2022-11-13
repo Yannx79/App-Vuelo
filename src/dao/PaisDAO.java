@@ -11,7 +11,7 @@ public class PaisDAO implements ObjectIDAO<PaisDTO> {
 
     private static final String SQL_CREATE = "";
     private static final String SQL_READ = "";
-    private static final String SQL_READ_ALL = "SELECT * FROM pais";
+    private static final String SQL_READ_ALL = "SELECT * FROM paises";
     private static final String SQL_UPDATE = "";
     private static final String SQL_DELETE = "";
     private static final Conexion CONEXION = Conexion.getConexion();

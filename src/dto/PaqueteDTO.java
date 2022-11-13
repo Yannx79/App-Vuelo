@@ -52,20 +52,23 @@ public class PaqueteDTO {
     }
 
     public PaqueteDTO() {
-
+        this.idAlojamiento = 0;
     }
 
     @Override
     public String toString() {
-        return "**********************************************"
-                + "\nNombre Paquete     : " + nombrePaquete
-                + "\nId Paquete         : " + idPaquete
-                + "\nId Alojamiento     : " + idAlojamiento
-                + "\nId Vuelo           : " + idVuelo
-                + "\nId Origen          : " + idOrigen
-                + "\nId Destino         : " + idDestino
-                + "\nFecha Salida       : " + fechaSalida
-                + "\nFecha Regreso      : " + fechaRegreso;
+        return "***************** DATOS DEL PAQUETE *******************"
+                + "\n Nombre Paquete         : " + nombrePaquete
+                + "\n Id Paquete             : " + idPaquete
+                + "\n Id Alojamiento         : " + idAlojamiento
+                + "\n Id Vuelo               : " + idVuelo
+                + "\n Id Origen              : " + idOrigen
+                + "\n Id Destino             : " + idDestino
+                + "\n Fecha Salida           : " + fechaSalida
+                + "\n Fecha Regreso          : " + fechaRegreso
+                + "\n Id Actividad           : " + idActividad
+                + "\n Id Portada Principal   : " + portadaPrincipal
+                + "\n Id Portada Secundaria  : " + portadaSecundaria;
     }
 
     public String getNombrePaquete() {
