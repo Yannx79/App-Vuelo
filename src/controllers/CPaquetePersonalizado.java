@@ -44,7 +44,6 @@ public class CPaquetePersonalizado extends ObligacionControlador implements Acti
         MiPaqueteDAO miPaqueteDAO = new MiPaqueteDAO();
         MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
         miPaqueteDTO = PPaquetePersonalizado.instanciar(this.vista);
-        System.out.println(miPaqueteDTO);
         miPaqueteDAO.createPaquete(miPaqueteDTO);
     }
     

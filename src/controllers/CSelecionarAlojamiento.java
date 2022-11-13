@@ -8,6 +8,7 @@ import dto.*;
 import interfaces.*;
 import java.util.LinkedList;
 import java.util.List;
+import process.PSelecionarAlojamiento;
 import rsscalelabel.RSScaleLabel;
 
 public class CSelecionarAlojamiento extends ObligacionControlador implements ActionListener {
@@ -23,9 +24,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
 
     public CSelecionarAlojamiento(VSelecionarAlojamiento f) {
         this.vista = f;
-        this.agregarTodosListeners();
-        this.inicializarObjetos();
-        this.construirVista();
+        constructor();
     }
 
     @Override
@@ -35,6 +34,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
         this.vista.lblTitulo.setText("Seleccionar Alojamientos");
         this.vista.lblCantidadRegistros.setText("Cantidad de alojamientos "
                 + "disponibles " + list.size());
+        PSelecionarAlojamiento.construirForma(vista);
     }
 
     @Override

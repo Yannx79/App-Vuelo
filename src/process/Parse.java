@@ -2,10 +2,12 @@ package process;
 
 import dto.MiPaqueteDTO;
 import dto.PaqueteDTO;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Parse {
 
-    public static MiPaqueteDTO parsePaqueteToMiPaquete(PaqueteDTO p){
+    public static MiPaqueteDTO parsePaqueteToMiPaquete(PaqueteDTO p) {
         MiPaqueteDTO mp = new MiPaqueteDTO();
         mp.setFechaRegreso(p.getFechaRegreso());
         mp.setFechaSalida(p.getFechaSalida());
@@ -19,5 +21,15 @@ public class Parse {
         mp.setPortadaSecundaria(p.getPortadaSecundaria());
         return mp;
     }
-    
+
+    public static String formatearFecha(Date date) {
+        SimpleDateFormat formato = new SimpleDateFormat("YYYY-MM-dd");
+        return formato.format(date);
+    }
+
+    public static int getPK(String valor) {
+        String valores[] = valor.split(" - ");
+        return Integer.parseInt(valores[0]);
+    }
+
 }

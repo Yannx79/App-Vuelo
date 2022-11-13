@@ -31,13 +31,13 @@ public class ActividadDTO {
     @Override
     public String toString() {
         return "*****************************************************" 
-                + "\nId Actividad           : " + idActividad 
-                + "\nNombre Actividad       : " + nombreActividad 
-                + "\nDescripcion            : " + descripcion 
-                + "\nId Categoria           : " + idCategoria 
-                + "\nCosto Actividad        : " + costoActividad 
-                + "\nPortado Principal      : " + portadoPrincipal 
-                + "\nPortada Secundaria     : " + portadaSecundaria;
+                + "\n Id Actividad           : " + idActividad 
+                + "\n Nombre Actividad       : " + nombreActividad 
+                + "\n Descripcion            : " + descripcion 
+                + "\n Id Categoria           : " + idCategoria 
+                + "\n Costo Actividad        : " + costoActividad 
+                + "\n Portado Principal      : " + portadoPrincipal 
+                + "\n Portada Secundaria     : " + portadaSecundaria;
     }
 
     public int getPortadoPrincipal() {

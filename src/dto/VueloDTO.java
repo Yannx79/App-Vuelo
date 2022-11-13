@@ -35,10 +35,10 @@ public class VueloDTO {
     @Override
     public String toString() {
         return "**************************************************" 
-                + "\nId Vuelo           : " + idVuelo 
-                + "\nNumero Pasajeros   : " + numeroPasajeros 
-                + "\nCosto Vuelo        : " + costoVuelo 
-                + "\nId Avion           : " + idAvion;
+                + "\n Id Vuelo           : " + idVuelo 
+                + "\n Numero Pasajeros   : " + numeroPasajeros 
+                + "\n Costo Vuelo        : " + costoVuelo 
+                + "\n Id Avion           : " + idAvion;
     }
 
     public int getPortadaPrincipal() {

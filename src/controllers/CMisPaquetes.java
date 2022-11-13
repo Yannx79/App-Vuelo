@@ -14,9 +14,7 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
     
     public CMisPaquetes(VMisPaquetes f){
         this.vista = f;
-        agregarTodosListeners();
-        inicializarObjetos();
-        construirVista();
+        constructor();
     }
     
     @Override

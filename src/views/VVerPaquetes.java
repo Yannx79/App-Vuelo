@@ -31,7 +31,6 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
         btnLeft = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
         lblPaquete = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         lblAlojamiento = new javax.swing.JLabel();
@@ -41,188 +40,131 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
         lblActividad = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        txtDatosPaquete = new javax.swing.JTextArea();
+        txaDatosPaquete = new javax.swing.JTextArea();
         jPanel15 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtDatosAlojamiento = new javax.swing.JTextArea();
+        txaDatosAlojamiento = new javax.swing.JTextArea();
         jPanel16 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtDatosVuelo = new javax.swing.JTextArea();
+        txaDatosVuelo = new javax.swing.JTextArea();
         jPanel17 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        txtDatosActividad = new javax.swing.JTextArea();
+        txaDatosActividad = new javax.swing.JTextArea();
         btnAgregar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         lblCantidadRegistros = new javax.swing.JLabel();
         lblNombrePaquete = new javax.swing.JLabel();
+        lblEmail = new javax.swing.JLabel();
 
         setClosable(true);
 
         pLienzo.setBackground(new java.awt.Color(250, 250, 250));
         pLienzo.setLayout(new java.awt.BorderLayout());
 
-        btnRight.setBackground(new java.awt.Color(153, 0, 153));
+        btnRight.setBackground(new java.awt.Color(33, 45, 62));
         btnRight.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         btnRight.setForeground(new java.awt.Color(250, 250, 250));
         btnRight.setText(">");
+        btnRight.setContentAreaFilled(false);
         btnRight.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRight.setOpaque(true);
         pLienzo.add(btnRight, java.awt.BorderLayout.LINE_END);
 
-        btnLeft.setBackground(new java.awt.Color(153, 0, 153));
+        btnLeft.setBackground(new java.awt.Color(33, 45, 62));
         btnLeft.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         btnLeft.setForeground(new java.awt.Color(250, 250, 250));
         btnLeft.setText("<");
+        btnLeft.setContentAreaFilled(false);
         btnLeft.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLeft.setOpaque(true);
         pLienzo.add(btnLeft, java.awt.BorderLayout.LINE_START);
 
-        jPanel2.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel2.setLayout(new java.awt.GridLayout(2, 4, 1, 0));
+        jPanel2.setBackground(new java.awt.Color(207, 10, 10));
+        jPanel2.setLayout(new java.awt.GridLayout(2, 4, 1, 1));
 
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PAQUETE", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.PAGE_AXIS));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPaquete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPaquete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        jPanel9.add(jPanel3);
+        jPanel9.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel9.add(lblPaquete);
 
         jPanel2.add(jPanel9);
 
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ALOJAMIENTO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel12.add(lblAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 240));
+        jPanel12.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel12.add(lblAlojamiento);
 
         jPanel2.add(jPanel12);
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VUELO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
-            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel13Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(lblVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 253, Short.MAX_VALUE)
-            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel13Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(lblVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jPanel13.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel13.add(lblVuelo);
 
         jPanel2.add(jPanel13);
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ACTIVIDAD", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
-            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel14Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(lblActividad, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 253, Short.MAX_VALUE)
-            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel14Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(lblActividad, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jPanel14.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel14.add(lblActividad);
 
         jPanel2.add(jPanel14);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS DEL PAQUETE", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtDatosPaquete.setColumns(20);
-        txtDatosPaquete.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        txtDatosPaquete.setRows(5);
-        jScrollPane4.setViewportView(txtDatosPaquete);
+        txaDatosPaquete.setColumns(20);
+        txaDatosPaquete.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        txaDatosPaquete.setRows(5);
+        jScrollPane4.setViewportView(txaDatosPaquete);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel4.add(jScrollPane4);
 
         jPanel2.add(jPanel4);
 
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS ALOJAMIENTO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel15.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtDatosAlojamiento.setColumns(20);
-        txtDatosAlojamiento.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        txtDatosAlojamiento.setRows(5);
-        jScrollPane1.setViewportView(txtDatosAlojamiento);
+        txaDatosAlojamiento.setColumns(20);
+        txaDatosAlojamiento.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        txaDatosAlojamiento.setRows(5);
+        jScrollPane1.setViewportView(txaDatosAlojamiento);
 
-        jPanel15.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 250, 220));
+        jPanel15.add(jScrollPane1);
 
         jPanel2.add(jPanel15);
 
         jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS VUELO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel16.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtDatosVuelo.setColumns(20);
-        txtDatosVuelo.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        txtDatosVuelo.setRows(5);
-        jScrollPane2.setViewportView(txtDatosVuelo);
+        txaDatosVuelo.setColumns(20);
+        txaDatosVuelo.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        txaDatosVuelo.setRows(5);
+        jScrollPane2.setViewportView(txaDatosVuelo);
 
-        jPanel16.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 250, 220));
+        jPanel16.add(jScrollPane2);
 
         jPanel2.add(jPanel16);
 
         jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS ACTIVIDAD", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel17.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtDatosActividad.setColumns(20);
-        txtDatosActividad.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        txtDatosActividad.setRows(5);
-        jScrollPane3.setViewportView(txtDatosActividad);
+        txaDatosActividad.setColumns(20);
+        txaDatosActividad.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        txaDatosActividad.setRows(5);
+        jScrollPane3.setViewportView(txaDatosActividad);
 
-        jPanel17.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 250, 220));
+        jPanel17.add(jScrollPane3);
 
         jPanel2.add(jPanel17);
 
         pLienzo.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        btnAgregar.setBackground(new java.awt.Color(153, 0, 153));
+        btnAgregar.setBackground(new java.awt.Color(33, 45, 62));
         btnAgregar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         btnAgregar.setForeground(new java.awt.Color(250, 250, 250));
         btnAgregar.setText("AGREGAR AL CARRITO");
+        btnAgregar.setContentAreaFilled(false);
         btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAgregar.setOpaque(true);
         pLienzo.add(btnAgregar, java.awt.BorderLayout.PAGE_END);
 
         jPanel1.setBackground(new java.awt.Color(250, 250, 250));
@@ -234,15 +176,22 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
         jPanel1.add(lblTitulo);
 
         jPanel5.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel5.setLayout(new java.awt.GridLayout(1, 2));
+        jPanel5.setLayout(new java.awt.GridLayout(1, 3));
 
         lblCantidadRegistros.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblCantidadRegistros.setForeground(new java.awt.Color(207, 10, 10));
         lblCantidadRegistros.setText("jLabel2");
         jPanel5.add(lblCantidadRegistros);
 
         lblNombrePaquete.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblNombrePaquete.setForeground(new java.awt.Color(207, 10, 10));
         lblNombrePaquete.setText("jLabel2");
         jPanel5.add(lblNombrePaquete);
+
+        lblEmail.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(207, 10, 10));
+        lblEmail.setText("jLabel2");
+        jPanel5.add(lblEmail);
 
         jPanel1.add(jPanel5);
 
@@ -252,11 +201,11 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 1294, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 751, Short.MAX_VALUE)
         );
 
         pack();
@@ -275,7 +224,6 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel9;
@@ -286,14 +234,15 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
     public javax.swing.JLabel lblActividad;
     public javax.swing.JLabel lblAlojamiento;
     public javax.swing.JLabel lblCantidadRegistros;
+    public javax.swing.JLabel lblEmail;
     public javax.swing.JLabel lblNombrePaquete;
     public javax.swing.JLabel lblPaquete;
     public javax.swing.JLabel lblTitulo;
     public javax.swing.JLabel lblVuelo;
     public javax.swing.JPanel pLienzo;
-    public javax.swing.JTextArea txtDatosActividad;
-    public javax.swing.JTextArea txtDatosAlojamiento;
-    public javax.swing.JTextArea txtDatosPaquete;
-    public javax.swing.JTextArea txtDatosVuelo;
+    public javax.swing.JTextArea txaDatosActividad;
+    public javax.swing.JTextArea txaDatosAlojamiento;
+    public javax.swing.JTextArea txaDatosPaquete;
+    public javax.swing.JTextArea txaDatosVuelo;
     // End of variables declaration//GEN-END:variables
 }

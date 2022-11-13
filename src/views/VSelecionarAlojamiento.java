@@ -34,7 +34,7 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         jPanel6 = new javax.swing.JPanel();
         lblPortadoPrincipal = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbxMisPaquetes = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaDatosExtra = new javax.swing.JTextArea();
         jPanel7 = new javax.swing.JPanel();
@@ -87,10 +87,10 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MIS PAQUETES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 490, 60));
+        cbxMisPaquetes.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxMisPaquetes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxMisPaquetes.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MIS PAQUETES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        jPanel4.add(cbxMisPaquetes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 490, 60));
 
         txaDatosExtra.setColumns(20);
         txaDatosExtra.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
@@ -188,7 +188,7 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnLeft;
     public javax.swing.JButton btnRight;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JComboBox<String> cbxMisPaquetes;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

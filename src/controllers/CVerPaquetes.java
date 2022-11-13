@@ -1,5 +1,6 @@
 package controllers;
 
+import formato.*;
 import interfaces.ObligacionControlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +8,7 @@ import views.*;
 import dto.*;
 import java.util.List;
 import dao.*;
+import java.awt.Image;
 import process.*;
 import java.util.LinkedList;
 import rsscalelabel.RSScaleLabel;
@@ -30,9 +32,7 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
 
     public CVerPaquetes(VVerPaquetes f) {
         this.vista = f;
-        this.agregarTodosListeners();
-        this.inicializarObjetos();
-        this.construirVista();
+        constructor();
     }
 
     @Override
@@ -40,7 +40,6 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         this.vista.setVisible(true);
         this.vista.setTitle("VER PAQUETES");
         this.vista.lblTitulo.setText("Ver Paquetes");
-        this.vista.lblCantidadRegistros.setText("Cantidad de Paquetes   : " + listPaquetes.size());
     }
 
     @Override
@@ -58,14 +57,14 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         alojamientoDAO = new AlojamientoDAO();
         actividadDAO = new ActividadDAO();
         vueloDAO = new VueloDAO();
-        
+
         paqueteDTO = new PaqueteDTO();
         miPaqueteDTO = new MiPaqueteDTO();
-        
+
         listPaquetes = new LinkedList<>();
         listPaquetes = paqueteDAO.readAll();
         index = 0;
-//        completarInformacionPaquete();
+        completarInformacionPaquete();
     }
 
     @Override
@@ -79,12 +78,12 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         }
     }
 
-    private void agregarPaquete(){
+    private void agregarPaquete() {
         miPaqueteDTO = Parse.parsePaqueteToMiPaquete(paqueteDTO);
         miPaqueteDTO.setIdUsuario(CMenu.usuario.getIdUsuario());
         miPaqueteDAO.create(miPaqueteDTO);
     }
-    
+
     private void moveLeft() {
         if (index > 0) {
             index--;
@@ -104,30 +103,30 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
     }
 
     private void completarInformacionPaquete() {
+        //informacion basica
+        this.vista.lblCantidadRegistros.setText("Cantidad de Paquetes: " + listPaquetes.size());
+        this.vista.lblNombrePaquete.setText("Nombre Paquete: " + listPaquetes.get(index).getNombrePaquete());
+        this.vista.lblEmail.setText("Usuario: " + CMenu.usuario.getEmail());
         //establecer img portada
         paqueteDTO = listPaquetes.get(index);
         PortadaDTO portadaDTO = portadaDAO.read(paqueteDTO.getPortadaPrincipal());
-        RSScaleLabel.setScaleLabel(
-                this.vista.lblPaquete, "imagenes/paquetes/" + portadaDTO.getPath());
-        this.vista.txtDatosPaquete.setText(paqueteDTO.toString());
+        Imagen.ajustar(this.vista.lblPaquete, "imagenes/paquetes/" + portadaDTO.getPath());
+        this.vista.txaDatosPaquete.setText(paqueteDTO.toString());
         //establecer img alojamiento
         AlojamientoDTO alojamientoDTO = alojamientoDAO.read(paqueteDTO.getIdAlojamiento());
         portadaDTO = portadaDAO.read(alojamientoDTO.getPortadoPrincipal());
-        RSScaleLabel.setScaleLabel(
-                this.vista.lblAlojamiento, "imagenes/alojamientos/" + portadaDTO.getPath());
-        this.vista.txtDatosAlojamiento.setText(alojamientoDTO.toString());
+        Imagen.ajustar(this.vista.lblAlojamiento, "imagenes/alojamientos/" + portadaDTO.getPath());
+        this.vista.txaDatosAlojamiento.setText(alojamientoDTO.toString());
         //establecer img vuelo
         VueloDTO vueloDTO = vueloDAO.read(paqueteDTO.getIdVuelo());
         portadaDTO = portadaDAO.read(vueloDTO.getPortadaPrincipal());
-        RSScaleLabel.setScaleLabel(
-                this.vista.lblVuelo, "imagenes/vuelos/" + portadaDTO.getPath());
-        this.vista.txtDatosVuelo.setText(vueloDTO.toString());
+        Imagen.ajustar(this.vista.lblVuelo, "imagenes/vuelos/" + portadaDTO.getPath());
+       this.vista.txaDatosVuelo.setText(vueloDTO.toString());
         //establecer img actividad
         ActividadDTO actividadDTO = actividadDAO.read(paqueteDTO.getIdActividad());
         portadaDTO = portadaDAO.read(actividadDTO.getPortadoPrincipal());
-        RSScaleLabel.setScaleLabel(
-                this.vista.lblActividad, "imagenes/actividades/" + portadaDTO.getPath());
-        this.vista.txtDatosActividad.setText(actividadDTO.toString());
+        Imagen.ajustar(this.vista.lblActividad, "imagenes/actividades/" + portadaDTO.getPath());
+        this.vista.txaDatosActividad.setText(actividadDTO.toString());
     }
 
 }
