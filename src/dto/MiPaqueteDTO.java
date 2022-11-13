@@ -4,21 +4,21 @@ public class MiPaqueteDTO extends PaqueteDTO {
 
     private int idUsuario;
 
-    public MiPaqueteDTO(int idUsuario, int idPaquete, int idAlojamiento, 
-            int idVuelo, int idOrigen, int idDestino, String fechaSalida, 
-            String fechaRegreso, int idActividad, int portadaPrincipal, 
+    public MiPaqueteDTO(int idUsuario, int idPaquete, int idAlojamiento,
+            int idVuelo, int idOrigen, int idDestino, String fechaSalida,
+            String fechaRegreso, int idActividad, int portadaPrincipal,
             int portadaSecundaria, String nombrePaquete) {
-        super(idPaquete, idAlojamiento, idVuelo, idOrigen, idDestino, 
-                fechaSalida, fechaRegreso, idActividad, portadaPrincipal, 
+        super(idPaquete, idAlojamiento, idVuelo, idOrigen, idDestino,
+                fechaSalida, fechaRegreso, idActividad, portadaPrincipal,
                 portadaSecundaria, nombrePaquete);
         this.idUsuario = idUsuario;
     }
 
-    public MiPaqueteDTO(int idUsuario, int idAlojamiento, int idVuelo, 
-            int idOrigen, int idDestino, String fechaSalida, String fechaRegreso, 
+    public MiPaqueteDTO(int idUsuario, int idAlojamiento, int idVuelo,
+            int idOrigen, int idDestino, String fechaSalida, String fechaRegreso,
             int idActividad, int portadaPrincipal, int portadaSecundaria,
             String nombrePaquete) {
-        super(idAlojamiento, idVuelo, idOrigen, idDestino, fechaSalida, 
+        super(idAlojamiento, idVuelo, idOrigen, idDestino, fechaSalida,
                 fechaRegreso, idActividad, portadaPrincipal, portadaSecundaria,
                 nombrePaquete);
         this.idUsuario = idUsuario;
@@ -29,7 +29,7 @@ public class MiPaqueteDTO extends PaqueteDTO {
     }
 
     public MiPaqueteDTO() {
-        
+
     }
 
     @Override
@@ -37,8 +37,6 @@ public class MiPaqueteDTO extends PaqueteDTO {
         return ""
                 + "\n Id Usuario        : " + idUsuario;
     }
-    
-    
 
     public int getIdUsuario() {
         return idUsuario;
@@ -47,5 +45,5 @@ public class MiPaqueteDTO extends PaqueteDTO {
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
-    
+
 }

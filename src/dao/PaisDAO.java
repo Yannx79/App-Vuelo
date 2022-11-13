@@ -2,40 +2,58 @@ package dao;
 
 import dto.PaisDTO;
 import interfaces.*;
+import java.sql.*;
+import conexion.*;
+import java.util.LinkedList;
 import java.util.List;
 
-public class PaisDAO implements ObjectIDAO<PaisDTO>{
+public class PaisDAO implements ObjectIDAO<PaisDTO> {
 
     private static final String SQL_CREATE = "";
     private static final String SQL_READ = "";
-    private static final String SQL_READ_ALL = "";
+    private static final String SQL_READ_ALL = "SELECT * FROM pais";
     private static final String SQL_UPDATE = "";
     private static final String SQL_DELETE = "";
-    
-    
+    private static final Conexion CONEXION = Conexion.getConexion();
+
     @Override
     public boolean create(PaisDTO t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return false;
     }
 
     @Override
     public PaisDTO read(Object key) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return null;
     }
 
     @Override
     public List<PaisDTO> readAll() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        List<PaisDTO> list = new LinkedList<>();
+        try {
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_READ_ALL);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                PaisDTO paisDTO = new PaisDTO();
+                paisDTO.setIdPais(rs.getInt(1));
+                paisDTO.setNombrePais(rs.getString(2));
+                list.add(paisDTO);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return list;
     }
 
     @Override
     public boolean update(PaisDTO t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return false;
     }
 
     @Override
     public boolean delete(Object key) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return false;
     }
 
 }

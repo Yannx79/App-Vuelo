@@ -35,7 +35,7 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        btnCrear = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -109,12 +109,12 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
         jLabel5.setBackground(new java.awt.Color(192, 27, 54));
         jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jButton3.setBackground(new java.awt.Color(250, 250, 250));
-        jButton3.setForeground(new java.awt.Color(250, 250, 250));
-        jButton3.setText("AGREGAR");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        jButton3.setContentAreaFilled(false);
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnCrear.setBackground(new java.awt.Color(250, 250, 250));
+        btnCrear.setForeground(new java.awt.Color(250, 250, 250));
+        btnCrear.setText("CREAR");
+        btnCrear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnCrear.setContentAreaFilled(false);
+        jPanel4.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 180, 50));
 
@@ -150,6 +150,7 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
         jButton5.setText("ELIMINAR ULTIMO REGISTRO");
         jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
         jButton5.setContentAreaFilled(false);
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel6.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 180, 50));
@@ -298,16 +299,16 @@ public class VPaquetePersonalizado extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnCrear;
     public javax.swing.JComboBox<String> cbxLugarDestino;
     public javax.swing.JComboBox<String> cbxLugarPartida;
     public javax.swing.JComboBox<String> cbxPortadaPrincipal;
     public javax.swing.JComboBox<String> cbxPortadaSecundaria;
     public com.toedter.calendar.JDateChooser chFechaRegreso;
     public com.toedter.calendar.JDateChooser dcFechaPartida;
-    private javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    public javax.swing.JButton jButton2;
+    public javax.swing.JButton jButton4;
+    public javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

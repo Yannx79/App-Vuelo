@@ -1,8 +1,10 @@
 package controllers;
 
+import dao.MiPaqueteDAO;
 import views.*;
 import interfaces.*;
 import process.*;
+import dto.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -24,6 +26,7 @@ public class CPaquetePersonalizado extends ObligacionControlador implements Acti
 
     @Override
     public void agregarTodosListeners() {
+        this.vista.btnCrear.addActionListener(this);
     }
 
     @Override
@@ -32,6 +35,16 @@ public class CPaquetePersonalizado extends ObligacionControlador implements Acti
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == this.vista.btnCrear) {
+            crearPaquetePerzonalizado();
+        }
     }
 
+    private void crearPaquetePerzonalizado(){
+        MiPaqueteDAO miPaqueteDAO = new MiPaqueteDAO();
+        MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
+        miPaqueteDTO = PPaquetePersonalizado.instanciar(this.vista);
+        System.out.println(miPaqueteDTO);
+    }
+    
 }

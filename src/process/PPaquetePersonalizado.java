@@ -1,13 +1,15 @@
 package process;
 
+import controllers.CMenu;
 import views.*;
 import dao.*;
 import dto.*;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class PPaquetePersonalizado {
-
+    
     public static void construirForma(VPaquetePersonalizado f) {
         completarCombox(f);
     }
@@ -20,6 +22,18 @@ public class PPaquetePersonalizado {
             f.cbxPortadaPrincipal.addItem(p.getIdPortada() + " - " + p.getPath());
             f.cbxPortadaSecundaria.addItem(p.getIdPortada() + " - " + p.getPath());
         }
+        f.cbxLugarDestino.removeAllItems();
+        f.cbxLugarPartida.removeAllItems();
+        List<PaisDTO> listPaises = obtenerListPaises();
+        for (PaisDTO p : listPaises) {
+            f.cbxLugarDestino.addItem(p.getIdPais() + " - " + p.getNombrePais());
+            f.cbxLugarPartida.addItem(p.getIdPais() + " - " + p.getNombrePais());
+        }
+    }
+
+    private static List<PaisDTO> obtenerListPaises() {
+        PaisDAO paisDAO = new PaisDAO();
+        return paisDAO.readAll();
     }
 
     private static List<PortadaDTO> obtenerListPortadasParaPaquetes() {
@@ -31,4 +45,21 @@ public class PPaquetePersonalizado {
         return list;
     }
 
+    public static MiPaqueteDTO instanciar(VPaquetePersonalizado f){
+        MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
+        miPaqueteDTO.setIdOrigen(getPK(f.cbxLugarPartida.getSelectedItem().toString()));     
+        miPaqueteDTO.setIdDestino(getPK(f.cbxLugarDestino.getSelectedItem().toString()));
+        miPaqueteDTO.setPortadaPrincipal(getPK(f.cbxPortadaPrincipal.getSelectedItem().toString()));
+        miPaqueteDTO.setPortadaSecundaria(getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
+        miPaqueteDTO.setFechaRegreso(f.chFechaRegreso.getDate().toString());
+        miPaqueteDTO.setFechaSalida(f.dcFechaPartida.getDate().toString());
+        miPaqueteDTO.setIdUsuario(CMenu.usuario.getIdUsuario());
+        return miPaqueteDTO;
+    }
+    
+    private static int getPK(String valor){
+        String valores[] = valor.split(" - ");
+        return Integer.parseInt(valores[0]);
+    }
+    
 }
