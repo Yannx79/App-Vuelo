@@ -13,7 +13,7 @@ import views.*;
 
 public class CMenu extends ObligacionControlador implements ActionListener, WindowListener {
     
-    private VMenu vista;
+    public static VMenu vista;
     public static ClienteDTO usuario;
     
     public CMenu(VMenu vmenu) {

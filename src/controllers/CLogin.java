@@ -18,9 +18,7 @@ public class CLogin extends ObligacionControlador implements ActionListener {
 
     public CLogin(VLogin f) {
         this.vista = f;
-        agregarTodosListeners();
-        inicializarObjetos();
-        construirVista();
+        super.constructor();
     }
 
     @Override
@@ -28,6 +26,9 @@ public class CLogin extends ObligacionControlador implements ActionListener {
         this.vista.setVisible(true);
         this.vista.setTitle("Login");
         this.vista.rbCliente.setSelected(true);
+        habilitarOperacionesCliente(false);
+        habilitarOperacionesEmpleado(false);
+        habilitarOperacionesSesion(false);
     }
 
     @Override
@@ -48,16 +49,18 @@ public class CLogin extends ObligacionControlador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.btnLogin) {
             this.loguear();
-        } if (e.getSource() == this.vista.btnRegistrar) {
+            this.habilitarOperaciones();
+        }
+        if (e.getSource() == this.vista.btnRegistrar) {
             this.registrar();
         }
     }
 
-    private void registrar(){
+    private void registrar() {
         this.vista.lblTitulo.setText("Registrar");
         this.vista.setTitle("Registrar");
     }
-    
+
     private void loguear() {
         String email = this.vista.txtEmail.getText();
         String password = Encriptar.toMD5(String.valueOf(this.vista.txtPassword.getPassword()));
@@ -76,6 +79,39 @@ public class CLogin extends ObligacionControlador implements ActionListener {
             this.vista.txtPassword.setText("");
         }
 
+    }
+
+    private void habilitarOperaciones(){
+        if (this.vista.rbCliente.isSelected()) {
+            habilitarOperacionesCliente(true);
+        } else if (this.vista.rbEmpleado.isSelected()) {
+            habilitarOperacionesEmpleado(true);
+        } else if (this.vista.rbAdministrador.isSelected()) {
+            habilitarOperacionesCliente(true);
+            habilitarOperacionesEmpleado(true);
+        }
+        habilitarOperacionesSesion(true);
+    }
+    
+    private void habilitarOperacionesSesion(boolean estado) {
+        CMenu.vista.miLogin.setEnabled(!estado);
+        CMenu.vista.miLogout.setEnabled(estado);
+    }
+
+    private void habilitarOperacionesEmpleado(boolean estado) {
+        CMenu.vista.miCrearActividad.setEnabled(estado);
+        CMenu.vista.miCrearAlojamiento.setEnabled(estado);
+        CMenu.vista.miCrearPaquete.setEnabled(estado);
+        CMenu.vista.miCrearVuelo.setEnabled(estado);
+    }
+
+    private void habilitarOperacionesCliente(boolean estado) {
+        CMenu.vista.miPaquetesPersonalizados.setEnabled(estado);
+        CMenu.vista.miSeleccionarActividad.setEnabled(estado);
+        CMenu.vista.miSeleccionarAlojamiento.setEnabled(estado);
+        CMenu.vista.miSeleccionarVuelo.setEnabled(estado);
+        CMenu.vista.miVerMisPaquetes.setEnabled(estado);
+        CMenu.vista.miVerPaquetes.setEnabled(estado);
     }
 
 }
