@@ -19,21 +19,27 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO> {
             + "fecha_regreso, id_actividad, portada_principal, portada_secundaria, "
             + "id_usuario, nombre_paquete) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
     private static final String SQL_INSERT_PAQUETE = ""
-            + "INSERT INTO mis_paquetes ( id_origen, id_destino, fecha_salida, "
+            + "INSERT INTO mis_paquetes (id_origen, id_destino, fecha_salida, "
             + "fecha_regreso, portada_principal, portada_secundaria, "
             + "id_usuario, nombre_paquete) VALUES (?,?,?,?,?,?,?,?)";
     private static final String SQL_READ = ""
-            + "SELECT * FROM mis_paquetes WHERE id_paquete=?";
+            + "SELECT * FROM mis_paquetes WHERE id_mis_paquete=?";
     private static final String SQL_READ_ALL = ""
             + "SELECT * FROM mis_paquetes";
     private static final String SQL_UPDATE = ""
-            + "UPDATE paquetes SET id_alojamiento=?, id_vuelo=?, "
+            + "UPDATE mis_paquetes SET id_alojamiento=?, id_vuelo=?, "
             + "id_origen=?, id_destino=?, fecha_salida=?, "
             + "fecha_regreso=?, id_actividad=?, portada_principal=?, "
             + "portada_secundaria=?, id_usuario=?, nombre_paquete=?"
-            + "WHERE id_mis_paquete=?";
+            + "WHERE id_mis_paquetes=?";
+    private static final String SQL_UPDATE_PAQUETE_ALOJAMIENTO = "UPDATE mis_paquetes "
+            + "SET id_alojamiento=? WHERE id_mis_paquetes=?";
+    private static final String SQL_UPDATE_PAQUETE_VUELO = "UPDATE mis_paquetes "
+            + "SET id_vuelo=? WHERE id_mis_paquetes=?";
+    private static final String SQL_UPDATE_PAQUETE_ACTIVIDAD = "UPDATE mis_paquetes "
+            + "SET id_actividad=? WHERE id_mis_paquetes=?";
     private static final String SQL_DELELE = ""
-            + "DELETE FROM paquetes WHERE id_mis_paquete=?";
+            + "DELETE FROM paquetes WHERE id_mis_paquetes=?";
     private static final Conexion CONEXION = Conexion.getConexion();
 
     public boolean createPaquete(MiPaqueteDTO t) {
@@ -144,6 +150,52 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO> {
             CONEXION.closeConexion();
         }
         return listPaquetes;
+    }
+
+    public boolean updateAlojamiento(MiPaqueteDTO t) {
+        try {
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_UPDATE_PAQUETE_ALOJAMIENTO);
+            ps.setInt(1, t.getIdAlojamiento());
+            ps.setInt(2, t.getIdPaquete());
+            if (ps.executeUpdate()> 0) {
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return false;
+    }
+    public boolean updateVuelo(MiPaqueteDTO t) {
+        try {
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_UPDATE_PAQUETE_VUELO);
+            ps.setInt(1, t.getIdVuelo());
+            ps.setInt(2, t.getIdPaquete());
+            if (ps.executeUpdate()> 0) {
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return false;
+    }
+    public boolean updateActividad(MiPaqueteDTO t) {
+        try {
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_UPDATE_PAQUETE_ACTIVIDAD);
+            ps.setInt(1, t.getIdActividad());
+            ps.setInt(2, t.getIdPaquete());
+            if (ps.executeUpdate()> 0) {
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            CONEXION.closeConexion();
+        }
+        return false;
     }
 
     @Override

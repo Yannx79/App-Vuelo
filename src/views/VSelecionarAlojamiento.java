@@ -31,7 +31,6 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         btnLeft = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
         lblPortadoPrincipal = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         cbxMisPaquetes = new javax.swing.JComboBox<>();
@@ -43,48 +42,46 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         txtNumeroPersonas = new javax.swing.JTextField();
         txtNumeroHabitaciones = new javax.swing.JTextField();
         txtIdHotel = new javax.swing.JTextField();
-        jPanel8 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
         lblPortadaSecundaria = new javax.swing.JLabel();
         btnAgregar = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         lblCantidadRegistros = new javax.swing.JLabel();
-        lblNombrePaquete = new javax.swing.JLabel();
+        lblNombreAlojamiento = new javax.swing.JLabel();
+        lblUsuario = new javax.swing.JLabel();
 
         setClosable(true);
 
         jPanel1.setBackground(new java.awt.Color(250, 250, 250));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        btnRight.setBackground(new java.awt.Color(153, 0, 153));
+        btnRight.setBackground(new java.awt.Color(33, 45, 62));
+        btnRight.setForeground(new java.awt.Color(250, 250, 250));
         btnRight.setText(">");
+        btnRight.setContentAreaFilled(false);
+        btnRight.setOpaque(true);
         jPanel1.add(btnRight, java.awt.BorderLayout.LINE_END);
 
-        btnLeft.setBackground(new java.awt.Color(153, 0, 153));
+        btnLeft.setBackground(new java.awt.Color(33, 45, 62));
+        btnLeft.setForeground(new java.awt.Color(250, 250, 250));
         btnLeft.setText("<");
+        btnLeft.setContentAreaFilled(false);
+        btnLeft.setOpaque(true);
         jPanel1.add(btnLeft, java.awt.BorderLayout.LINE_START);
 
-        jPanel2.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel2.setLayout(new java.awt.GridLayout(2, 3, 1, 0));
+        jPanel2.setBackground(new java.awt.Color(207, 10, 10));
+        jPanel2.setLayout(new java.awt.GridLayout(2, 2, 1, 1));
 
-        jPanel3.setLayout(new javax.swing.BoxLayout(jPanel3, javax.swing.BoxLayout.PAGE_AXIS));
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPortadoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPortadoPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-        );
-
-        jPanel3.add(jPanel6);
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PORTADA PRINCIPAL", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.add(lblPortadoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 510, 250));
 
         jPanel2.add(jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cbxMisPaquetes.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
@@ -102,6 +99,7 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
 
         jPanel2.add(jPanel4);
 
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(new javax.swing.BoxLayout(jPanel7, javax.swing.BoxLayout.PAGE_AXIS));
 
         txtIdAlojamiento.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
@@ -126,24 +124,23 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
 
         jPanel2.add(jPanel7);
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPortadaSecundaria, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPortadaSecundaria, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-        );
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PORTADA SECUNDARIA", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.add(jPanel8);
+        lblPortadaSecundaria.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel6.add(lblPortadaSecundaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, 510, 250));
+
+        jPanel2.add(jPanel6);
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        btnAgregar.setBackground(new java.awt.Color(153, 0, 153));
+        btnAgregar.setBackground(new java.awt.Color(33, 45, 62));
         btnAgregar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
-        btnAgregar.setText("AGREGAR");
+        btnAgregar.setForeground(new java.awt.Color(250, 250, 250));
+        btnAgregar.setText("AGREGAR ALOJAMIENTO");
+        btnAgregar.setContentAreaFilled(false);
+        btnAgregar.setOpaque(true);
         jPanel1.add(btnAgregar, java.awt.BorderLayout.PAGE_END);
 
         jPanel5.setBackground(new java.awt.Color(250, 250, 250));
@@ -155,15 +152,22 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         jPanel5.add(lblTitulo);
 
         jPanel9.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel9.setLayout(new java.awt.GridLayout(1, 2));
+        jPanel9.setLayout(new java.awt.GridLayout(1, 3));
 
         lblCantidadRegistros.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblCantidadRegistros.setForeground(new java.awt.Color(207, 10, 10));
         lblCantidadRegistros.setText("jLabel2");
         jPanel9.add(lblCantidadRegistros);
 
-        lblNombrePaquete.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
-        lblNombrePaquete.setText("jLabel2");
-        jPanel9.add(lblNombrePaquete);
+        lblNombreAlojamiento.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblNombreAlojamiento.setForeground(new java.awt.Color(207, 10, 10));
+        lblNombreAlojamiento.setText("jLabel2");
+        jPanel9.add(lblNombreAlojamiento);
+
+        lblUsuario.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblUsuario.setForeground(new java.awt.Color(207, 10, 10));
+        lblUsuario.setText("jLabel2");
+        jPanel9.add(lblUsuario);
 
         jPanel5.add(jPanel9);
 
@@ -177,7 +181,7 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
         );
 
         pack();
@@ -190,20 +194,20 @@ public class VSelecionarAlojamiento extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnRight;
     public javax.swing.JComboBox<String> cbxMisPaquetes;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    public javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JLabel lblCantidadRegistros;
-    public javax.swing.JLabel lblNombrePaquete;
+    public javax.swing.JLabel lblNombreAlojamiento;
     public javax.swing.JLabel lblPortadaSecundaria;
     public javax.swing.JLabel lblPortadoPrincipal;
     public javax.swing.JLabel lblTitulo;
+    public javax.swing.JLabel lblUsuario;
     public javax.swing.JTextArea txaDatosExtra;
     public javax.swing.JTextField txtCostoAlojamiento;
     public javax.swing.JTextField txtIdAlojamiento;

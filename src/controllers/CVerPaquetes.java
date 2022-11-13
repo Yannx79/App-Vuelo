@@ -40,6 +40,8 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         this.vista.setVisible(true);
         this.vista.setTitle("VER PAQUETES");
         this.vista.lblTitulo.setText("Ver Paquetes");
+        this.vista.lblCantidadRegistros.setText("Cantidad de Paquetes: " + listPaquetes.size());
+        this.vista.lblEmail.setText("Usuario: " + CMenu.usuario.getEmail());
     }
 
     @Override
@@ -104,9 +106,7 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
 
     private void completarInformacionPaquete() {
         //informacion basica
-        this.vista.lblCantidadRegistros.setText("Cantidad de Paquetes: " + listPaquetes.size());
         this.vista.lblNombrePaquete.setText("Nombre Paquete: " + listPaquetes.get(index).getNombrePaquete());
-        this.vista.lblEmail.setText("Usuario: " + CMenu.usuario.getEmail());
         //establecer img portada
         paqueteDTO = listPaquetes.get(index);
         PortadaDTO portadaDTO = portadaDAO.read(paqueteDTO.getPortadaPrincipal());
@@ -121,7 +121,7 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         VueloDTO vueloDTO = vueloDAO.read(paqueteDTO.getIdVuelo());
         portadaDTO = portadaDAO.read(vueloDTO.getPortadaPrincipal());
         Imagen.ajustar(this.vista.lblVuelo, "imagenes/vuelos/" + portadaDTO.getPath());
-       this.vista.txaDatosVuelo.setText(vueloDTO.toString());
+        this.vista.txaDatosVuelo.setText(vueloDTO.toString());
         //establecer img actividad
         ActividadDTO actividadDTO = actividadDAO.read(paqueteDTO.getIdActividad());
         portadaDTO = portadaDAO.read(actividadDTO.getPortadoPrincipal());
