@@ -11,7 +11,6 @@ import interfaces.*;
 import java.util.LinkedList;
 import java.util.List;
 import process.PSelecionarAlojamiento;
-import rsscalelabel.RSScaleLabel;
 
 public class CSelecionarAlojamiento extends ObligacionControlador implements ActionListener {
 
@@ -20,7 +19,6 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
 
     private AlojamientoDAO alojamientoDAO;
     private PortadaDAO portadaDAO;
-    private VueloDAO vueloDAO;
 
     private int index;
 

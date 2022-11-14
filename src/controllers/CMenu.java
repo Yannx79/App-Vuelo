@@ -48,9 +48,13 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
             CSelecionarAlojamiento csa = new CSelecionarAlojamiento(vsa);
             Desktop.agregarAlDesktop(this.vista.desktopMenu, vsa);
         } else if (e.getSource() == this.vista.miSeleccionarVuelo) {
-
+            VSelecionarVuelo vsv = new VSelecionarVuelo();
+            CSelecionarVuelo csv = new CSelecionarVuelo(vsv);
+            Desktop.agregarAlDesktop(this.vista.desktopMenu, vsv);
         } else if (e.getSource() == this.vista.miSeleccionarActividad) {
-
+            VSelecionarActividad vsa = new VSelecionarActividad();
+            CSelecionarActividad csa = new CSelecionarActividad(vsa);
+            Desktop.agregarAlDesktop(this.vista.desktopMenu, vsa);
         } else if (e.getSource() == this.vista.miCrearPaquete) {
 
         } else if (e.getSource() == this.vista.miCrearAlojamiento) {

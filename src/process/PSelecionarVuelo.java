@@ -1,20 +1,20 @@
+
 package process;
 
 import controllers.CMenu;
-import views.*;
-import dao.*;
-import dto.*;
+import dao.MiPaqueteDAO;
+import dto.MiPaqueteDTO;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.swing.JInternalFrame;
+import views.VSelecionarAlojamiento;
+import views.VSelecionarVuelo;
 
-public class PSelecionarAlojamiento {
-
-    public static void construirForma(VSelecionarAlojamiento f) {
+public class PSelecionarVuelo {
+   public static void construirForma(VSelecionarVuelo f) {
         completarCombox(f);
     }
 
-    public static void completarCombox(VSelecionarAlojamiento f) {
+    public static void completarCombox(VSelecionarVuelo f) {
         List<MiPaqueteDTO> list = obtenerListaMisPaquete();
         f.cbxMisPaquetes.removeAllItems();
         for (MiPaqueteDTO x : list) {

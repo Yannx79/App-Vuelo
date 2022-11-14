@@ -58,7 +58,7 @@ public class VueloDAO implements ObjectIDAO<VueloDTO> {
                 vueloDTO.setNumeroPasajeros(rs.getInt(2));
                 vueloDTO.setCostoVuelo(rs.getInt(3));
                 vueloDTO.setIdAvion(rs.getInt(4));
-                vueloDTO.setPortadaPrincipal(rs.getInt(6));
+                vueloDTO.setPortadaPrincipal(rs.getInt(5));
                 vueloDTO.setPortadaSecundaria(rs.getInt(6));
             }
         } catch (Exception e) {
@@ -82,7 +82,7 @@ public class VueloDAO implements ObjectIDAO<VueloDTO> {
                 vueloDTO.setNumeroPasajeros(rs.getInt(2));
                 vueloDTO.setCostoVuelo(rs.getInt(3));
                 vueloDTO.setIdAvion(rs.getInt(4));
-                vueloDTO.setPortadaPrincipal(rs.getInt(6));
+                vueloDTO.setPortadaPrincipal(rs.getInt(5));
                 vueloDTO.setPortadaSecundaria(rs.getInt(6));
                 list.add(vueloDTO);
             }
