@@ -25,9 +25,10 @@ public class VLogin extends javax.swing.JInternalFrame {
 
         bgUser = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lblBannerLogo = new javax.swing.JLabel();
+        lblLogoCentro = new javax.swing.JLabel();
+        lblLogoReducido = new javax.swing.JLabel();
+        lblFondo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -50,40 +51,21 @@ public class VLogin extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(250, 250, 250));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblBannerLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(lblBannerLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 322, 250));
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblLogoCentro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(lblLogoCentro, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 278, 241));
 
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblLogoReducido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblLogoReducido.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel1.add(lblLogoReducido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 46, 41));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(39, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(81, 81, 81))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(115, Short.MAX_VALUE))
-        );
+        lblFondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblFondo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel1.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 620));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 620));
 
@@ -209,17 +191,18 @@ public class VLogin extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnLogin;
     public javax.swing.JButton btnRegistrar;
     public javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    public javax.swing.JLabel lblBannerLogo;
+    public javax.swing.JLabel lblFondo;
+    public javax.swing.JLabel lblLogoCentro;
+    public javax.swing.JLabel lblLogoReducido;
     public javax.swing.JLabel lblTitulo;
     public javax.swing.JRadioButton rbAdministrador;
     public javax.swing.JRadioButton rbCliente;

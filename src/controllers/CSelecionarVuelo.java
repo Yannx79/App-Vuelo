@@ -33,7 +33,7 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
         this.vista.setTitle("SELECCIONAR VUELOS");
         this.vista.lblTitulo.setText("Seleccionar Vuelos");
         this.vista.lblCantidadRegistros.setText(
-                "Cantidad de vuelos: ");
+                "Cantidad de vuelos: " + list.size());
         this.vista.lblUsuario.setText("Usuario: " + CMenu.usuario.getEmail());
         PSelecionarVuelo.construirForma(vista);
     }
@@ -52,6 +52,9 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
         this.list = new LinkedList<>();
         this.list = vueloDAO.readAll();
         this.index = 0;
+//        System.out.println(this.vista.lblPortadoPrincipal.getSize());
+//        this.vista.lblPortadoPrincipal.setSize(this.vista.pPortadaPrincipal.getSize());
+//        System.out.println(this.vista.pPortadaPrincipal.getSize());
         this.completarInformacionVuelo();
     }
 

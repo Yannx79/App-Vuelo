@@ -9,13 +9,14 @@ public class Imagen {
 
     public static void ajustar(JLabel label, String path) {
         if (label.getWidth() == 0 && label.getHeight() == 0) {
+            System.out.println("Dimensiones nulas");
             label.setSize(270, 270);
         }
         ImageIcon imageIcon = new ImageIcon(path);
         Icon icon = new ImageIcon(
                 imageIcon.getImage().
                         getScaledInstance(
-                                label.getWidth(), label.getWidth(), Image.SCALE_DEFAULT)
+                                label.getWidth(), label.getHeight(), Image.SCALE_DEFAULT)
         );
         label.setIcon(icon);
         label.repaint();

@@ -30,7 +30,7 @@ public class VSelecionarVuelo extends javax.swing.JInternalFrame {
         btnRight = new javax.swing.JButton();
         btnLeft = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        pPortadaPrincipal = new javax.swing.JPanel();
         lblPortadoPrincipal = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         cbxMisPaquetes = new javax.swing.JComboBox<>();
@@ -74,12 +74,12 @@ public class VSelecionarVuelo extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(207, 10, 10));
         jPanel2.setLayout(new java.awt.GridLayout(2, 2, 1, 1));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PORTADA PRINCIPAL", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(lblPortadoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 510, 250));
+        pPortadaPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        pPortadaPrincipal.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PORTADA PRINCIPAL", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        pPortadaPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pPortadaPrincipal.add(lblPortadoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 510, 250));
 
-        jPanel2.add(jPanel3);
+        jPanel2.add(pPortadaPrincipal);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -193,7 +193,6 @@ public class VSelecionarVuelo extends javax.swing.JInternalFrame {
     public javax.swing.JComboBox<String> cbxMisPaquetes;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -206,6 +205,7 @@ public class VSelecionarVuelo extends javax.swing.JInternalFrame {
     public javax.swing.JLabel lblPortadoPrincipal;
     public javax.swing.JLabel lblTitulo;
     public javax.swing.JLabel lblUsuario;
+    public javax.swing.JPanel pPortadaPrincipal;
     public javax.swing.JTextArea txaDatosExtra;
     public javax.swing.JTextField txtCostoVuelo;
     public javax.swing.JTextField txtIdAvion;

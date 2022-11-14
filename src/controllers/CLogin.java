@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.stream.Collectors;
 import formato.Encriptar;
+import formato.Imagen;
 
 public class CLogin extends ObligacionControlador implements ActionListener {
 
@@ -29,6 +30,14 @@ public class CLogin extends ObligacionControlador implements ActionListener {
         habilitarOperacionesCliente(false);
         habilitarOperacionesEmpleado(false);
         habilitarOperacionesSesion(false);
+        this.vista.lblBannerLogo.setSize(322, 250);
+        this.vista.lblLogoReducido.setSize(46, 41);
+        this.vista.lblLogoCentro.setSize(278, 241);
+        this.vista.lblFondo.setSize(400,620);
+        Imagen.ajustar(this.vista.lblFondo, "imagenes/interfaces/fondo1.jpg");
+        Imagen.ajustar(this.vista.lblLogoReducido, "imagenes/interfaces/logo_transparent.png");
+        Imagen.ajustar(this.vista.lblBannerLogo, "imagenes/interfaces/entrada.png");
+        Imagen.ajustar(this.vista.lblLogoCentro, "imagenes/interfaces/logo_transparent.png");
     }
 
     @Override
