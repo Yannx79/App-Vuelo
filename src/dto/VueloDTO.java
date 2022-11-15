@@ -34,10 +34,10 @@ public class VueloDTO {
 
     @Override
     public String toString() {
-        return "**************************************************" 
-                + "\n Id Vuelo           : " + idVuelo 
-                + "\n Numero Pasajeros   : " + numeroPasajeros 
-                + "\n Costo Vuelo        : " + costoVuelo 
+        return "**************************************************"
+                + "\n Id Vuelo           : " + idVuelo
+                + "\n Numero Pasajeros   : " + numeroPasajeros
+                + "\n Costo Vuelo        : " + costoVuelo
                 + "\n Id Avion           : " + idAvion;
     }
 
@@ -57,8 +57,6 @@ public class VueloDTO {
         this.portadaSecundaria = portadaSecundaria;
     }
 
-    
-    
     public int getIdVuelo() {
         return idVuelo;
     }
@@ -89,6 +87,18 @@ public class VueloDTO {
 
     public void setIdAvion(int idAvion) {
         this.idAvion = idAvion;
+    }
+
+    public Object[] vectorizar() {
+        Object[] values = {
+            idVuelo,
+            numeroPasajeros,
+            costoVuelo,
+            idAvion,
+            portadaPrincipal,
+            portadaSecundaria
+        };
+        return values;
     }
 
 }

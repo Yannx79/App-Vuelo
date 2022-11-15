@@ -34,6 +34,8 @@ public class VueloDAO implements ObjectIDAO<VueloDTO> {
             ps.setInt(1, t.getNumeroPasajeros());
             ps.setDouble(2, t.getCostoVuelo());
             ps.setInt(3, t.getIdAvion());
+            ps.setInt(4, t.getPortadaPrincipal());
+            ps.setInt(5, t.getPortadaSecundaria());
             if (ps.executeUpdate() > 0) {
                 return true;
             }

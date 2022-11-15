@@ -26,7 +26,7 @@ public class AvionDAO implements ObjectIDAO<AvionDTO> {
     public AvionDTO read(Object key) {
         AvionDTO avionDTO = new AvionDTO();
         try {
-            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_READ_ALL);
+            PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_READ);
             ps.setString(1, key.toString());
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {

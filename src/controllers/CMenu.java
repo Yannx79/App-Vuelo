@@ -60,7 +60,9 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
         } else if (e.getSource() == this.vista.miCrearAlojamiento) {
 
         } else if (e.getSource() == this.vista.miCrearVuelo) {
-
+            VCrearVuelo vcv = new VCrearVuelo();
+            CCrearVuelo ccv = new CCrearVuelo(vcv);
+            Desktop.agregarAlDesktop(this.vista.desktopMenu, vcv);
         } else if (e.getSource() == this.vista.miCrearActividad) {
 
         }

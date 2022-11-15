@@ -8,12 +8,12 @@ package interfaces;
  */
 public abstract class ObligacionControlador {
 
-    public void constructor(){
-        this.agregarTodosListeners();
+    public void constructor() {
         this.inicializarObjetos();
+        this.agregarTodosListeners();
         this.construirVista();
     }
-    
+
     public abstract void construirVista();
 
     public abstract void agregarTodosListeners();

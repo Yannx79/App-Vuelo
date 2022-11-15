@@ -136,7 +136,7 @@ public class VSelecionarActividad extends javax.swing.JInternalFrame {
         btnAgregar.setBackground(new java.awt.Color(33, 45, 62));
         btnAgregar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         btnAgregar.setForeground(new java.awt.Color(250, 250, 250));
-        btnAgregar.setText("AGREGAR ALOJAMIENTO");
+        btnAgregar.setText("AGREGAR ACTIVIDAD");
         btnAgregar.setContentAreaFilled(false);
         btnAgregar.setOpaque(true);
         jPanel1.add(btnAgregar, java.awt.BorderLayout.PAGE_END);

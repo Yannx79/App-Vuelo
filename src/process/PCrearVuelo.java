@@ -9,35 +9,35 @@ import java.util.stream.Collectors;
 
 public class PCrearVuelo {
 
-    public static void construirForma(VCrearVuelo f){
+    public static void construirForma(VCrearVuelo f) {
         completarCombox(f);
     }
-    
-    private static void completarCombox(VCrearVuelo f){
+
+    private static void completarCombox(VCrearVuelo f) {
         f.cbxIdAvion.removeAllItems();
         f.cbxPortadaPrincipal.removeAllItems();
         f.cbxPortadaSecundaria.removeAllItems();
-        List<PortadaDTO> listPortadas=  obtenerListPortadasParaVuelos();
-        for(PortadaDTO p: listPortadas){
+        List<PortadaDTO> listPortadas = obtenerListPortadasParaVuelos();
+        for (PortadaDTO p : listPortadas) {
             f.cbxPortadaPrincipal.addItem(p.getIdPortada() + " - " + p.getPath());
             f.cbxPortadaSecundaria.addItem(p.getIdPortada() + " - " + p.getPath());
         }
         AvionDAO avionDAO = new AvionDAO();
         List<AvionDTO> listAviones = avionDAO.readAll();
-        for (AvionDTO a: listAviones) {
+        for (AvionDTO a : listAviones) {
             f.cbxIdAvion.addItem(a.getIdAvion() + " - " + a.getNombreAvion());
         }
     }
 
-    private static List<PortadaDTO> obtenerListPortadasParaVuelos(){
+    private static List<PortadaDTO> obtenerListPortadasParaVuelos() {
         PortadaDAO portadaDAO = new PortadaDAO();
         List<PortadaDTO> list = portadaDAO.readAll().stream().
-                filter(x -> x.getIdTipoPortada() == 2).
+                filter(x -> x.getIdTipoPortada() == 3).
                 collect(Collectors.toList());
         return list;
     }
-    
-    public static VueloDTO instanciar(VCrearVuelo f){
+
+    public static VueloDTO instanciar(VCrearVuelo f) {
         VueloDTO vueloDTO = new VueloDTO();
         vueloDTO.setNumeroPasajeros(Integer.parseInt(f.txtNumeroPasajeros.getText()));
         vueloDTO.setCostoVuelo(Double.parseDouble(f.txtCostoVuelo.getText()));
@@ -45,6 +45,6 @@ public class PCrearVuelo {
         vueloDTO.setPortadaPrincipal(Parse.getPK(f.cbxPortadaPrincipal.getSelectedItem().toString()));
         vueloDTO.setPortadaSecundaria(Parse.getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
         return vueloDTO;
-    } 
-    
+    }
+
 }

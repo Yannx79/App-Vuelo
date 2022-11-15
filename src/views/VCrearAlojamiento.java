@@ -8,12 +8,12 @@ package views;
  *
  * @author yanni
  */
-public class VCrearVuelo extends javax.swing.JInternalFrame {
+public class VCrearAlojamiento extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form VSelecionarAlojamiento
      */
-    public VCrearVuelo() {
+    public VCrearAlojamiento() {
         initComponents();
     }
 
@@ -47,11 +47,11 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        txtNumeroPasajeros = new javax.swing.JTextField();
+        txtNumeroPersonas = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        cbxIdAvion = new javax.swing.JComboBox<>();
+        cbxIdHotel = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         cbxPortadaPrincipal = new javax.swing.JComboBox<>();
@@ -60,13 +60,17 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
         lblPortadaSecundaria = new javax.swing.JLabel();
         lblPortadaPrincipal = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        txtCostoVuelo = new javax.swing.JTextField();
+        txtCostoAlojamiento = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaDatosExtra = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblDatos = new javax.swing.JTable();
+        jLabel23 = new javax.swing.JLabel();
+        txtNumeroHabitaciones = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
 
         setClosable(true);
 
@@ -151,7 +155,7 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 180, 50));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 1000, 90));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1000, 90));
 
         jLabel20.setBackground(new java.awt.Color(207, 10, 10));
         jLabel20.setOpaque(true);
@@ -160,20 +164,20 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("CREAR VUELO");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 105, -1));
+        jLabel19.setText("CREAR ALOJAMIENTO");
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, -1));
 
         jLabel21.setBackground(new java.awt.Color(207, 10, 10));
         jLabel21.setOpaque(true);
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 105, 20));
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 20));
 
-        txtNumeroPasajeros.setBackground(new java.awt.Color(33, 45, 62));
-        txtNumeroPasajeros.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
-        txtNumeroPasajeros.setForeground(new java.awt.Color(220, 95, 0));
-        txtNumeroPasajeros.setBorder(null);
-        txtNumeroPasajeros.setCaretColor(new java.awt.Color(220, 95, 0));
-        txtNumeroPasajeros.setOpaque(false);
-        jPanel1.add(txtNumeroPasajeros, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 270, 40));
+        txtNumeroPersonas.setBackground(new java.awt.Color(33, 45, 62));
+        txtNumeroPersonas.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        txtNumeroPersonas.setForeground(new java.awt.Color(220, 95, 0));
+        txtNumeroPersonas.setBorder(null);
+        txtNumeroPersonas.setCaretColor(new java.awt.Color(220, 95, 0));
+        txtNumeroPersonas.setOpaque(false);
+        jPanel1.add(txtNumeroPersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 270, 40));
 
         jSeparator1.setBackground(new java.awt.Color(207, 10, 10));
         jSeparator1.setForeground(new java.awt.Color(220, 95, 0));
@@ -182,19 +186,19 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
 
         jLabel9.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(10, 10, 10));
-        jLabel9.setText("ID AVION");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 310, -1));
+        jLabel9.setText("ID HOTEL");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 310, -1));
 
-        cbxIdAvion.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        cbxIdAvion.setForeground(new java.awt.Color(220, 95, 0));
-        cbxIdAvion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbxIdAvion.setBorder(null);
-        cbxIdAvion.setOpaque(false);
-        jPanel1.add(cbxIdAvion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 310, 50));
+        cbxIdHotel.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxIdHotel.setForeground(new java.awt.Color(220, 95, 0));
+        cbxIdHotel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxIdHotel.setBorder(null);
+        cbxIdHotel.setOpaque(false);
+        jPanel1.add(cbxIdHotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 310, 50));
 
         jLabel14.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(10, 10, 10));
-        jLabel14.setText("NUMERO DE PASAJEROS");
+        jLabel14.setText("NUMERO DE PERSONAS");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
@@ -225,16 +229,16 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
 
         jLabel18.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(10, 10, 10));
-        jLabel18.setText("COSTO VUELO");
+        jLabel18.setText("COSTO ALOJAMIENTO");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        txtCostoVuelo.setBackground(new java.awt.Color(33, 45, 62));
-        txtCostoVuelo.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
-        txtCostoVuelo.setForeground(new java.awt.Color(220, 95, 0));
-        txtCostoVuelo.setBorder(null);
-        txtCostoVuelo.setCaretColor(new java.awt.Color(220, 95, 0));
-        txtCostoVuelo.setOpaque(false);
-        jPanel1.add(txtCostoVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 270, 40));
+        txtCostoAlojamiento.setBackground(new java.awt.Color(33, 45, 62));
+        txtCostoAlojamiento.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        txtCostoAlojamiento.setForeground(new java.awt.Color(220, 95, 0));
+        txtCostoAlojamiento.setBorder(null);
+        txtCostoAlojamiento.setCaretColor(new java.awt.Color(220, 95, 0));
+        txtCostoAlojamiento.setOpaque(false);
+        jPanel1.add(txtCostoAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 270, 40));
         jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 48, 36));
 
         jSeparator4.setBackground(new java.awt.Color(207, 10, 10));
@@ -247,7 +251,7 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
         txaDatosExtra.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS DEL EXTRA", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
         jScrollPane1.setViewportView(txaDatosExtra);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 310, 140));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 310, 120));
 
         tblDatos.setAutoCreateRowSorter(true);
         tblDatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -269,7 +273,25 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
         tblDatos.setSelectionBackground(new java.awt.Color(220, 95, 0));
         jScrollPane2.setViewportView(tblDatos);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 640, 210));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 640, 280));
+
+        jLabel23.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(10, 10, 10));
+        jLabel23.setText("NUMERO DE HABITACIONES");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        txtNumeroHabitaciones.setBackground(new java.awt.Color(33, 45, 62));
+        txtNumeroHabitaciones.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        txtNumeroHabitaciones.setForeground(new java.awt.Color(220, 95, 0));
+        txtNumeroHabitaciones.setBorder(null);
+        txtNumeroHabitaciones.setCaretColor(new java.awt.Color(220, 95, 0));
+        txtNumeroHabitaciones.setOpaque(false);
+        jPanel1.add(txtNumeroHabitaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 270, 40));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 48, 36));
+
+        jSeparator5.setBackground(new java.awt.Color(207, 10, 10));
+        jSeparator5.setForeground(new java.awt.Color(220, 95, 0));
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 310, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -281,7 +303,7 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -290,7 +312,7 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCrear;
-    public javax.swing.JComboBox<String> cbxIdAvion;
+    public javax.swing.JComboBox<String> cbxIdHotel;
     public javax.swing.JComboBox<String> cbxPortadaPrincipal;
     public javax.swing.JComboBox<String> cbxPortadaSecundaria;
     public javax.swing.JButton jButton2;
@@ -299,6 +321,7 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -308,6 +331,7 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -324,11 +348,13 @@ public class VCrearVuelo extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     public javax.swing.JLabel lblPortadaPrincipal;
     public javax.swing.JLabel lblPortadaSecundaria;
     public javax.swing.JTable tblDatos;
     public javax.swing.JTextArea txaDatosExtra;
-    public javax.swing.JTextField txtCostoVuelo;
-    public javax.swing.JTextField txtNumeroPasajeros;
+    public javax.swing.JTextField txtCostoAlojamiento;
+    public javax.swing.JTextField txtNumeroHabitaciones;
+    public javax.swing.JTextField txtNumeroPersonas;
     // End of variables declaration//GEN-END:variables
 }

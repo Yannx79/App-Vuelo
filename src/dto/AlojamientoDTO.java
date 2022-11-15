@@ -29,13 +29,25 @@ public class AlojamientoDTO {
     public AlojamientoDTO() {
     }
 
+    public Object[] vectorizar() {
+        Object[] values = {
+            idAlojamiento,
+            costoAlojamiento,
+            numeroPersonas,
+            numeroHabitaciones,
+            idHotel,
+            portadoPrincipal,
+            portadaSecundaria,};
+        return values;
+    }
+
     @Override
     public String toString() {
-        return "********************* DATOS HOTEL ***********************" 
-                + "\n Id Alojamiento         : " + idAlojamiento 
-                + "\n Costo Alojamiento      : " + costoAlojamiento 
-                + "\n Numero Personas        : " + numeroPersonas 
-                + "\n Numero Habitaciones    : " + numeroHabitaciones 
+        return "********************* DATOS HOTEL ***********************"
+                + "\n Id Alojamiento         : " + idAlojamiento
+                + "\n Costo Alojamiento      : " + costoAlojamiento
+                + "\n Numero Personas        : " + numeroPersonas
+                + "\n Numero Habitaciones    : " + numeroHabitaciones
                 + "\n Id Hotel               : " + idHotel;
     }
 
@@ -55,8 +67,6 @@ public class AlojamientoDTO {
         this.portadaSecundaria = portadaSecundaria;
     }
 
-    
-    
     public int getIdAlojamiento() {
         return idAlojamiento;
     }
