@@ -13,7 +13,7 @@ public class ActividadDAO implements ObjectIDAO<ActividadDTO> {
 
     private static final String SQL_INSERT = ""
             + "INSERT INTO actividades (nombre_actividad, descripcion, "
-            + "id_categoria, costo_unidad, portada_principal, portada_secundaria) "
+            + "id_categoria, costo_actividad, portada_principal, portada_secundaria) "
             + "VALUES (?,?,?,?,?,?)";
     private static final String SQL_READ = ""
             + "SELECT * FROM actividades WHERE id_actividad=?";
@@ -21,7 +21,7 @@ public class ActividadDAO implements ObjectIDAO<ActividadDTO> {
             + "SELECT * FROM actividades";
     private static final String SQL_UPDATE = ""
             + "UPDATE alojamientos SET nombre_actividad=?, descripcion=?, "
-            + "id_categoria=?, costo_unidad=?, portada_principal=?, portada_secundaria=?";
+            + "id_categoria=?, costo_actividad=?, portada_principal=?, portada_secundaria=?";
     private static final String SQL_DELETE = ""
             + "DELETE FROM actividades WHERE id_actividad=?";
     private static final Conexion CONEXION = Conexion.getConexion();
@@ -34,6 +34,8 @@ public class ActividadDAO implements ObjectIDAO<ActividadDTO> {
             ps.setString(2, t.getDescripcion());
             ps.setInt(3, t.getIdCategoria());
             ps.setDouble(4, t.getCostoActividad());
+            ps.setInt(5, t.getPortadoPrincipal());
+            ps.setInt(6, t.getPortadaSecundaria());
             if (ps.executeUpdate() > 0) {
                 return true;
             }

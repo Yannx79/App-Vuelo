@@ -28,7 +28,7 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.miLogout) {
             this.usuario = null;
-            cargarLogin();
+            this.cargarLogin();
         } else if (e.getSource() == this.vista.miLogin) {
             this.cargarLogin();
         } else if (e.getSource() == this.vista.miVerMisPaquetes) {
@@ -58,16 +58,24 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
         } else if (e.getSource() == this.vista.miCrearPaquete) {
 
         } else if (e.getSource() == this.vista.miCrearAlojamiento) {
-
+            VCrearAlojamiento vca = new VCrearAlojamiento();
+            CCrearAlojamiento cca = new CCrearAlojamiento(vca);
+            Desktop.agregarAlDesktop(this.vista.desktopMenu, vca);
         } else if (e.getSource() == this.vista.miCrearVuelo) {
             VCrearVuelo vcv = new VCrearVuelo();
             CCrearVuelo ccv = new CCrearVuelo(vcv);
             Desktop.agregarAlDesktop(this.vista.desktopMenu, vcv);
         } else if (e.getSource() == this.vista.miCrearActividad) {
-
+            this.actionPerformedCrearActividad(e);
         }
     }
 
+    private void actionPerformedCrearActividad(ActionEvent e){
+        VCrearActividad vca = new VCrearActividad();
+        CCrearActividad cca = new CCrearActividad(vca);
+        Desktop.agregarAlDesktop(this.vista.desktopMenu, vca);
+    }
+    
     @Override
     public void construirVista() {
         this.vista.setVisible(true);

@@ -1,62 +1,60 @@
 package dao;
 
 import conexion.Conexion;
-import dto.HotelDTO;
-import interfaces.ObjectIDAO;
+import dto.CategoriaDTO;
+import interfaces.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.sql.*;
 
-public class HotelDAO implements ObjectIDAO<HotelDTO> {
+public class CategoriaDAO implements ObjectIDAO<CategoriaDTO> {
 
     private static final String SQL_INSERT = "";
-    private static final String SQL_READ = "SELECT * FROM hoteles WHERE "
-            + "id_hotel=?";
-    private static final String SQL_READ_ALL = "SELECT * FROM hoteles";
+    private static final String SQL_READ = "SELECT * FROM categoria WHERE "
+            + "id_categoria=?";
+    private static final String SQL_READ_ALL = "SELECT * FROM categoria";
     private static final String SQL_UPDATE = "";
     private static final String SQL_DELETE = "";
     private static final Conexion CONEXION = Conexion.getConexion();
 
     @Override
-    public boolean create(HotelDTO t) {
+    public boolean create(CategoriaDTO t) {
         return true;
     }
 
     @Override
-    public HotelDTO read(Object key) {
-        HotelDTO hotelDTO = new HotelDTO();
+    public CategoriaDTO read(Object key) {
+        CategoriaDTO categoriaDTO = new CategoriaDTO();
         try {
             PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_READ);
             ps.setInt(1, Integer.parseInt(key.toString()));
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                hotelDTO.setIdHotel(rs.getInt(1));
-                hotelDTO.setNombreHotel(rs.getString(2));
-                hotelDTO.setCantidadEstrellas(rs.getInt(3));
+                categoriaDTO.setIdCategoria(rs.getInt(1));
+                categoriaDTO.setTipoCategoria(rs.getString(2));
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println(e);
         } finally {
             CONEXION.closeConexion();
         }
-        return hotelDTO;
+        return categoriaDTO;
     }
 
     @Override
-    public List<HotelDTO> readAll() {
-        List<HotelDTO> list = new LinkedList<>();
+    public List<CategoriaDTO> readAll() {
+        List<CategoriaDTO> list = new LinkedList<>();
         try {
             PreparedStatement ps = CONEXION.getConnection().prepareStatement(SQL_READ_ALL);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                HotelDTO hotelDTO = new HotelDTO();
-                hotelDTO.setIdHotel(rs.getInt(1));
-                hotelDTO.setNombreHotel(rs.getString(2));
-                hotelDTO.setCantidadEstrellas(rs.getInt(3));
-                list.add(hotelDTO);
+                CategoriaDTO categoriaDTO = new CategoriaDTO();
+                categoriaDTO.setIdCategoria(rs.getInt(1));
+                categoriaDTO.setTipoCategoria(rs.getString(2));
+                list.add(categoriaDTO);
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println(e);
         } finally {
             CONEXION.closeConexion();
         }
@@ -64,7 +62,7 @@ public class HotelDAO implements ObjectIDAO<HotelDTO> {
     }
 
     @Override
-    public boolean update(HotelDTO t) {
+    public boolean update(CategoriaDTO t) {
         return true;
     }
 

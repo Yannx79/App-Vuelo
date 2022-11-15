@@ -36,6 +36,8 @@ public class AlojamientoDAO implements ObjectIDAO<AlojamientoDTO> {
             ps.setInt(2, t.getNumeroPersonas());
             ps.setInt(3, t.getNumeroHabitaciones());
             ps.setInt(4, t.getIdHotel());
+            ps.setInt(5, t.getPortadoPrincipal());
+            ps.setInt(6, t.getPortadaSecundaria());
             if (ps.executeUpdate() > 0) {
                 return true;
             }

@@ -47,11 +47,11 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        txtNumeroPersonas = new javax.swing.JTextField();
+        txtNombreActividad = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        cbxIdHotel = new javax.swing.JComboBox<>();
+        cbxIdCategoria = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         cbxPortadaPrincipal = new javax.swing.JComboBox<>();
@@ -60,7 +60,7 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
         lblPortadaSecundaria = new javax.swing.JLabel();
         lblPortadaPrincipal = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        txtCostoAlojamiento = new javax.swing.JTextField();
+        txtDescripcion = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -68,7 +68,7 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblDatos = new javax.swing.JTable();
         jLabel23 = new javax.swing.JLabel();
-        txtNumeroHabitaciones = new javax.swing.JTextField();
+        txtCostoActividad = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
 
@@ -164,20 +164,20 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("CREAR ALOJAMIENTO");
+        jLabel19.setText("CREAR ACTIVIDAD");
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, -1));
 
         jLabel21.setBackground(new java.awt.Color(207, 10, 10));
         jLabel21.setOpaque(true);
         jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 20));
 
-        txtNumeroPersonas.setBackground(new java.awt.Color(33, 45, 62));
-        txtNumeroPersonas.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
-        txtNumeroPersonas.setForeground(new java.awt.Color(220, 95, 0));
-        txtNumeroPersonas.setBorder(null);
-        txtNumeroPersonas.setCaretColor(new java.awt.Color(220, 95, 0));
-        txtNumeroPersonas.setOpaque(false);
-        jPanel1.add(txtNumeroPersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 270, 40));
+        txtNombreActividad.setBackground(new java.awt.Color(33, 45, 62));
+        txtNombreActividad.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        txtNombreActividad.setForeground(new java.awt.Color(220, 95, 0));
+        txtNombreActividad.setBorder(null);
+        txtNombreActividad.setCaretColor(new java.awt.Color(220, 95, 0));
+        txtNombreActividad.setOpaque(false);
+        jPanel1.add(txtNombreActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 270, 40));
 
         jSeparator1.setBackground(new java.awt.Color(207, 10, 10));
         jSeparator1.setForeground(new java.awt.Color(220, 95, 0));
@@ -186,19 +186,19 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
 
         jLabel9.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(10, 10, 10));
-        jLabel9.setText("ID HOTEL");
+        jLabel9.setText("ID CATEGORIA");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 310, -1));
 
-        cbxIdHotel.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        cbxIdHotel.setForeground(new java.awt.Color(220, 95, 0));
-        cbxIdHotel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbxIdHotel.setBorder(null);
-        cbxIdHotel.setOpaque(false);
-        jPanel1.add(cbxIdHotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 310, 50));
+        cbxIdCategoria.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxIdCategoria.setForeground(new java.awt.Color(220, 95, 0));
+        cbxIdCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxIdCategoria.setBorder(null);
+        cbxIdCategoria.setOpaque(false);
+        jPanel1.add(cbxIdCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 310, 50));
 
         jLabel14.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(10, 10, 10));
-        jLabel14.setText("NUMERO DE PERSONAS");
+        jLabel14.setText("NOMBRE ACTIVIDAD");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
@@ -229,16 +229,16 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
 
         jLabel18.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(10, 10, 10));
-        jLabel18.setText("COSTO ALOJAMIENTO");
+        jLabel18.setText("DESCRIPCION");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        txtCostoAlojamiento.setBackground(new java.awt.Color(33, 45, 62));
-        txtCostoAlojamiento.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
-        txtCostoAlojamiento.setForeground(new java.awt.Color(220, 95, 0));
-        txtCostoAlojamiento.setBorder(null);
-        txtCostoAlojamiento.setCaretColor(new java.awt.Color(220, 95, 0));
-        txtCostoAlojamiento.setOpaque(false);
-        jPanel1.add(txtCostoAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 270, 40));
+        txtDescripcion.setBackground(new java.awt.Color(33, 45, 62));
+        txtDescripcion.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        txtDescripcion.setForeground(new java.awt.Color(220, 95, 0));
+        txtDescripcion.setBorder(null);
+        txtDescripcion.setCaretColor(new java.awt.Color(220, 95, 0));
+        txtDescripcion.setOpaque(false);
+        jPanel1.add(txtDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 270, 40));
         jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 48, 36));
 
         jSeparator4.setBackground(new java.awt.Color(207, 10, 10));
@@ -277,16 +277,16 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
 
         jLabel23.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(10, 10, 10));
-        jLabel23.setText("NUMERO DE HABITACIONES");
+        jLabel23.setText("COSTO ACTIVIDAD");
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        txtNumeroHabitaciones.setBackground(new java.awt.Color(33, 45, 62));
-        txtNumeroHabitaciones.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
-        txtNumeroHabitaciones.setForeground(new java.awt.Color(220, 95, 0));
-        txtNumeroHabitaciones.setBorder(null);
-        txtNumeroHabitaciones.setCaretColor(new java.awt.Color(220, 95, 0));
-        txtNumeroHabitaciones.setOpaque(false);
-        jPanel1.add(txtNumeroHabitaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 270, 40));
+        txtCostoActividad.setBackground(new java.awt.Color(33, 45, 62));
+        txtCostoActividad.setFont(new java.awt.Font("Gotham Thin", 0, 18)); // NOI18N
+        txtCostoActividad.setForeground(new java.awt.Color(220, 95, 0));
+        txtCostoActividad.setBorder(null);
+        txtCostoActividad.setCaretColor(new java.awt.Color(220, 95, 0));
+        txtCostoActividad.setOpaque(false);
+        jPanel1.add(txtCostoActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 270, 40));
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 48, 36));
 
         jSeparator5.setBackground(new java.awt.Color(207, 10, 10));
@@ -312,7 +312,7 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCrear;
-    public javax.swing.JComboBox<String> cbxIdHotel;
+    public javax.swing.JComboBox<String> cbxIdCategoria;
     public javax.swing.JComboBox<String> cbxPortadaPrincipal;
     public javax.swing.JComboBox<String> cbxPortadaSecundaria;
     public javax.swing.JButton jButton2;
@@ -353,8 +353,8 @@ public class VCrearActividad extends javax.swing.JInternalFrame {
     public javax.swing.JLabel lblPortadaSecundaria;
     public javax.swing.JTable tblDatos;
     public javax.swing.JTextArea txaDatosExtra;
-    public javax.swing.JTextField txtCostoAlojamiento;
-    public javax.swing.JTextField txtNumeroHabitaciones;
-    public javax.swing.JTextField txtNumeroPersonas;
+    public javax.swing.JTextField txtCostoActividad;
+    public javax.swing.JTextField txtDescripcion;
+    public javax.swing.JTextField txtNombreActividad;
     // End of variables declaration//GEN-END:variables
 }

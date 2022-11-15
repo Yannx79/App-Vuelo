@@ -363,7 +363,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="CREAR ALOJAMIENTO"/>
+            <Property name="text" type="java.lang.String" value="CREAR ACTIVIDAD"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -384,7 +384,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtNumeroPersonas">
+        <Component class="javax.swing.JTextField" name="txtNombreActividad">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3e" green="2d" red="21" type="rgb"/>
@@ -442,7 +442,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a" green="a" red="a" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ID HOTEL"/>
+            <Property name="text" type="java.lang.String" value="ID CATEGORIA"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -450,7 +450,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbxIdHotel">
+        <Component class="javax.swing.JComboBox" name="cbxIdCategoria">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic UI Semilight" size="16" style="0"/>
@@ -489,7 +489,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a" green="a" red="a" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="NUMERO DE PERSONAS"/>
+            <Property name="text" type="java.lang.String" value="NOMBRE ACTIVIDAD"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -619,7 +619,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a" green="a" red="a" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="COSTO ALOJAMIENTO"/>
+            <Property name="text" type="java.lang.String" value="DESCRIPCION"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -627,7 +627,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtCostoAlojamiento">
+        <Component class="javax.swing.JTextField" name="txtDescripcion">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3e" green="2d" red="21" type="rgb"/>
@@ -764,7 +764,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a" green="a" red="a" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="NUMERO DE HABITACIONES"/>
+            <Property name="text" type="java.lang.String" value="COSTO ACTIVIDAD"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -772,7 +772,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtNumeroHabitaciones">
+        <Component class="javax.swing.JTextField" name="txtCostoActividad">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3e" green="2d" red="21" type="rgb"/>

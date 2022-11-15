@@ -28,15 +28,27 @@ public class ActividadDTO {
     public ActividadDTO() {
     }
 
+    public Object[] vectorizar() {
+        Object[] values = {
+            idActividad,
+            nombreActividad,
+            descripcion,
+            idCategoria,
+            costoActividad,
+            portadoPrincipal,
+            portadaSecundaria,};
+        return values;
+    }
+
     @Override
     public String toString() {
-        return "*****************************************************" 
-                + "\n Id Actividad           : " + idActividad 
-                + "\n Nombre Actividad       : " + nombreActividad 
-                + "\n Descripcion            : " + descripcion 
-                + "\n Id Categoria           : " + idCategoria 
-                + "\n Costo Actividad        : " + costoActividad 
-                + "\n Portado Principal      : " + portadoPrincipal 
+        return "*****************************************************"
+                + "\n Id Actividad           : " + idActividad
+                + "\n Nombre Actividad       : " + nombreActividad
+                + "\n Descripcion            : " + descripcion
+                + "\n Id Categoria           : " + idCategoria
+                + "\n Costo Actividad        : " + costoActividad
+                + "\n Portado Principal      : " + portadoPrincipal
                 + "\n Portada Secundaria     : " + portadaSecundaria;
     }
 

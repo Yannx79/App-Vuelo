@@ -45,7 +45,7 @@ public class PCrearAlojamiento {
         alojamientoDTO.setNumeroHabitaciones(Integer.parseInt(f.txtNumeroHabitaciones.getText()));
         alojamientoDTO.setIdHotel(Parse.getPK(f.cbxIdHotel.getSelectedItem().toString()));
         alojamientoDTO.setPortadoPrincipal(Parse.getPK(f.cbxPortadaPrincipal.getSelectedItem().toString()));
-        alojamientoDTO.setPortadoPrincipal(Parse.getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
+        alojamientoDTO.setPortadaSecundaria(Parse.getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
         return alojamientoDTO;
     }
     

@@ -62,6 +62,7 @@ public class CCrearAlojamiento extends ObligacionControlador implements  ActionL
         if (e.getSource() == this.vista.btnCrear) {
             AlojamientoDTO alojamientoDTO = PCrearAlojamiento.instanciar(vista);
             alojamientoDAO.create(alojamientoDTO);
+            this.generarTabla();
         } else if (e.getSource() == this.vista.cbxIdHotel) {
             completarInformacionHotel();
         } else if (e.getSource() == this.vista.cbxPortadaPrincipal) {
@@ -78,9 +79,9 @@ public class CCrearAlojamiento extends ObligacionControlador implements  ActionL
 
     private void cambiarImagen() {
         PortadaDTO portadaDTO = portadaDAO.read(Parse.getPK(vista.cbxPortadaPrincipal.getSelectedItem().toString()));
-        Imagen.ajustar(this.vista.lblPortadaPrincipal, "imagenes/vuelos/" + portadaDTO.getPath());
+        Imagen.ajustar(this.vista.lblPortadaPrincipal, "imagenes/alojamientos/" + portadaDTO.getPath());
         portadaDTO = portadaDAO.read(Parse.getPK(vista.cbxPortadaSecundaria.getSelectedItem().toString()));
-        Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/vuelos/" + portadaDTO.getPath());
+        Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/alojamientos/" + portadaDTO.getPath());
     }
     
     private void generarTabla() {
