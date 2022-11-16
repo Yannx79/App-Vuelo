@@ -1,16 +1,20 @@
 package controllers;
 
 import dao.MiPaqueteDAO;
+import dao.*;
 import views.*;
 import interfaces.*;
 import process.*;
 import dto.*;
+import formato.Imagen;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CPaquetePersonalizado extends ObligacionControlador implements ActionListener{
 
     private VPaquetePersonalizado vista;
+
+    private PortadaDAO portadaDAO;
     
     public CPaquetePersonalizado(VPaquetePersonalizado f){
         this.vista = f;
@@ -21,22 +25,32 @@ public class CPaquetePersonalizado extends ObligacionControlador implements Acti
     public void construirVista() {
         this.vista.setVisible(true);
         this.vista.setTitle("Crear un Paquete Personalizado");
+        this.vista.lblPortadaPrincipal.setSize(310,110);
+        this.vista.lblPortadaSecundaria.setSize(310,110);
+        this.cambiarImagen();
         PPaquetePersonalizado.construirForma(vista);
     }
 
     @Override
     public void agregarTodosListeners() {
         this.vista.btnCrear.addActionListener(this);
+        this.vista.cbxPortadaPrincipal.addActionListener(this);
+        this.vista.cbxPortadaSecundaria.addActionListener(this);
     }
 
     @Override
     public void inicializarObjetos() {
+        portadaDAO = new PortadaDAO();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.btnCrear) {
-            crearPaquetePerzonalizado();
+            this.crearPaquetePerzonalizado();
+        } else if (e.getSource() == this.vista.cbxPortadaPrincipal) {
+            this.cambiarImagen();
+        } else if (e.getSource() == this.vista.cbxPortadaSecundaria) {
+            this.cambiarImagen();
         }
     }
 
@@ -45,6 +59,13 @@ public class CPaquetePersonalizado extends ObligacionControlador implements Acti
         MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
         miPaqueteDTO = PPaquetePersonalizado.instanciar(this.vista);
         miPaqueteDAO.createPaquete(miPaqueteDTO);
+    }
+    
+    private void cambiarImagen() {
+        PortadaDTO portadaDTO = portadaDAO.read(Parse.getPK(vista.cbxPortadaPrincipal.getSelectedItem().toString()));
+        Imagen.ajustar(this.vista.lblPortadaPrincipal, "imagenes/alojamientos/" + portadaDTO.getPath());
+        portadaDTO = portadaDAO.read(Parse.getPK(vista.cbxPortadaSecundaria.getSelectedItem().toString()));
+        Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/alojamientos/" + portadaDTO.getPath());
     }
     
 }

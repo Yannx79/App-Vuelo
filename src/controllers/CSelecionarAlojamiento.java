@@ -47,6 +47,8 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
 
     @Override
     public void inicializarObjetos() {
+        this.vista.lblPortadoPrincipal.setSize(510, 250);
+        this.vista.lblPortadaSecundaria.setSize(510, 250);
         alojamientoDAO = new AlojamientoDAO();
         portadaDAO = new PortadaDAO();
         this.list = new LinkedList<>();

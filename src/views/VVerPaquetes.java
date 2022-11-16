@@ -85,26 +85,26 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
         jPanel2.setLayout(new java.awt.GridLayout(2, 4, 1, 1));
 
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PAQUETE", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel9.setLayout(new java.awt.GridLayout(1, 0));
-        jPanel9.add(lblPaquete);
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel9.add(lblPaquete, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 288, 300));
 
         jPanel2.add(jPanel9);
 
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ALOJAMIENTO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel12.setLayout(new java.awt.GridLayout(1, 0));
-        jPanel12.add(lblAlojamiento);
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel12.add(lblAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 288, 300));
 
         jPanel2.add(jPanel12);
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VUELO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel13.setLayout(new java.awt.GridLayout(1, 0));
-        jPanel13.add(lblVuelo);
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel13.add(lblVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 288, 300));
 
         jPanel2.add(jPanel13);
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ACTIVIDAD", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel14.setLayout(new java.awt.GridLayout(1, 0));
-        jPanel14.add(lblActividad);
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel14.add(lblActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 288, 300));
 
         jPanel2.add(jPanel14);
 

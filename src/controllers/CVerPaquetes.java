@@ -66,6 +66,11 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         listPaquetes = new LinkedList<>();
         listPaquetes = paqueteDAO.readAll();
         index = 0;
+        
+        this.vista.lblActividad.setSize(288, 300);
+        this.vista.lblVuelo.setSize(288, 300);
+        this.vista.lblPaquete.setSize(288, 300);
+        this.vista.lblAlojamiento.setSize(288, 300);
         completarInformacionPaquete();
     }
 
@@ -92,6 +97,7 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         } else {
             index = listPaquetes.size() - 1;
         }
+        System.out.println(vista.lblActividad.getSize());
         completarInformacionPaquete();
     }
 
