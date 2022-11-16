@@ -50,6 +50,7 @@ public class PCrearActividad {
         actividadDTO.setCostoActividad(Double.parseDouble(f.txtCostoActividad.getText()));
         actividadDTO.setPortadoPrincipal(Parse.getPK(f.cbxPortadaPrincipal.getSelectedItem().toString()));
         actividadDTO.setPortadaSecundaria(Parse.getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
+        limpiarEntradas(f);
         return actividadDTO;
     }
     
@@ -59,6 +60,16 @@ public class PCrearActividad {
         for (ActividadDTO x : list) {
             dtm.addRow(x.vectorizar());
         }
+    }
+    
+    private static void limpiarEntradas(VCrearActividad f){
+        f.txtNombreActividad.requestFocus();
+        f.txtNombreActividad.setText("");
+        f.txtDescripcion.setText("");
+        f.txtCostoActividad.setText("");
+        f.cbxIdCategoria.setSelectedIndex(0);
+        f.cbxPortadaPrincipal.setSelectedIndex(0);
+        f.cbxPortadaSecundaria.setSelectedIndex(0);
     }
     
 }

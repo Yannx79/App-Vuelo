@@ -13,7 +13,7 @@ public class PMenu {
         f.miLogin.setIcon(new ImageIcon("imagenes/iconos/login.png"));
         f.miLogout.setIcon(new ImageIcon("imagenes/iconos/logout.png"));
         
-        f.miVerMisPaquetes.setIcon(new ImageIcon("imagenes/iconos/package.png"));
+        f.miVerMisPaquetes.setIcon(new ImageIcon("imagenes/iconos/package2.png"));
         f.miVerPaquetes.setIcon(new ImageIcon("imagenes/iconos/package.png"));
         f.miPaquetesPersonalizados.setIcon(new ImageIcon("imagenes/iconos/engine.png"));
         f.miSeleccionarAlojamiento.setIcon(new ImageIcon("imagenes/iconos/hotel.png"));

@@ -19,6 +19,7 @@ public class Parse {
         mp.setIdVuelo(p.getIdVuelo());
         mp.setPortadaPrincipal(p.getPortadaPrincipal());
         mp.setPortadaSecundaria(p.getPortadaSecundaria());
+        mp.setNombrePaquete(p.getNombrePaquete());
         return mp;
     }
 

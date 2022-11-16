@@ -39,7 +39,7 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO> {
     private static final String SQL_UPDATE_PAQUETE_ACTIVIDAD = "UPDATE mis_paquetes "
             + "SET id_actividad=? WHERE id_mis_paquetes=?";
     private static final String SQL_DELELE = ""
-            + "DELETE FROM paquetes WHERE id_mis_paquetes=?";
+            + "DELETE FROM mis_paquetes WHERE id_mis_paquetes=?";
     private static final Conexion CONEXION = Conexion.getConexion();
 
     public boolean createPaquete(MiPaqueteDTO t) {

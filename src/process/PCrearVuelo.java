@@ -44,7 +44,16 @@ public class PCrearVuelo {
         vueloDTO.setIdAvion(Parse.getPK(f.cbxIdAvion.getSelectedItem().toString()));
         vueloDTO.setPortadaPrincipal(Parse.getPK(f.cbxPortadaPrincipal.getSelectedItem().toString()));
         vueloDTO.setPortadaSecundaria(Parse.getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
+        limpiar(f);
         return vueloDTO;
     }
 
+    private static void limpiar(VCrearVuelo f){
+        f.txtNumeroPasajeros.requestFocus();
+        f.txtNumeroPasajeros.setText("");
+        f.txtCostoVuelo.setText("");
+        f.cbxPortadaPrincipal.setSelectedIndex(0);
+        f.cbxPortadaSecundaria.setSelectedIndex(0);
+    }
+    
 }

@@ -14,31 +14,32 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jLabel20 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lblVerDetalle = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnVerDeetalle = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        lblActualizar = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        lblEliminar = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        lblPagar = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        btnPagar = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
+        lblSinAccion1 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        btnSinAccion1 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
+        lblSinAccion2 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnSinAccion2 = new javax.swing.JButton();
+        lblRepresentacion = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        lblReferencia = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDatos = new javax.swing.JTable();
 
@@ -58,19 +59,19 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel3.setOpaque(false);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel3.add(lblVerDetalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel2.setBackground(new java.awt.Color(207, 10, 10));
         jLabel2.setOpaque(true);
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jButton2.setBackground(new java.awt.Color(250, 250, 250));
-        jButton2.setForeground(new java.awt.Color(250, 250, 250));
-        jButton2.setText("VER DETALLE");
-        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        jButton2.setContentAreaFilled(false);
-        jButton2.setVerifyInputWhenFocusTarget(false);
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnVerDeetalle.setBackground(new java.awt.Color(250, 250, 250));
+        btnVerDeetalle.setForeground(new java.awt.Color(250, 250, 250));
+        btnVerDeetalle.setText("VER DETALLE");
+        btnVerDeetalle.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnVerDeetalle.setContentAreaFilled(false);
+        btnVerDeetalle.setVerifyInputWhenFocusTarget(false);
+        jPanel3.add(btnVerDeetalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 180, 50));
 
@@ -78,17 +79,17 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel4.setOpaque(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel4.add(lblActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel5.setBackground(new java.awt.Color(192, 27, 54));
         jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jButton3.setBackground(new java.awt.Color(250, 250, 250));
-        jButton3.setForeground(new java.awt.Color(250, 250, 250));
-        jButton3.setText("ACTUALIZAR");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        jButton3.setContentAreaFilled(false);
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnActualizar.setBackground(new java.awt.Color(250, 250, 250));
+        btnActualizar.setForeground(new java.awt.Color(250, 250, 250));
+        btnActualizar.setText("ACTUALIZAR");
+        btnActualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnActualizar.setContentAreaFilled(false);
+        jPanel4.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 180, 50));
 
@@ -96,17 +97,17 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jPanel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel5.setOpaque(false);
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel5.add(lblEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel8.setBackground(new java.awt.Color(192, 27, 54));
         jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jButton4.setBackground(new java.awt.Color(250, 250, 250));
-        jButton4.setForeground(new java.awt.Color(250, 250, 250));
-        jButton4.setText("ELIMINAR");
-        jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        jButton4.setContentAreaFilled(false);
-        jPanel5.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnEliminar.setBackground(new java.awt.Color(250, 250, 250));
+        btnEliminar.setForeground(new java.awt.Color(250, 250, 250));
+        btnEliminar.setText("ELIMINAR");
+        btnEliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnEliminar.setContentAreaFilled(false);
+        jPanel5.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 180, 50));
 
@@ -114,17 +115,17 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jPanel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel6.setOpaque(false);
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel6.add(lblPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel11.setBackground(new java.awt.Color(192, 27, 54));
         jPanel6.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jButton5.setBackground(new java.awt.Color(250, 250, 250));
-        jButton5.setForeground(new java.awt.Color(250, 250, 250));
-        jButton5.setText("PAGAR");
-        jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        jButton5.setContentAreaFilled(false);
-        jPanel6.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnPagar.setBackground(new java.awt.Color(250, 250, 250));
+        btnPagar.setForeground(new java.awt.Color(250, 250, 250));
+        btnPagar.setText("PAGAR");
+        btnPagar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnPagar.setContentAreaFilled(false);
+        jPanel6.add(btnPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 180, 50));
 
@@ -132,17 +133,17 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jPanel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel7.setOpaque(false);
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel7.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel7.add(lblSinAccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel14.setBackground(new java.awt.Color(192, 27, 54));
         jPanel7.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jButton6.setBackground(new java.awt.Color(250, 250, 250));
-        jButton6.setForeground(new java.awt.Color(250, 250, 250));
-        jButton6.setText("SIN ACCION");
-        jButton6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        jButton6.setContentAreaFilled(false);
-        jPanel7.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnSinAccion1.setBackground(new java.awt.Color(250, 250, 250));
+        btnSinAccion1.setForeground(new java.awt.Color(250, 250, 250));
+        btnSinAccion1.setText("SIN ACCION");
+        btnSinAccion1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnSinAccion1.setContentAreaFilled(false);
+        jPanel7.add(btnSinAccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 180, 50));
 
@@ -150,19 +151,20 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jPanel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel8.setOpaque(false);
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel8.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel8.add(lblSinAccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel17.setBackground(new java.awt.Color(192, 27, 54));
         jPanel8.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        jButton1.setBackground(new java.awt.Color(250, 250, 250));
-        jButton1.setForeground(new java.awt.Color(250, 250, 250));
-        jButton1.setText("SIN ACCION");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        jButton1.setContentAreaFilled(false);
-        jPanel8.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnSinAccion2.setBackground(new java.awt.Color(250, 250, 250));
+        btnSinAccion2.setForeground(new java.awt.Color(250, 250, 250));
+        btnSinAccion2.setText("SIN ACCION");
+        btnSinAccion2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnSinAccion2.setContentAreaFilled(false);
+        jPanel8.add(btnSinAccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 180, 50));
+        jPanel2.add(lblRepresentacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 60, 60));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
@@ -170,9 +172,9 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jLabel19.setText("MIS PAQUETES");
         jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 105, -1));
 
-        jLabel21.setBackground(new java.awt.Color(207, 10, 10));
-        jLabel21.setOpaque(true);
-        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 105, 105));
+        lblReferencia.setBackground(new java.awt.Color(207, 10, 10));
+        lblReferencia.setOpaque(true);
+        jPanel2.add(lblReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 105, 105));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 550));
 
@@ -213,26 +215,19 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
+    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnPagar;
+    public javax.swing.JButton btnSinAccion1;
+    public javax.swing.JButton btnSinAccion2;
+    public javax.swing.JButton btnVerDeetalle;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -243,6 +238,14 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JLabel lblActualizar;
+    public javax.swing.JLabel lblEliminar;
+    public javax.swing.JLabel lblPagar;
+    public javax.swing.JLabel lblReferencia;
+    public javax.swing.JLabel lblRepresentacion;
+    public javax.swing.JLabel lblSinAccion1;
+    public javax.swing.JLabel lblSinAccion2;
+    public javax.swing.JLabel lblVerDetalle;
     public javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
 }

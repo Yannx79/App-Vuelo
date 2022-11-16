@@ -46,6 +46,7 @@ public class PCrearAlojamiento {
         alojamientoDTO.setIdHotel(Parse.getPK(f.cbxIdHotel.getSelectedItem().toString()));
         alojamientoDTO.setPortadoPrincipal(Parse.getPK(f.cbxPortadaPrincipal.getSelectedItem().toString()));
         alojamientoDTO.setPortadaSecundaria(Parse.getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
+        limpiar(f);
         return alojamientoDTO;
     }
     
@@ -57,4 +58,14 @@ public class PCrearAlojamiento {
         }
     }
 
+    private static void limpiar(VCrearAlojamiento f){
+        f.txtCostoAlojamiento.requestFocus();
+        f.txtCostoAlojamiento.setText("");
+        f.txtNumeroHabitaciones.setText("");
+        f.txtNumeroPersonas.setText("");
+        f.cbxIdHotel.setSelectedIndex(0);
+        f.cbxPortadaPrincipal.setSelectedIndex(0);
+        f.cbxPortadaSecundaria.setSelectedIndex(0);
+    }
+    
 }

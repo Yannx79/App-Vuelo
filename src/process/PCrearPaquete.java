@@ -52,7 +52,17 @@ public class PCrearPaquete {
         paqueteDTO.setPortadaSecundaria(Parse.getPK(f.cbxPortadaSecundaria.getSelectedItem().toString()));
         paqueteDTO.setFechaRegreso(Parse.formatearFecha(f.dcFechaRegreso.getDate()));
         paqueteDTO.setFechaSalida(Parse.formatearFecha(f.dcFechaPartida.getDate()));
+        limpiar(f);
         return paqueteDTO;
+    }
+    
+    private static void limpiar(VCrearPaquete f){
+        f.txtNombrePaquete.requestFocus();
+        f.txtNombrePaquete.setText("");
+        f.cbxLugarDestino.setSelectedIndex(0);
+        f.cbxLugarPartida.setSelectedIndex(0);
+        f.cbxPortadaPrincipal.setSelectedIndex(0);
+        f.cbxPortadaSecundaria.setSelectedIndex(0);
     }
     
 }
