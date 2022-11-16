@@ -14,8 +14,8 @@ public class PMenu {
         f.miLogout.setIcon(new ImageIcon("imagenes/iconos/logout.png"));
         
         f.miVerMisPaquetes.setIcon(new ImageIcon("imagenes/iconos/package.png"));
-        f.miVerPaquetes.setIcon(new ImageIcon("imagenes/iconos/engine.png"));
-        f.miPaquetesPersonalizados.setIcon(new ImageIcon("imagenes/iconos/package.png"));
+        f.miVerPaquetes.setIcon(new ImageIcon("imagenes/iconos/package.png"));
+        f.miPaquetesPersonalizados.setIcon(new ImageIcon("imagenes/iconos/engine.png"));
         f.miSeleccionarAlojamiento.setIcon(new ImageIcon("imagenes/iconos/hotel.png"));
         f.miSeleccionarVuelo.setIcon(new ImageIcon("imagenes/iconos/avion.png"));
         f.miSeleccionarActividad.setIcon(new ImageIcon("imagenes/iconos/soccer.png"));

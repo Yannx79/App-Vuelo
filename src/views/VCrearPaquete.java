@@ -8,12 +8,12 @@ package views;
  *
  * @author yanni
  */
-public class VVerPaquetes extends javax.swing.JInternalFrame {
+public class VCrearPaquete extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form VSelecionarAlojamiento
      */
-    public VVerPaquetes() {
+    public VCrearPaquete() {
         initComponents();
     }
 
@@ -31,7 +31,9 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
         btnLeft = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        lblPaquete = new javax.swing.JLabel();
+        txtNombrePaquete = new javax.swing.JTextField();
+        dcFechaPartida = new com.toedter.calendar.JDateChooser();
+        dcFechaRegreso = new com.toedter.calendar.JDateChooser();
         jPanel12 = new javax.swing.JPanel();
         lblAlojamiento = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
@@ -39,8 +41,10 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
         jPanel14 = new javax.swing.JPanel();
         lblActividad = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        txaDatosPaquete = new javax.swing.JTextArea();
+        cbxLugarPartida = new javax.swing.JComboBox<>();
+        cbxLugarDestino = new javax.swing.JComboBox<>();
+        cbxPortadaPrincipal = new javax.swing.JComboBox<>();
+        cbxPortadaSecundaria = new javax.swing.JComboBox<>();
         jPanel15 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaDatosAlojamiento = new javax.swing.JTextArea();
@@ -50,13 +54,17 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
         jPanel17 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         txaDatosActividad = new javax.swing.JTextArea();
-        btnAgregar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         lblCantidadRegistros = new javax.swing.JLabel();
         lblNombrePaquete = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        btnCrearPaquete = new javax.swing.JButton();
+        btnCambiarAlojamiento = new javax.swing.JButton();
+        btnCambiarVuelo = new javax.swing.JButton();
+        btnCambiarActividad = new javax.swing.JButton();
 
         setClosable(true);
 
@@ -86,8 +94,25 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
 
         jPanel9.setBackground(new java.awt.Color(250, 250, 250));
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PAQUETE", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel9.add(lblPaquete, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 288, 300));
+        jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.PAGE_AXIS));
+
+        txtNombrePaquete.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        txtNombrePaquete.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "NOMBRE PAQUETE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        jPanel9.add(txtNombrePaquete);
+
+        dcFechaPartida.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FECHA DE PARTIDA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        dcFechaPartida.setForeground(new java.awt.Color(220, 95, 0));
+        dcFechaPartida.setDateFormatString("YYYY-MM-dd");
+        dcFechaPartida.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
+        dcFechaPartida.setOpaque(false);
+        jPanel9.add(dcFechaPartida);
+
+        dcFechaRegreso.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FECHA DE REGRESO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        dcFechaRegreso.setForeground(new java.awt.Color(220, 95, 0));
+        dcFechaRegreso.setDateFormatString("YYYY-MM-dd");
+        dcFechaRegreso.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
+        dcFechaRegreso.setOpaque(false);
+        jPanel9.add(dcFechaRegreso);
 
         jPanel2.add(jPanel9);
 
@@ -114,14 +139,35 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
 
         jPanel4.setBackground(new java.awt.Color(250, 250, 250));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS DEL PAQUETE", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
-        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.PAGE_AXIS));
 
-        txaDatosPaquete.setColumns(20);
-        txaDatosPaquete.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        txaDatosPaquete.setRows(5);
-        jScrollPane4.setViewportView(txaDatosPaquete);
+        cbxLugarPartida.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxLugarPartida.setForeground(new java.awt.Color(220, 95, 0));
+        cbxLugarPartida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxLugarPartida.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LUGAR DE PARTIDA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        cbxLugarPartida.setOpaque(false);
+        jPanel4.add(cbxLugarPartida);
 
-        jPanel4.add(jScrollPane4);
+        cbxLugarDestino.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxLugarDestino.setForeground(new java.awt.Color(220, 95, 0));
+        cbxLugarDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxLugarDestino.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LUGAR DE DESTINO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        cbxLugarDestino.setOpaque(false);
+        jPanel4.add(cbxLugarDestino);
+
+        cbxPortadaPrincipal.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxPortadaPrincipal.setForeground(new java.awt.Color(220, 95, 0));
+        cbxPortadaPrincipal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxPortadaPrincipal.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PORTADA PRINCIPAL", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        cbxPortadaPrincipal.setOpaque(false);
+        jPanel4.add(cbxPortadaPrincipal);
+
+        cbxPortadaSecundaria.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        cbxPortadaSecundaria.setForeground(new java.awt.Color(220, 95, 0));
+        cbxPortadaSecundaria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxPortadaSecundaria.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PORTADA SECUNDARIA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
+        cbxPortadaSecundaria.setOpaque(false);
+        jPanel4.add(cbxPortadaSecundaria);
 
         jPanel2.add(jPanel4);
 
@@ -166,15 +212,6 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
 
         pLienzo.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        btnAgregar.setBackground(new java.awt.Color(33, 45, 62));
-        btnAgregar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
-        btnAgregar.setForeground(new java.awt.Color(250, 250, 250));
-        btnAgregar.setText("AGREGAR AL CARRITO");
-        btnAgregar.setContentAreaFilled(false);
-        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAgregar.setOpaque(true);
-        pLienzo.add(btnAgregar, java.awt.BorderLayout.PAGE_END);
-
         jPanel1.setBackground(new java.awt.Color(250, 250, 250));
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
@@ -205,15 +242,55 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
 
         pLienzo.add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
+        jPanel3.setLayout(new java.awt.GridLayout(1, 0));
+
+        btnCrearPaquete.setBackground(new java.awt.Color(33, 45, 62));
+        btnCrearPaquete.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
+        btnCrearPaquete.setForeground(new java.awt.Color(250, 250, 250));
+        btnCrearPaquete.setText("CREAR PAQUETE");
+        btnCrearPaquete.setContentAreaFilled(false);
+        btnCrearPaquete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCrearPaquete.setOpaque(true);
+        jPanel3.add(btnCrearPaquete);
+
+        btnCambiarAlojamiento.setBackground(new java.awt.Color(33, 45, 62));
+        btnCambiarAlojamiento.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
+        btnCambiarAlojamiento.setForeground(new java.awt.Color(250, 250, 250));
+        btnCambiarAlojamiento.setText("CAMBIAR ALOJAMIENTO");
+        btnCambiarAlojamiento.setContentAreaFilled(false);
+        btnCambiarAlojamiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCambiarAlojamiento.setOpaque(true);
+        jPanel3.add(btnCambiarAlojamiento);
+
+        btnCambiarVuelo.setBackground(new java.awt.Color(33, 45, 62));
+        btnCambiarVuelo.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
+        btnCambiarVuelo.setForeground(new java.awt.Color(250, 250, 250));
+        btnCambiarVuelo.setText("CAMBIAR VUELO");
+        btnCambiarVuelo.setContentAreaFilled(false);
+        btnCambiarVuelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCambiarVuelo.setOpaque(true);
+        jPanel3.add(btnCambiarVuelo);
+
+        btnCambiarActividad.setBackground(new java.awt.Color(33, 45, 62));
+        btnCambiarActividad.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
+        btnCambiarActividad.setForeground(new java.awt.Color(250, 250, 250));
+        btnCambiarActividad.setText("CAMBIAR ACTIVIDAD");
+        btnCambiarActividad.setContentAreaFilled(false);
+        btnCambiarActividad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCambiarActividad.setOpaque(true);
+        jPanel3.add(btnCambiarActividad);
+
+        pLienzo.add(jPanel3, java.awt.BorderLayout.PAGE_END);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 1294, Short.MAX_VALUE)
+            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 751, Short.MAX_VALUE)
+            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -221,9 +298,18 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAgregar;
+    public javax.swing.JButton btnCambiarActividad;
+    public javax.swing.JButton btnCambiarAlojamiento;
+    public javax.swing.JButton btnCambiarVuelo;
+    public javax.swing.JButton btnCrearPaquete;
     public javax.swing.JButton btnLeft;
     public javax.swing.JButton btnRight;
+    public javax.swing.JComboBox<String> cbxLugarDestino;
+    public javax.swing.JComboBox<String> cbxLugarPartida;
+    public javax.swing.JComboBox<String> cbxPortadaPrincipal;
+    public javax.swing.JComboBox<String> cbxPortadaSecundaria;
+    public com.toedter.calendar.JDateChooser dcFechaPartida;
+    public com.toedter.calendar.JDateChooser dcFechaRegreso;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
@@ -232,25 +318,24 @@ public class VVerPaquetes extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     public javax.swing.JLabel lblActividad;
     public javax.swing.JLabel lblAlojamiento;
     public javax.swing.JLabel lblCantidadRegistros;
     public javax.swing.JLabel lblEmail;
     public javax.swing.JLabel lblNombrePaquete;
-    public javax.swing.JLabel lblPaquete;
     public javax.swing.JLabel lblTitulo;
     public javax.swing.JLabel lblVuelo;
     public javax.swing.JPanel pLienzo;
     public javax.swing.JTextArea txaDatosActividad;
     public javax.swing.JTextArea txaDatosAlojamiento;
-    public javax.swing.JTextArea txaDatosPaquete;
     public javax.swing.JTextArea txaDatosVuelo;
+    public javax.swing.JTextField txtNombrePaquete;
     // End of variables declaration//GEN-END:variables
 }

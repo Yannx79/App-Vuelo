@@ -16,15 +16,15 @@ import process.PMenu;
 import views.*;
 
 public class CMenu extends ObligacionControlador implements ActionListener, WindowListener {
-
+    
     public static VMenu vista;
     public static ClienteDTO usuario;
-
+    
     public CMenu(VMenu vmenu) {
         this.vista = vmenu;
         super.constructor();
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.miLogout) {
@@ -57,7 +57,7 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
             CSelecionarActividad csa = new CSelecionarActividad(vsa);
             Desktop.agregarAlDesktop(this.vista.desktopMenu, vsa);
         } else if (e.getSource() == this.vista.miCrearPaquete) {
-
+            this.actionPerformedCrearPaquete(e);
         } else if (e.getSource() == this.vista.miCrearAlojamiento) {
             VCrearAlojamiento vca = new VCrearAlojamiento();
             CCrearAlojamiento cca = new CCrearAlojamiento(vca);
@@ -70,8 +70,14 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
             this.actionPerformedCrearActividad(e);
         }
     }
-
-    private void actionPerformedCrearActividad(ActionEvent e){
+    
+    private void actionPerformedCrearPaquete(ActionEvent e) {
+        VCrearPaquete vcp = new VCrearPaquete();
+        CCrearPaquete ccp = new CCrearPaquete(vcp);
+        Desktop.agregarAlDesktop(this.vista.desktopMenu, vcp);
+    }
+    
+    private void actionPerformedCrearActividad(ActionEvent e) {
         VCrearActividad vca = new VCrearActividad();
         CCrearActividad cca = new CCrearActividad(vca);
         Desktop.agregarAlDesktop(this.vista.desktopMenu, vca);
@@ -84,12 +90,12 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
         this.vista.setExtendedState(JFrame.MAXIMIZED_BOTH);
         PMenu.construirForma(this.vista);
     }
-
+    
     @Override
     public void inicializarObjetos() {
         usuario = new ClienteDTO();
     }
-
+    
     @Override
     public void agregarTodosListeners() {
         this.vista.addWindowListener(this);
@@ -118,37 +124,37 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
         CLogin cLogin = new CLogin(vLogin);
         Desktop.agregarAlDesktop(this.vista.desktopMenu, vLogin);
     }
-
+    
     @Override
     public void windowOpened(WindowEvent e) {
         if (e.getSource() == this.vista) {
             this.cargarLogin();
         }
     }
-
+    
     @Override
     public void windowClosing(WindowEvent e) {
-
+        
     }
-
+    
     @Override
     public void windowClosed(WindowEvent e) {
     }
-
+    
     @Override
     public void windowIconified(WindowEvent e) {
     }
-
+    
     @Override
     public void windowDeiconified(WindowEvent e) {
     }
-
+    
     @Override
     public void windowActivated(WindowEvent e) {
     }
-
+    
     @Override
     public void windowDeactivated(WindowEvent e) {
     }
-
+    
 }
