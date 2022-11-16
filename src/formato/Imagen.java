@@ -21,5 +21,5 @@ public class Imagen {
         label.setIcon(icon);
         label.repaint();
     }
-
+    
 }

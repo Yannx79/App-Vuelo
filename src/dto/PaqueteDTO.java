@@ -71,6 +71,23 @@ public class PaqueteDTO {
                 + "\n Id Portada Secundaria  : " + portadaSecundaria;
     }
 
+    public Object[] vectorizar() {
+        Object[] values = {
+            getIdPaquete(),
+            getIdAlojamiento(),
+            getIdVuelo(),
+            getIdOrigen(),
+            getIdDestino(),
+            getFechaSalida(),
+            getFechaRegreso(),
+            getIdActividad(),
+            getPortadaPrincipal(),
+            getPortadaSecundaria(),
+            getNombrePaquete()
+        };
+        return values;
+    }
+    
     public String getNombrePaquete() {
         return nombrePaquete;
     }

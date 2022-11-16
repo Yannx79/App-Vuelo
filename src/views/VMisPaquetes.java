@@ -44,7 +44,7 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblDatos = new javax.swing.JTable();
 
         setClosable(true);
 
@@ -69,7 +69,6 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jButton2.setText("VER DETALLE");
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
         jButton2.setContentAreaFilled(false);
-        jButton2.setOpaque(false);
         jButton2.setVerifyInputWhenFocusTarget(false);
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
@@ -89,7 +88,6 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jButton3.setText("ACTUALIZAR");
         jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
         jButton3.setContentAreaFilled(false);
-        jButton3.setOpaque(false);
         jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 180, 50));
@@ -108,7 +106,6 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jButton4.setText("ELIMINAR");
         jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
         jButton4.setContentAreaFilled(false);
-        jButton4.setOpaque(false);
         jPanel5.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 180, 50));
@@ -127,7 +124,6 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jButton5.setText("PAGAR");
         jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
         jButton5.setContentAreaFilled(false);
-        jButton5.setOpaque(false);
         jPanel6.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 180, 50));
@@ -146,7 +142,6 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jButton6.setText("SIN ACCION");
         jButton6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
         jButton6.setContentAreaFilled(false);
-        jButton6.setOpaque(false);
         jPanel7.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 180, 50));
@@ -165,7 +160,6 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jButton1.setText("SIN ACCION");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
         jButton1.setContentAreaFilled(false);
-        jButton1.setOpaque(false);
         jPanel8.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 180, 50));
@@ -196,9 +190,9 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 720, 120));
 
-        jTable1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTable1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblDatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tblDatos.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 16)); // NOI18N
+        tblDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -209,10 +203,10 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setGridColor(new java.awt.Color(220, 95, 0));
-        jTable1.setOpaque(false);
-        jTable1.setRowHeight(30);
-        jScrollPane1.setViewportView(jTable1);
+        tblDatos.setGridColor(new java.awt.Color(220, 95, 0));
+        tblDatos.setOpaque(false);
+        tblDatos.setRowHeight(30);
+        jScrollPane1.setViewportView(tblDatos);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 700, 410));
 
@@ -266,6 +260,6 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
 }

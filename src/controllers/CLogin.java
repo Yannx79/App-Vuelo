@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import formato.Encriptar;
 import formato.Imagen;
+import javax.swing.ImageIcon;
 
 public class CLogin extends ObligacionControlador implements ActionListener {
 
@@ -38,6 +39,8 @@ public class CLogin extends ObligacionControlador implements ActionListener {
         Imagen.ajustar(this.vista.lblLogoReducido, "imagenes/interfaces/logo_transparent.png");
         Imagen.ajustar(this.vista.lblBannerLogo, "imagenes/interfaces/entrada.png");
         Imagen.ajustar(this.vista.lblLogoCentro, "imagenes/interfaces/logo_transparent.png");
+        this.vista.lblUser.setIcon(new ImageIcon("imagenes/iconos/user_color.png"));
+        this.vista.lblPassword.setIcon(new ImageIcon("imagenes/iconos/password_color.png"));
     }
 
     @Override

@@ -38,8 +38,8 @@ public class VLogin extends javax.swing.JInternalFrame {
         txtPassword = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lblUser = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         rbAdministrador = new javax.swing.JRadioButton();
         rbCliente = new javax.swing.JRadioButton();
@@ -122,8 +122,8 @@ public class VLogin extends javax.swing.JInternalFrame {
         jSeparator2.setBackground(new java.awt.Color(207, 10, 10));
         jSeparator2.setForeground(new java.awt.Color(220, 95, 0));
         jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 310, 10));
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 48, 36));
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 48, 42));
+        jPanel2.add(lblUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 48, 36));
+        jPanel2.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 48, 42));
 
         jCheckBox1.setBackground(new java.awt.Color(33, 45, 62));
         jCheckBox1.setFont(new java.awt.Font("Gotham Thin", 0, 14)); // NOI18N
@@ -193,8 +193,6 @@ public class VLogin extends javax.swing.JInternalFrame {
     public javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
@@ -203,7 +201,9 @@ public class VLogin extends javax.swing.JInternalFrame {
     public javax.swing.JLabel lblFondo;
     public javax.swing.JLabel lblLogoCentro;
     public javax.swing.JLabel lblLogoReducido;
+    public javax.swing.JLabel lblPassword;
     public javax.swing.JLabel lblTitulo;
+    public javax.swing.JLabel lblUser;
     public javax.swing.JRadioButton rbAdministrador;
     public javax.swing.JRadioButton rbCliente;
     public javax.swing.JRadioButton rbEmpleado;

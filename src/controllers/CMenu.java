@@ -12,6 +12,7 @@ import java.awt.event.WindowListener;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import process.PMenu;
 import views.*;
 
 public class CMenu extends ObligacionControlador implements ActionListener, WindowListener {
@@ -81,6 +82,7 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
         this.vista.setVisible(true);
         this.vista.setTitle("App de venta de paquetes de viajes");
         this.vista.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        PMenu.construirForma(this.vista);
     }
 
     @Override

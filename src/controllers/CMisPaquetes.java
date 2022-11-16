@@ -4,7 +4,7 @@ import interfaces.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import dao.*;
-import dto.*;
+import process.PMisPaquetes;
 import views.*;
 
 public class CMisPaquetes extends ObligacionControlador implements ActionListener{
@@ -21,6 +21,7 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
     public void construirVista() {
         this.vista.setVisible(true);
         this.vista.setTitle("MIS PAQUETES");
+        PMisPaquetes.construirForma(this.vista);
     }
 
     @Override
