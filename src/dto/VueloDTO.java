@@ -34,7 +34,7 @@ public class VueloDTO {
 
     @Override
     public String toString() {
-        return "**************************************************"
+        return "*************** DATOS VUELO*********************"
                 + "\n Id Vuelo           : " + idVuelo
                 + "\n Numero Pasajeros   : " + numeroPasajeros
                 + "\n Costo Vuelo        : " + costoVuelo

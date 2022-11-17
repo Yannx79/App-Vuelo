@@ -42,7 +42,7 @@ public class ActividadDTO {
 
     @Override
     public String toString() {
-        return "*****************************************************"
+        return "************** DATOS ACTIVIDAD **********************"
                 + "\n Id Actividad           : " + idActividad
                 + "\n Nombre Actividad       : " + nombreActividad
                 + "\n Descripcion            : " + descripcion

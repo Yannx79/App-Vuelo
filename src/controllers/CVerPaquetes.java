@@ -21,8 +21,11 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
     private MiPaqueteDAO miPaqueteDAO;
     private PortadaDAO portadaDAO;
     private AlojamientoDAO alojamientoDAO;
+    private HotelDAO hotelDAO;
     private ActividadDAO actividadDAO;
     private VueloDAO vueloDAO;
+    private AvionDAO avionDAO;
+    private CategoriaDAO categoriaDAO;
     //dto
     private PaqueteDTO paqueteDTO;
     private MiPaqueteDTO miPaqueteDTO;
@@ -59,6 +62,9 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         alojamientoDAO = new AlojamientoDAO();
         actividadDAO = new ActividadDAO();
         vueloDAO = new VueloDAO();
+        avionDAO = new AvionDAO();
+        hotelDAO = new HotelDAO();
+        categoriaDAO = new CategoriaDAO();
 
         paqueteDTO = new PaqueteDTO();
         miPaqueteDTO = new MiPaqueteDTO();
@@ -66,7 +72,7 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         listPaquetes = new LinkedList<>();
         listPaquetes = paqueteDAO.readAll();
         index = 0;
-        
+
         this.vista.lblActividad.setSize(288, 300);
         this.vista.lblVuelo.setSize(288, 300);
         this.vista.lblPaquete.setSize(288, 300);
@@ -120,19 +126,25 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         this.vista.txaDatosPaquete.setText(paqueteDTO.toString());
         //establecer img alojamiento
         AlojamientoDTO alojamientoDTO = alojamientoDAO.read(paqueteDTO.getIdAlojamiento());
+        HotelDTO hotelDTO = hotelDAO.read(alojamientoDTO.getIdHotel());
         portadaDTO = portadaDAO.read(alojamientoDTO.getPortadoPrincipal());
         Imagen.ajustar(this.vista.lblAlojamiento, "imagenes/alojamientos/" + portadaDTO.getPath());
-        this.vista.txaDatosAlojamiento.setText(alojamientoDTO.toString());
+        String textoAlojamiento = alojamientoDTO.toString() + "\n" + hotelDTO.toString();
+        this.vista.txaDatosAlojamiento.setText(textoAlojamiento);
         //establecer img vuelo
         VueloDTO vueloDTO = vueloDAO.read(paqueteDTO.getIdVuelo());
+        AvionDTO avionDTO = avionDAO.read(vueloDTO.getIdAvion());
         portadaDTO = portadaDAO.read(vueloDTO.getPortadaPrincipal());
         Imagen.ajustar(this.vista.lblVuelo, "imagenes/vuelos/" + portadaDTO.getPath());
-        this.vista.txaDatosVuelo.setText(vueloDTO.toString());
+        String textoVuelo = vueloDTO.toString() + "\n" + avionDTO.toString();
+        this.vista.txaDatosVuelo.setText(textoVuelo);
         //establecer img actividad
         ActividadDTO actividadDTO = actividadDAO.read(paqueteDTO.getIdActividad());
+        CategoriaDTO categoriaDTO = categoriaDAO.read(actividadDTO.getIdCategoria());
         portadaDTO = portadaDAO.read(actividadDTO.getPortadoPrincipal());
         Imagen.ajustar(this.vista.lblActividad, "imagenes/actividades/" + portadaDTO.getPath());
-        this.vista.txaDatosActividad.setText(actividadDTO.toString());
+        String textoActividad = actividadDTO.toString() + "\n" + categoriaDTO.toString();
+        this.vista.txaDatosActividad.setText(textoActividad);
     }
 
 }

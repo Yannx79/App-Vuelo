@@ -23,9 +23,9 @@ public class HotelDTO {
     @Override
     public String toString() {
         return "**************** DATOS DEL HOTEL ****************************"
-                + "\n IdHotel               : " + idHotel
-                + "\n NombreHotel           : " + nombreHotel
-                + "\n CantidadEstrellas     : " + cantidadEstrellas;
+                + "\n IdHotel                : " + idHotel
+                + "\n NombreHotel            : " + nombreHotel
+                + "\n CantidadEstrellas      : " + cantidadEstrellas;
     }
 
     public int getIdHotel() {

@@ -16,7 +16,7 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jPanel3 = new javax.swing.JPanel();
         lblVerDetalle = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnVerDeetalle = new javax.swing.JButton();
+        btnVerDetalle = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         lblActualizar = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -65,13 +65,13 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jLabel2.setOpaque(true);
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        btnVerDeetalle.setBackground(new java.awt.Color(250, 250, 250));
-        btnVerDeetalle.setForeground(new java.awt.Color(250, 250, 250));
-        btnVerDeetalle.setText("VER DETALLE");
-        btnVerDeetalle.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        btnVerDeetalle.setContentAreaFilled(false);
-        btnVerDeetalle.setVerifyInputWhenFocusTarget(false);
-        jPanel3.add(btnVerDeetalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnVerDetalle.setBackground(new java.awt.Color(250, 250, 250));
+        btnVerDetalle.setForeground(new java.awt.Color(250, 250, 250));
+        btnVerDetalle.setText("VER DETALLE");
+        btnVerDetalle.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnVerDetalle.setContentAreaFilled(false);
+        btnVerDetalle.setVerifyInputWhenFocusTarget(false);
+        jPanel3.add(btnVerDetalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 180, 50));
 
@@ -220,7 +220,7 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnPagar;
     public javax.swing.JButton btnSinAccion1;
     public javax.swing.JButton btnSinAccion2;
-    public javax.swing.JButton btnVerDeetalle;
+    public javax.swing.JButton btnVerDetalle;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel17;

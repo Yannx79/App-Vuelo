@@ -21,8 +21,8 @@ public class CategoriaDTO {
     @Override
     public String toString() {
         return "*********** DATOS CATEGORIA *****************" 
-                + "\n Id Categoria      : " + idCategoria 
-                + "\n Tipo Categoria    : " + tipoCategoria;
+                + "\n Id Categoria          : " + idCategoria 
+                + "\n Tipo Categoria        : " + tipoCategoria;
     }
 
     

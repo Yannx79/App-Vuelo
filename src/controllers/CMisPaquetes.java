@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import dao.*;
 import formato.Imagen;
+import formato.Mensaje;
 import javax.swing.ImageIcon;
 import process.PMisPaquetes;
 import views.*;
@@ -39,7 +40,7 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
         this.vista.btnEliminar.addActionListener(this);
         this.vista.btnActualizar.addActionListener(this);
         this.vista.btnPagar.addActionListener(this);
-        this.vista.btnVerDeetalle.addActionListener(this);
+        this.vista.btnVerDetalle.addActionListener(this);
     }
 
     @Override
@@ -50,7 +51,26 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.btnEliminar) {
-            eliminarPaquete();
+            this.eliminarPaquete();
+        } else if (e.getSource() == this.vista.btnActualizar) {
+            /*
+            muestra el alojamiento
+            muestra el vuelo
+            muestra la actividad
+            */
+        } else if (e.getSource() == this.vista.btnVerDetalle) {
+            /*
+            recuperar la data paquete
+            recuperar la data alojamiento
+                recuperar su subpaquete
+            recuperar la data actividad
+                recuperar subpaquete
+            recuperar vuelo
+                recuperar aviones
+            */
+            
+        } else if (e.getSource() == this.vista.btnPagar) {
+            Mensaje.mostrar(CMenu.usuario.getNombres() + " pagaste exitosamente");
         }
 
     }

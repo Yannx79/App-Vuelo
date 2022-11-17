@@ -3,6 +3,8 @@ package process;
 import controllers.CMenu;
 import dto.MiPaqueteDTO;
 import dao.MiPaqueteDAO;
+import dao.PaqueteDAO;
+import dto.PaqueteDTO;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.swing.JTable;
@@ -38,5 +40,5 @@ public class PMisPaquetes {
                 collect(Collectors.toList());
         return list;
     }
-
+    
 }

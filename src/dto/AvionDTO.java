@@ -21,8 +21,8 @@ public class AvionDTO {
     @Override
     public String toString() {
         return "******** DATOS AVION *******************" 
-                + "\n Id Avion      : " + idAvion 
-                + "\n Nombre Avion  : " + nombreAvion;
+                + "\n Id Avion           : " + idAvion 
+                + "\n Nombre Avion       : " + nombreAvion;
     }
 
     public int getIdAvion() {
