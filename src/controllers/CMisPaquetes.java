@@ -8,13 +8,15 @@ import dto.*;
 import formato.Desktop;
 import formato.Imagen;
 import formato.Mensaje;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import javax.swing.ImageIcon;
 import process.PMisPaquetes;
 import views.*;
 
 public class CMisPaquetes extends ObligacionControlador implements ActionListener {
 
-    private VMisPaquetes vista;
+    public static VMisPaquetes vista;
     private MiPaqueteDAO miPaqueteDAO;
     private PaqueteDAO paqueteDAO;
     private AlojamientoDAO alojamientoDAO;
@@ -81,7 +83,6 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
         } else if (e.getSource() == this.vista.btnPagar) {
             Mensaje.mostrar(CMenu.usuario.getNombres() + " pagaste exitosamente");
         }
-        PMisPaquetes.completarTabla(this.vista.tblDatos);
     }
 
     private void verDetalle() {

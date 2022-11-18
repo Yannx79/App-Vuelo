@@ -50,6 +50,8 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
         this.list = new LinkedList<>();
         this.list = actividadDAO.readAll();
         this.index = 0;
+        this.vista.lblPortadaSecundaria.setSize(510, 250);
+        this.vista.lblPortadaPrincipal.setSize(510, 250);
         this.completarInformacionActividad();
     }
 
@@ -57,6 +59,7 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.btnAgregar) {
             this.agregarActividad();
+            PMisPaquetes.completarTabla(CMisPaquetes.vista.tblDatos);
         } else if (e.getSource() == this.vista.btnLeft) {
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnRight) {
@@ -81,18 +84,18 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
         }
         this.completarInformacionActividad();
     }
-    
-    private void agregarActividad(){
+
+    private void agregarActividad() {
         MiPaqueteDAO miPaqueteDAO = new MiPaqueteDAO();
         MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
         int idPaquete = Parse.getPK(this.vista.cbxMisPaquetes.getSelectedItem().toString());
         miPaqueteDTO.setIdPaquete(idPaquete);
         miPaqueteDTO.setIdActividad(list.get(index).getIdActividad());
         miPaqueteDAO.updateActividad(miPaqueteDTO);
-        
+
     }
-    
-    private void completarInformacionActividad(){
+
+    private void completarInformacionActividad() {
         ActividadDTO actividadDTO = list.get(index);
         this.vista.lblNombreActividad.setText(actividadDTO.getNombreActividad());
         this.vista.txtIdActividad.setText(String.valueOf(actividadDTO.getIdActividad()));
@@ -101,9 +104,9 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
         this.vista.txtIdCategoria.setText(String.valueOf(actividadDTO.getIdCategoria()));
         this.vista.txtNombreActividad.setText(String.valueOf(actividadDTO.getNombreActividad()));
         PortadaDTO portadaDTO = portadaDAO.read(actividadDTO.getPortadoPrincipal());
-        Imagen.ajustar(this.vista.lblPortadoPrincipal, "imagenes/actividades/" + portadaDTO.getPath());
+        Imagen.ajustar(this.vista.lblPortadaPrincipal, "imagenes/actividades/" + portadaDTO.getPath());
         portadaDTO = portadaDAO.read(actividadDTO.getPortadaSecundaria());
         Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/actividades/" + portadaDTO.getPath());
     }
-    
+
 }

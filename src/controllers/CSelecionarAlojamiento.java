@@ -47,13 +47,15 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
 
     @Override
     public void inicializarObjetos() {
-        this.vista.lblPortadoPrincipal.setSize(510, 250);
+        this.vista.lblPortadaPrincipal.setSize(510, 250);
         this.vista.lblPortadaSecundaria.setSize(510, 250);
         alojamientoDAO = new AlojamientoDAO();
         portadaDAO = new PortadaDAO();
         this.list = new LinkedList<>();
         this.list = alojamientoDAO.readAll();
         this.index = 0;
+        this.vista.lblPortadaPrincipal.setSize(510, 250);
+        this.vista.lblPortadaSecundaria.setSize(510, 250);
         this.completarInformacionAlojamiento();
     }
 
@@ -65,6 +67,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnAgregar) {
             this.agregarAlojamiento();
+            PMisPaquetes.completarTabla(CMisPaquetes.vista.tblDatos);
         }
     }
 
@@ -104,7 +107,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
         this.vista.txtNumeroHabitaciones.setText(String.valueOf(alojamientoDTO.getNumeroHabitaciones()));
         this.vista.txtNumeroPersonas.setText(String.valueOf(alojamientoDTO.getNumeroPersonas()));
         PortadaDTO portadaDTO = portadaDAO.read(alojamientoDTO.getPortadoPrincipal());
-        Imagen.ajustar(this.vista.lblPortadoPrincipal, "imagenes/alojamientos/" + portadaDTO.getPath());
+        Imagen.ajustar(this.vista.lblPortadaPrincipal, "imagenes/alojamientos/" + portadaDTO.getPath());
         portadaDTO = portadaDAO.read(alojamientoDTO.getPortadaSecundaria());
         Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/alojamientos/" + portadaDTO.getPath());
     }

@@ -148,9 +148,6 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
         this.vista.miCrearActividad.addActionListener(this);
     }
 
-//    private void setAllEnable() {
-//        //encontra el tipo de instancia
-//    }
     private void cargarLogin() {
         VLogin vLogin = new VLogin();
         CLogin cLogin = new CLogin(vLogin);

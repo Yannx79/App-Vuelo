@@ -31,7 +31,7 @@ public class VSelecionarActividad extends javax.swing.JInternalFrame {
         btnLeft = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        lblPortadoPrincipal = new javax.swing.JLabel();
+        lblPortadaPrincipal = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         cbxMisPaquetes = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -77,7 +77,7 @@ public class VSelecionarActividad extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PORTADA PRINCIPAL", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(lblPortadoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 510, 250));
+        jPanel3.add(lblPortadaPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 510, 250));
 
         jPanel2.add(jPanel3);
 
@@ -202,8 +202,8 @@ public class VSelecionarActividad extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JLabel lblCantidadRegistros;
     public javax.swing.JLabel lblNombreActividad;
+    public javax.swing.JLabel lblPortadaPrincipal;
     public javax.swing.JLabel lblPortadaSecundaria;
-    public javax.swing.JLabel lblPortadoPrincipal;
     public javax.swing.JLabel lblTitulo;
     public javax.swing.JLabel lblUsuario;
     public javax.swing.JTextArea txaDatosExtra;

@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
 import java.util.List;
+import process.PMisPaquetes;
 import process.PSelecionarVuelo;
 import process.Parse;
 
@@ -52,9 +53,8 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
         this.list = new LinkedList<>();
         this.list = vueloDAO.readAll();
         this.index = 0;
-//        System.out.println(this.vista.lblPortadoPrincipal.getSize());
-//        this.vista.lblPortadoPrincipal.setSize(this.vista.pPortadaPrincipal.getSize());
-//        System.out.println(this.vista.pPortadaPrincipal.getSize());
+        this.vista.lblPortadaSecundaria.setSize(510, 250);
+        this.vista.lblPortadoPrincipal.setSize(510, 250);
         this.completarInformacionVuelo();
     }
 
@@ -66,6 +66,7 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnAgregar) {
             this.agregarVuelo();
+            PMisPaquetes.completarTabla(CMisPaquetes.vista.tblDatos);
         }
     }
 
