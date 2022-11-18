@@ -39,7 +39,7 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
         } else if (e.getSource() == this.vista.miPaquetesPersonalizados) {
             this.actionPerformedPaquetesPersonalizados();
         } else if (e.getSource() == this.vista.miSeleccionarAlojamiento) {
-            this.actionPerformedCrearAlojamiento();
+            this.actionPerformedSeleccionarAlojamiento();
         } else if (e.getSource() == this.vista.miSeleccionarVuelo) {
             this.actionPerformedSeleccionarVuelo();
         } else if (e.getSource() == this.vista.miSeleccionarActividad) {

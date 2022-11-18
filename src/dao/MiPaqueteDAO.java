@@ -23,7 +23,7 @@ public class MiPaqueteDAO implements ObjectIDAO<MiPaqueteDTO> {
             + "fecha_regreso, portada_principal, portada_secundaria, "
             + "id_usuario, nombre_paquete) VALUES (?,?,?,?,?,?,?,?)";
     private static final String SQL_READ = ""
-            + "SELECT * FROM mis_paquetes WHERE id_mis_paquete=?";
+            + "SELECT * FROM mis_paquetes WHERE id_mis_paquetes=?";
     private static final String SQL_READ_ALL = ""
             + "SELECT * FROM mis_paquetes";
     private static final String SQL_UPDATE = ""

@@ -18,9 +18,9 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         btnVerDetalle = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        lblActualizar = new javax.swing.JLabel();
+        lblActualizarActividad = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        btnActualizar = new javax.swing.JButton();
+        btnActualizarActividad = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         lblEliminar = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -30,13 +30,13 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jLabel11 = new javax.swing.JLabel();
         btnPagar = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
-        lblSinAccion1 = new javax.swing.JLabel();
+        lblActualizarAlojamiento = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        btnSinAccion1 = new javax.swing.JButton();
+        btnActualizarAlojamiento = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
-        lblSinAccion2 = new javax.swing.JLabel();
+        lblActualizarVuelo = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        btnSinAccion2 = new javax.swing.JButton();
+        btnActualizarVuelo = new javax.swing.JButton();
         lblRepresentacion = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         lblReferencia = new javax.swing.JLabel();
@@ -79,19 +79,19 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel4.setOpaque(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel4.add(lblActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel4.add(lblActualizarActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel5.setBackground(new java.awt.Color(192, 27, 54));
         jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        btnActualizar.setBackground(new java.awt.Color(250, 250, 250));
-        btnActualizar.setForeground(new java.awt.Color(250, 250, 250));
-        btnActualizar.setText("ACTUALIZAR");
-        btnActualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        btnActualizar.setContentAreaFilled(false);
-        jPanel4.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnActualizarActividad.setBackground(new java.awt.Color(250, 250, 250));
+        btnActualizarActividad.setForeground(new java.awt.Color(250, 250, 250));
+        btnActualizarActividad.setText("ACTUALIZAR ACTIVIDAD");
+        btnActualizarActividad.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnActualizarActividad.setContentAreaFilled(false);
+        jPanel4.add(btnActualizarActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 180, 50));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 180, 50));
 
         jPanel5.setBackground(new java.awt.Color(42, 39, 41));
         jPanel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -109,7 +109,7 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         btnEliminar.setContentAreaFilled(false);
         jPanel5.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 180, 50));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 180, 50));
 
         jPanel6.setBackground(new java.awt.Color(42, 39, 41));
         jPanel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -127,43 +127,43 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         btnPagar.setContentAreaFilled(false);
         jPanel6.add(btnPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 180, 50));
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 180, 50));
 
         jPanel7.setBackground(new java.awt.Color(42, 39, 41));
         jPanel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel7.setOpaque(false);
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel7.add(lblSinAccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel7.add(lblActualizarAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel14.setBackground(new java.awt.Color(192, 27, 54));
         jPanel7.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        btnSinAccion1.setBackground(new java.awt.Color(250, 250, 250));
-        btnSinAccion1.setForeground(new java.awt.Color(250, 250, 250));
-        btnSinAccion1.setText("SIN ACCION");
-        btnSinAccion1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        btnSinAccion1.setContentAreaFilled(false);
-        jPanel7.add(btnSinAccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnActualizarAlojamiento.setBackground(new java.awt.Color(250, 250, 250));
+        btnActualizarAlojamiento.setForeground(new java.awt.Color(250, 250, 250));
+        btnActualizarAlojamiento.setText("ACTUALIZAR ALOJAMIENTO");
+        btnActualizarAlojamiento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnActualizarAlojamiento.setContentAreaFilled(false);
+        jPanel7.add(btnActualizarAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 180, 50));
+        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 180, 50));
 
         jPanel8.setBackground(new java.awt.Color(42, 39, 41));
         jPanel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel8.setOpaque(false);
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel8.add(lblSinAccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
+        jPanel8.add(lblActualizarVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 30, 30));
 
         jLabel17.setBackground(new java.awt.Color(192, 27, 54));
         jPanel8.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 50));
 
-        btnSinAccion2.setBackground(new java.awt.Color(250, 250, 250));
-        btnSinAccion2.setForeground(new java.awt.Color(250, 250, 250));
-        btnSinAccion2.setText("SIN ACCION");
-        btnSinAccion2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
-        btnSinAccion2.setContentAreaFilled(false);
-        jPanel8.add(btnSinAccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
+        btnActualizarVuelo.setBackground(new java.awt.Color(250, 250, 250));
+        btnActualizarVuelo.setForeground(new java.awt.Color(250, 250, 250));
+        btnActualizarVuelo.setText("ACTUALIZAR VUELO");
+        btnActualizarVuelo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 250, 250), 1, true));
+        btnActualizarVuelo.setContentAreaFilled(false);
+        jPanel8.add(btnActualizarVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 110, 30));
 
-        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 180, 50));
+        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 180, 50));
         jPanel2.add(lblRepresentacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 60, 60));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -215,11 +215,11 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnActualizarActividad;
+    public javax.swing.JButton btnActualizarAlojamiento;
+    public javax.swing.JButton btnActualizarVuelo;
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnPagar;
-    public javax.swing.JButton btnSinAccion1;
-    public javax.swing.JButton btnSinAccion2;
     public javax.swing.JButton btnVerDetalle;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
@@ -238,13 +238,13 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JLabel lblActualizar;
+    public javax.swing.JLabel lblActualizarActividad;
+    public javax.swing.JLabel lblActualizarAlojamiento;
+    public javax.swing.JLabel lblActualizarVuelo;
     public javax.swing.JLabel lblEliminar;
     public javax.swing.JLabel lblPagar;
     public javax.swing.JLabel lblReferencia;
     public javax.swing.JLabel lblRepresentacion;
-    public javax.swing.JLabel lblSinAccion1;
-    public javax.swing.JLabel lblSinAccion2;
     public javax.swing.JLabel lblVerDetalle;
     public javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
