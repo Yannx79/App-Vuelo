@@ -71,15 +71,16 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
         }
     }
 
-    private void agregarAlojamiento(){
+    private void agregarAlojamiento() {
         MiPaqueteDAO miPaqueteDAO = new MiPaqueteDAO();
         MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
         int idPaquete = Parse.getPK(this.vista.cbxMisPaquetes.getSelectedItem().toString());
         miPaqueteDTO.setIdPaquete(idPaquete);
         miPaqueteDTO.setIdAlojamiento(list.get(index).getIdAlojamiento());
         miPaqueteDAO.updateAlojamiento(miPaqueteDTO);
+        Mensaje.mostrar("Accion ejecutada correctamente");
     }
-    
+
     private void moveLeft() {
         if (index > 0) {
             index--;
@@ -99,7 +100,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
     }
 
     private void completarInformacionAlojamiento() {
-        this.vista.lblNombreAlojamiento.setText("Sin Nombre");
+        this.vista.lblNombreAlojamiento.setText("Id del alojamiento: " + list.get(index).getIdAlojamiento());
         AlojamientoDTO alojamientoDTO = list.get(index);
         this.vista.txtIdAlojamiento.setText(String.valueOf(alojamientoDTO.getIdAlojamiento()));
         this.vista.txtCostoAlojamiento.setText(String.valueOf(alojamientoDTO.getCostoAlojamiento()));

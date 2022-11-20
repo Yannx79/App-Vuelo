@@ -8,6 +8,7 @@ import views.*;
 import process.*;
 import dto.*;
 import formato.Imagen;
+import formato.Mensaje;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -92,7 +93,7 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
         miPaqueteDTO.setIdPaquete(idPaquete);
         miPaqueteDTO.setIdActividad(list.get(index).getIdActividad());
         miPaqueteDAO.updateActividad(miPaqueteDTO);
-
+        Mensaje.mostrar("Accion ejecutada correctamente");
     }
 
     private void completarInformacionActividad() {

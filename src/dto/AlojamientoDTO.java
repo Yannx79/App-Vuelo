@@ -43,7 +43,7 @@ public class AlojamientoDTO {
 
     @Override
     public String toString() {
-        return "********************* DATOS HOTEL ***********************"
+        return "********************* DATOS DEL ALOJAMIENTO ***********************"
                 + "\n Id Alojamiento         : " + idAlojamiento
                 + "\n Costo Alojamiento      : " + costoAlojamiento
                 + "\n Numero Personas        : " + numeroPersonas

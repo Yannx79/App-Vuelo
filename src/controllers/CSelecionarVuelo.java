@@ -4,6 +4,7 @@ import views.*;
 import dao.*;
 import dto.*;
 import formato.Imagen;
+import formato.Mensaje;
 import interfaces.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -95,10 +96,11 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
         miPaqueteDTO.setIdPaquete(idPaquete);
         miPaqueteDTO.setIdVuelo(list.get(index).getIdVuelo());
         miPaqueteDAO.updateVuelo(miPaqueteDTO);
+        Mensaje.mostrar("Accion ejecutada correctamente");
     }
 
     private void completarInformacionVuelo() {
-        this.vista.lblNombreVuelo.setText("Sin Nombre");
+        this.vista.lblNombreVuelo.setText("Id del vuelo: " + list.get(index).getIdVuelo());
         VueloDTO vueloDTO = list.get(index);
         this.vista.txtCostoVuelo.setText(String.valueOf(vueloDTO.getCostoVuelo()));
         this.vista.txtIdAvion.setText(String.valueOf(vueloDTO.getIdAvion()));

@@ -95,6 +95,7 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
         miPaqueteDTO = Parse.parsePaqueteToMiPaquete(paqueteDTO);
         miPaqueteDTO.setIdUsuario(CMenu.usuario.getIdUsuario());
         miPaqueteDAO.create(miPaqueteDTO);
+        Mensaje.mostrar("Paquete agregado correctamente");
     }
 
     private void moveLeft() {
