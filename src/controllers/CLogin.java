@@ -90,7 +90,6 @@ public class CLogin extends ObligacionControlador implements ActionListener {
             this.vista.txtEmail.setText("");
             this.vista.txtPassword.setText("");
         }
-
     }
 
     private void habilitarOperaciones(){

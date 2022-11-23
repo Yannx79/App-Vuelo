@@ -67,7 +67,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnAgregar) {
             this.agregarAlojamiento();
-            PMisPaquetes.completarTabla(CMisPaquetes.vista.tblDatos);
+            PMisPaquetes.completarTablaConDependencias(CMisPaquetes.vista.tblDatos);
         }
     }
 

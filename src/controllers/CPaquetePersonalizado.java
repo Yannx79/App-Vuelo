@@ -7,6 +7,7 @@ import interfaces.*;
 import process.*;
 import dto.*;
 import formato.Imagen;
+import formato.Mensaje;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -59,6 +60,7 @@ public class CPaquetePersonalizado extends ObligacionControlador implements Acti
         MiPaqueteDTO miPaqueteDTO = new MiPaqueteDTO();
         miPaqueteDTO = PPaquetePersonalizado.instanciar(this.vista);
         miPaqueteDAO.createPaquete(miPaqueteDTO);
+        Mensaje.mostrar("Paquete Creado Sastifactoriamente");
     }
 
     private void cambiarImagen() {

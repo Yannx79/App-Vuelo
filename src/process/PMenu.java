@@ -10,6 +10,10 @@ public class PMenu {
     }
 
     private static void establecerImagenMenuItem(VMenu f) {
+        f.jmHome.setIcon(new ImageIcon(""));
+        f.jmOperacionesCliente.setIcon(new ImageIcon(""));
+        f.jmOperacionesEmpleado.setIcon(new ImageIcon(""));
+        
         f.miLogin.setIcon(new ImageIcon("imagenes/iconos/login.png"));
         f.miLogout.setIcon(new ImageIcon("imagenes/iconos/logout.png"));
         

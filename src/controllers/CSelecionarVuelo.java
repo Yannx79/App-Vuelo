@@ -67,7 +67,7 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnAgregar) {
             this.agregarVuelo();
-            PMisPaquetes.completarTabla(CMisPaquetes.vista.tblDatos);
+            PMisPaquetes.completarTablaConDependencias(CMisPaquetes.vista.tblDatos);
         }
     }
 
@@ -105,7 +105,7 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
         this.vista.txtCostoVuelo.setText(String.valueOf(vueloDTO.getCostoVuelo()));
         this.vista.txtIdAvion.setText(String.valueOf(vueloDTO.getIdAvion()));
         this.vista.txtIdVuelo.setText(String.valueOf(vueloDTO.getIdVuelo()));
-        this.vista.txtNombreVuelo.setText("");
+        this.vista.txtNombreVuelo.setText("Vuelo N° " + list.get(index).getIdVuelo() + "" + list.get(index).getIdAvion());
         this.vista.txtNumeroPasajeros.setText(String.valueOf(vueloDTO.getNumeroPasajeros()));
         PortadaDTO portadaDTO = portadaDAO.read(vueloDTO.getPortadaPrincipal());
         Imagen.ajustar(this.vista.lblPortadoPrincipal, "imagenes/vuelos/" + portadaDTO.getPath());

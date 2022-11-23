@@ -1,5 +1,9 @@
 package dto;
 
+import dao.ActividadDAO;
+import dao.AlojamientoDAO;
+import dao.VueloDAO;
+
 public class PaqueteDTO {
 
     private int idPaquete;
@@ -81,6 +85,35 @@ public class PaqueteDTO {
             getFechaSalida(),
             getFechaRegreso(),
             getIdActividad(),
+            getPortadaPrincipal(),
+            getPortadaSecundaria(),
+            getNombrePaquete()
+        };
+        return values;
+    }
+    
+    public Object[] vectorizarConDependencias() {
+        //daos
+        AlojamientoDAO alojamientoDAO = new AlojamientoDAO();
+        ActividadDAO actividadDAO = new ActividadDAO();
+        VueloDAO vueloDAO = new VueloDAO();
+        //dtos
+        AlojamientoDTO alojamientoDTO = alojamientoDAO.read(getIdAlojamiento());
+        ActividadDTO actividadDTO = actividadDAO.read(getIdActividad());
+        VueloDTO vueloDTO = vueloDAO.read(getIdVuelo());
+        //vector
+        Object[] values = {
+            getIdPaquete(),
+            getIdAlojamiento(),
+            "Alojamiento " + alojamientoDTO.getIdAlojamiento() + "" + alojamientoDTO.getIdHotel(),
+            getIdVuelo(),
+            "Vuelo " + vueloDTO.getIdVuelo() + "" + vueloDTO.getIdAvion(),
+            getIdOrigen(),
+            getIdDestino(),
+            getFechaSalida(),
+            getFechaRegreso(),
+            getIdActividad(),
+            "Activiadad " + actividadDTO.getNombreActividad(),
             getPortadaPrincipal(),
             getPortadaSecundaria(),
             getNombrePaquete()

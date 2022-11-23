@@ -24,6 +24,7 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
     private List<AlojamientoDTO> listAlojamientos;
     private List<ActividadDTO> listActividades;
     private List<VueloDTO> listVuelos;
+    private List<PaqueteDTO> listPaquetes;
 
     private Integer indexAlojamiento = 0;
     private Integer indexActividad = 0;
@@ -43,6 +44,9 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         this.vista.btnCambiarActividad.setIcon(new ImageIcon("imagenes/iconos/update.png"));
         this.vista.btnCambiarVuelo.setIcon(new ImageIcon("imagenes/iconos/update.png"));
         this.vista.btnCrearPaquete.setIcon(new ImageIcon("imagenes/iconos/create3.png"));
+        vista.lblCantidadRegistros.setText("Cantidad de paquetes existentes: " + listPaquetes.size());
+        this.vista.lblEmail.setText("Usuario: "+CMenu.usuario.getEmail());
+        this.vista.lblNombreUsuario.setText("Nombre Usuario: " +CMenu.usuario.getNombres());
         this.mostrarInformacion();
     }
 
@@ -67,6 +71,7 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         listActividades = actividadDAO.readAll();
         listAlojamientos = alojamientoDAO.readAll();
         listVuelos = vueloDAO.readAll();
+        listPaquetes = paqueteDAO.readAll();
 
         this.vista.lblActividad.setSize(288, 300);
         this.vista.lblVuelo.setSize(288, 300);

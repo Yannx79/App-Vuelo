@@ -88,6 +88,7 @@ public class CVerPaquetes extends ObligacionControlador implements ActionListene
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnAgregar) {
             this.agregarPaquete();
+            Mensaje.mostrar("Accion ejecutada correctamente");
         }
     }
 

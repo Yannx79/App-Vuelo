@@ -58,7 +58,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         lblTitulo = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         lblCantidadRegistros = new javax.swing.JLabel();
-        lblNombrePaquete = new javax.swing.JLabel();
+        lblNombreUsuario = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         btnCrearPaquete = new javax.swing.JButton();
@@ -228,10 +228,10 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         lblCantidadRegistros.setText("jLabel2");
         jPanel5.add(lblCantidadRegistros);
 
-        lblNombrePaquete.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
-        lblNombrePaquete.setForeground(new java.awt.Color(207, 10, 10));
-        lblNombrePaquete.setText("jLabel2");
-        jPanel5.add(lblNombrePaquete);
+        lblNombreUsuario.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblNombreUsuario.setForeground(new java.awt.Color(207, 10, 10));
+        lblNombreUsuario.setText("jLabel2");
+        jPanel5.add(lblNombreUsuario);
 
         lblEmail.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(207, 10, 10));
@@ -329,7 +329,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
     public javax.swing.JLabel lblAlojamiento;
     public javax.swing.JLabel lblCantidadRegistros;
     public javax.swing.JLabel lblEmail;
-    public javax.swing.JLabel lblNombrePaquete;
+    public javax.swing.JLabel lblNombreUsuario;
     public javax.swing.JLabel lblTitulo;
     public javax.swing.JLabel lblVuelo;
     public javax.swing.JPanel pLienzo;

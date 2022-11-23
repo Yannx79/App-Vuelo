@@ -28,7 +28,7 @@ public class VMenu extends javax.swing.JFrame {
 
         desktopMenu = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jmSesion = new javax.swing.JMenu();
+        jmHome = new javax.swing.JMenu();
         miLogout = new javax.swing.JMenuItem();
         miLogin = new javax.swing.JMenuItem();
         jmOperacionesCliente = new javax.swing.JMenu();
@@ -57,15 +57,15 @@ public class VMenu extends javax.swing.JFrame {
             .addGap(0, 280, Short.MAX_VALUE)
         );
 
-        jmSesion.setText("Sesion");
+        jmHome.setText("Sesion");
 
         miLogout.setText("Logout");
-        jmSesion.add(miLogout);
+        jmHome.add(miLogout);
 
         miLogin.setText("Login");
-        jmSesion.add(miLogin);
+        jmHome.add(miLogin);
 
-        jMenuBar1.add(jmSesion);
+        jMenuBar1.add(jmHome);
 
         jmOperacionesCliente.setText("Operaciones del Cliente");
 
@@ -160,9 +160,9 @@ public class VMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JDesktopPane desktopMenu;
     private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenu jmHome;
     public javax.swing.JMenu jmOperacionesCliente;
     public javax.swing.JMenu jmOperacionesEmpleado;
-    public javax.swing.JMenu jmSesion;
     public javax.swing.JMenuItem miCrearActividad;
     public javax.swing.JMenuItem miCrearAlojamiento;
     public javax.swing.JMenuItem miCrearPaquete;

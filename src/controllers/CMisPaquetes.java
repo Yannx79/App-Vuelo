@@ -95,7 +95,9 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
             ActividadDTO actividadDTO = actividadDAO.read(miPaqueteDTO.getIdActividad());
             VueloDTO vueloDTO = vueloDAO.read(miPaqueteDTO.getIdVuelo());
 
-            Mensaje.mostrar(miPaqueteDTO.toString());
+            String mensaje = miPaqueteDTO + "\n" + alojamientoDTO + "\n"  + actividadDTO + "\n" + vueloDTO;
+            
+            Mensaje.mostrar(mensaje);
         }
     }
 
@@ -107,6 +109,7 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
             VSelecionarAlojamiento vsa = new VSelecionarAlojamiento();
             CSelecionarAlojamiento csa = new CSelecionarAlojamiento(vsa);
             Desktop.agregarAlDesktop(CMenu.vista.desktopMenu, vsa);
+            vista.toBack();
 
             MiPaqueteDTO miPaqueteDTO = miPaqueteDAO.read(key);
 
@@ -124,6 +127,7 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
             VSelecionarActividad vsa = new VSelecionarActividad();
             CSelecionarActividad csa = new CSelecionarActividad(vsa);
             Desktop.agregarAlDesktop(CMenu.vista.desktopMenu, vsa);
+            vista.toBack();
 
             MiPaqueteDTO miPaqueteDTO = miPaqueteDAO.read(key);
             System.out.println(miPaqueteDTO.toString());
@@ -141,6 +145,7 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
             VSelecionarVuelo vsv = new VSelecionarVuelo();
             CSelecionarVuelo csv = new CSelecionarVuelo(vsv);
             Desktop.agregarAlDesktop(CMenu.vista.desktopMenu, vsv);
+            vista.toBack();
 
             MiPaqueteDTO miPaqueteDTO = miPaqueteDAO.read(key);
 

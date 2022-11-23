@@ -56,7 +56,12 @@ public class PPaquetePersonalizado {
         miPaqueteDTO.setFechaRegreso(Parse.formatearFecha(f.dcFechaRegreso.getDate()));
         miPaqueteDTO.setFechaSalida(Parse.formatearFecha(f.dcFechaPartida.getDate()));
         miPaqueteDTO.setIdUsuario(CMenu.usuario.getIdUsuario());
+        limpiar(f);
         return miPaqueteDTO;
+    }
+
+    public static void limpiar(VPaquetePersonalizado f){
+        f.txtNombrePaquete.setText("");
     }
     
 }

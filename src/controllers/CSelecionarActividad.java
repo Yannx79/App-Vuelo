@@ -60,7 +60,7 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.btnAgregar) {
             this.agregarActividad();
-            PMisPaquetes.completarTabla(CMisPaquetes.vista.tblDatos);
+            PMisPaquetes.completarTablaConDependencias(CMisPaquetes.vista.tblDatos);
         } else if (e.getSource() == this.vista.btnLeft) {
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnRight) {
