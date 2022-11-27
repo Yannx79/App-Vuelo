@@ -132,8 +132,8 @@ public class PaqueteDAO implements ObjectIDAO<PaqueteDTO> {
             ps.setInt(7, t.getIdActividad());
             ps.setInt(8, t.getPortadaPrincipal());
             ps.setInt(9, t.getPortadaSecundaria());
-            ps.setInt(10, t.getIdPaquete());
-            ps.setString(11, t.getNombrePaquete());
+            ps.setString(10, t.getNombrePaquete());
+            ps.setInt(11, t.getIdPaquete());
             if (ps.executeUpdate() > 0) {
                 return true;
             }

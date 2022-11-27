@@ -2,8 +2,11 @@ package process;
 
 import dto.MiPaqueteDTO;
 import dto.PaqueteDTO;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Parse {
 
@@ -28,6 +31,16 @@ public class Parse {
         return formato.format(date);
     }
 
+    public static Date formatearStringToFecha(String fecha){
+        SimpleDateFormat formato = new SimpleDateFormat("YYYY-MM-dd");
+        try {
+            return formato.parse(fecha);
+        } catch (ParseException ex) {
+            Logger.getLogger(Parse.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new Date();
+    }
+    
     public static int getPK(String valor) {
         String valores[] = valor.split(" - ");
         return Integer.parseInt(valores[0]);

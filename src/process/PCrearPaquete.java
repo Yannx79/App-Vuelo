@@ -2,6 +2,7 @@ package process;
 
 import dao.*;
 import dto.*;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import views.*;
@@ -56,13 +57,15 @@ public class PCrearPaquete {
         return paqueteDTO;
     }
     
-    private static void limpiar(VCrearPaquete f){
+    public static void limpiar(VCrearPaquete f){
         f.txtNombrePaquete.requestFocus();
         f.txtNombrePaquete.setText("");
         f.cbxLugarDestino.setSelectedIndex(0);
         f.cbxLugarPartida.setSelectedIndex(0);
         f.cbxPortadaPrincipal.setSelectedIndex(0);
         f.cbxPortadaSecundaria.setSelectedIndex(0);
+        f.dcFechaPartida.setDate(new Date());
+        f.dcFechaRegreso.setDate(new Date());
     }
     
 }

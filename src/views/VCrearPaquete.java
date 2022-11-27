@@ -27,8 +27,6 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         pLienzo = new javax.swing.JPanel();
-        btnRight = new javax.swing.JButton();
-        btnLeft = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         txtNombrePaquete = new javax.swing.JTextField();
@@ -65,29 +63,13 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         btnCambiarAlojamiento = new javax.swing.JButton();
         btnCambiarVuelo = new javax.swing.JButton();
         btnCambiarActividad = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
+        btnConsultar = new javax.swing.JButton();
 
         setClosable(true);
 
         pLienzo.setBackground(new java.awt.Color(250, 250, 250));
         pLienzo.setLayout(new java.awt.BorderLayout());
-
-        btnRight.setBackground(new java.awt.Color(33, 45, 62));
-        btnRight.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
-        btnRight.setForeground(new java.awt.Color(250, 250, 250));
-        btnRight.setText(">");
-        btnRight.setContentAreaFilled(false);
-        btnRight.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnRight.setOpaque(true);
-        pLienzo.add(btnRight, java.awt.BorderLayout.LINE_END);
-
-        btnLeft.setBackground(new java.awt.Color(33, 45, 62));
-        btnLeft.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
-        btnLeft.setForeground(new java.awt.Color(250, 250, 250));
-        btnLeft.setText("<");
-        btnLeft.setContentAreaFilled(false);
-        btnLeft.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLeft.setOpaque(true);
-        pLienzo.add(btnLeft, java.awt.BorderLayout.LINE_START);
 
         jPanel2.setBackground(new java.awt.Color(207, 10, 10));
         jPanel2.setLayout(new java.awt.GridLayout(2, 4, 1, 1));
@@ -119,21 +101,21 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         jPanel12.setBackground(new java.awt.Color(250, 250, 250));
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ALOJAMIENTO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel12.add(lblAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 288, 300));
+        jPanel12.add(lblAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 350, 300));
 
         jPanel2.add(jPanel12);
 
         jPanel13.setBackground(new java.awt.Color(250, 250, 250));
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VUELO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel13.add(lblVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 288, 300));
+        jPanel13.add(lblVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 350, 300));
 
         jPanel2.add(jPanel13);
 
         jPanel14.setBackground(new java.awt.Color(250, 250, 250));
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ACTIVIDAD", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 18))); // NOI18N
         jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel14.add(lblActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 288, 300));
+        jPanel14.add(lblActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 350, 300));
 
         jPanel2.add(jPanel14);
 
@@ -242,7 +224,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
 
         pLienzo.add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCrearPaquete.setBackground(new java.awt.Color(33, 45, 62));
         btnCrearPaquete.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
@@ -251,7 +233,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         btnCrearPaquete.setContentAreaFilled(false);
         btnCrearPaquete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCrearPaquete.setOpaque(true);
-        jPanel3.add(btnCrearPaquete);
+        jPanel3.add(btnCrearPaquete, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 245, -1));
 
         btnCambiarAlojamiento.setBackground(new java.awt.Color(33, 45, 62));
         btnCambiarAlojamiento.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
@@ -260,7 +242,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         btnCambiarAlojamiento.setContentAreaFilled(false);
         btnCambiarAlojamiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCambiarAlojamiento.setOpaque(true);
-        jPanel3.add(btnCambiarAlojamiento);
+        jPanel3.add(btnCambiarAlojamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 0, -1, -1));
 
         btnCambiarVuelo.setBackground(new java.awt.Color(33, 45, 62));
         btnCambiarVuelo.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
@@ -269,7 +251,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         btnCambiarVuelo.setContentAreaFilled(false);
         btnCambiarVuelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCambiarVuelo.setOpaque(true);
-        jPanel3.add(btnCambiarVuelo);
+        jPanel3.add(btnCambiarVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 245, -1));
 
         btnCambiarActividad.setBackground(new java.awt.Color(33, 45, 62));
         btnCambiarActividad.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
@@ -278,7 +260,25 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         btnCambiarActividad.setContentAreaFilled(false);
         btnCambiarActividad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCambiarActividad.setOpaque(true);
-        jPanel3.add(btnCambiarActividad);
+        jPanel3.add(btnCambiarActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 0, 245, -1));
+
+        btnActualizar.setBackground(new java.awt.Color(33, 45, 62));
+        btnActualizar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(250, 250, 250));
+        btnActualizar.setText("ACTUALIZAR");
+        btnActualizar.setContentAreaFilled(false);
+        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar.setOpaque(true);
+        jPanel3.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, 245, -1));
+
+        btnConsultar.setBackground(new java.awt.Color(33, 45, 62));
+        btnConsultar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
+        btnConsultar.setForeground(new java.awt.Color(250, 250, 250));
+        btnConsultar.setText("CONSULTAR");
+        btnConsultar.setContentAreaFilled(false);
+        btnConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConsultar.setOpaque(true);
+        jPanel3.add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1225, 0, 245, -1));
 
         pLienzo.add(jPanel3, java.awt.BorderLayout.PAGE_END);
 
@@ -286,7 +286,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
+            .addComponent(pLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,12 +298,12 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnActualizar;
     public javax.swing.JButton btnCambiarActividad;
     public javax.swing.JButton btnCambiarAlojamiento;
     public javax.swing.JButton btnCambiarVuelo;
+    public javax.swing.JButton btnConsultar;
     public javax.swing.JButton btnCrearPaquete;
-    public javax.swing.JButton btnLeft;
-    public javax.swing.JButton btnRight;
     public javax.swing.JComboBox<String> cbxLugarDestino;
     public javax.swing.JComboBox<String> cbxLugarPartida;
     public javax.swing.JComboBox<String> cbxPortadaPrincipal;

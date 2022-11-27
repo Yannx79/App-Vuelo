@@ -2,6 +2,7 @@ package dto;
 
 import dao.ActividadDAO;
 import dao.AlojamientoDAO;
+import dao.PaisDAO;
 import dao.VueloDAO;
 
 public class PaqueteDTO {
@@ -113,9 +114,34 @@ public class PaqueteDTO {
             getFechaSalida(),
             getFechaRegreso(),
             getIdActividad(),
-            "Activiadad " + actividadDTO.getNombreActividad(),
+            "Actividad " + actividadDTO.getNombreActividad(),
             getPortadaPrincipal(),
             getPortadaSecundaria(),
+            getNombrePaquete()
+        };
+        return values;
+    }
+    
+    public Object[] vectorizarParaCliente(){
+        //daos
+        AlojamientoDAO alojamientoDAO = new AlojamientoDAO();
+        ActividadDAO actividadDAO = new ActividadDAO();
+        VueloDAO vueloDAO = new VueloDAO();
+        PaisDAO paisDAO = new PaisDAO();
+        //dtos
+        AlojamientoDTO alojamientoDTO = alojamientoDAO.read(getIdAlojamiento());
+        ActividadDTO actividadDTO = actividadDAO.read(getIdActividad());
+        VueloDTO vueloDTO = vueloDAO.read(getIdVuelo());
+        //vector
+        Object[] values = {
+            getIdPaquete(),
+            "Alojamiento " + alojamientoDTO.getIdAlojamiento() + "" + alojamientoDTO.getIdHotel(),
+            "Vuelo " + vueloDTO.getIdVuelo() + "" + vueloDTO.getIdAvion(),
+            paisDAO.read(getIdOrigen()).getNombrePais(),
+            paisDAO.read(getIdDestino()).getNombrePais(),
+            getFechaSalida(),
+            getFechaRegreso(),
+            "Actividad " + actividadDTO.getNombreActividad(),
             getNombrePaquete()
         };
         return values;
