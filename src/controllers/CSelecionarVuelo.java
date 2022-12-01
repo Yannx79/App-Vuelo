@@ -69,7 +69,7 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnAgregar) {
             this.agregarVuelo();
-            PMisPaquetes.completarTablaConDependencias(CMisPaquetes.vista.tblDatos);
+            PMisPaquetes.construirTabla(CMisPaquetes.vista);
         }
     }
 
@@ -114,7 +114,6 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
         portadaDTO = portadaDAO.read(vueloDTO.getPortadaSecundaria());
         Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/vuelos/" + portadaDTO.getPath());
         AvionDTO avionDTO = avionDAO.read(vueloDTO.getIdAvion());
-        System.out.println(avionDTO);
         if (avionDTO.getIdAvion() == 0 || avionDTO.getNombreAvion().isBlank()) {
             this.vista.txaDatosExtra.setText("Datos del avion no registrados aun");
         } else {

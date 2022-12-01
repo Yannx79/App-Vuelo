@@ -10,6 +10,7 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bgMostrarInformacion = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -42,6 +43,9 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         lblReferencia = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDatos = new javax.swing.JTable();
+        rbMostrarMuyResumido = new javax.swing.JRadioButton();
+        rbMostrarTodo = new javax.swing.JRadioButton();
+        rbMostrarResumen = new javax.swing.JRadioButton();
 
         setClosable(true);
 
@@ -50,7 +54,7 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
 
         jLabel20.setBackground(new java.awt.Color(207, 10, 10));
         jLabel20.setOpaque(true);
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 20));
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1190, 20));
 
         jPanel2.setBackground(new java.awt.Color(33, 45, 62));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -197,7 +201,22 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
         tblDatos.setSelectionBackground(new java.awt.Color(220, 95, 0));
         jScrollPane1.setViewportView(tblDatos);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 700, 510));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 990, 480));
+
+        bgMostrarInformacion.add(rbMostrarMuyResumido);
+        rbMostrarMuyResumido.setText("Mostrar muy resumido");
+        rbMostrarMuyResumido.setContentAreaFilled(false);
+        jPanel1.add(rbMostrarMuyResumido, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 30, 250, -1));
+
+        bgMostrarInformacion.add(rbMostrarTodo);
+        rbMostrarTodo.setText("Mostrar toda la informacion");
+        rbMostrarTodo.setContentAreaFilled(false);
+        jPanel1.add(rbMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 250, -1));
+
+        bgMostrarInformacion.add(rbMostrarResumen);
+        rbMostrarResumen.setText("Mostrar resumido");
+        rbMostrarResumen.setContentAreaFilled(false);
+        jPanel1.add(rbMostrarResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, 250, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -215,6 +234,7 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bgMostrarInformacion;
     public javax.swing.JButton btnActualizarActividad;
     public javax.swing.JButton btnActualizarAlojamiento;
     public javax.swing.JButton btnActualizarVuelo;
@@ -246,6 +266,9 @@ public class VMisPaquetes extends javax.swing.JInternalFrame {
     public javax.swing.JLabel lblReferencia;
     public javax.swing.JLabel lblRepresentacion;
     public javax.swing.JLabel lblVerDetalle;
+    public javax.swing.JRadioButton rbMostrarMuyResumido;
+    public javax.swing.JRadioButton rbMostrarResumen;
+    public javax.swing.JRadioButton rbMostrarTodo;
     public javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
 }

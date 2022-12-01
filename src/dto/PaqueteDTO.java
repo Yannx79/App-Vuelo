@@ -132,6 +132,9 @@ public class PaqueteDTO {
         AlojamientoDTO alojamientoDTO = alojamientoDAO.read(getIdAlojamiento());
         ActividadDTO actividadDTO = actividadDAO.read(getIdActividad());
         VueloDTO vueloDTO = vueloDAO.read(getIdVuelo());
+        if (actividadDTO.getNombreActividad() == null) {
+            actividadDTO.setNombreActividad("Sin asignar");
+        }
         //vector
         Object[] values = {
             getIdPaquete(),

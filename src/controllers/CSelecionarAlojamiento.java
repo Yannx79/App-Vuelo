@@ -69,7 +69,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnAgregar) {
             this.agregarAlojamiento();
-            PMisPaquetes.completarTablaConDependencias(CMisPaquetes.vista.tblDatos);
+            PMisPaquetes.construirTabla(CMisPaquetes.vista);
         }
     }
 
@@ -114,7 +114,6 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
         portadaDTO = portadaDAO.read(alojamientoDTO.getPortadaSecundaria());
         Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/alojamientos/" + portadaDTO.getPath());
         HotelDTO hotelDTO = hotelDAO.read(alojamientoDTO.getIdHotel());
-        System.out.println(hotelDTO);
         if (hotelDTO.getIdHotel()== 0 || hotelDTO.getNombreHotel().isBlank()) {
             this.vista.txaDatosExtra.setText("Datos del hotel no registrados aun");
         } else {

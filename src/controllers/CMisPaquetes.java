@@ -43,7 +43,8 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
         this.vista.lblVerDetalle.setIcon(new ImageIcon("imagenes/iconos/detail2.png"));
         this.vista.lblRepresentacion.setSize(60, 60);
         Imagen.ajustar(this.vista.lblRepresentacion, "imagenes/iconos/package.png");
-        PMisPaquetes.construirForma(this.vista);
+        PMisPaquetes.construirTabla(this.vista);
+        PMisPaquetes.construirForma(vista);
     }
 
     @Override
@@ -54,6 +55,9 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
         this.vista.btnActualizarActividad.addActionListener(this);
         this.vista.btnActualizarVuelo.addActionListener(this);
         this.vista.btnActualizarAlojamiento.addActionListener(this);
+        this.vista.rbMostrarMuyResumido.addActionListener(this);
+        this.vista.rbMostrarResumen.addActionListener(this);
+        this.vista.rbMostrarTodo.addActionListener(this);
     }
 
     @Override
@@ -82,6 +86,12 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
             this.verDetalle();
         } else if (e.getSource() == this.vista.btnPagar) {
             Mensaje.mostrar(CMenu.usuario.getNombres() + " pagaste exitosamente");
+        } else if (e.getSource() == this.vista.rbMostrarTodo) {
+            PMisPaquetes.completarTablaTotal(vista.tblDatos);
+        } else if (e.getSource() == this.vista.rbMostrarResumen) {
+            PMisPaquetes.completarTablaConDependencias(vista.tblDatos);
+        } else if (e.getSource() == this.vista.rbMostrarMuyResumido) {
+            PMisPaquetes.completarResumenTabla(vista.tblDatos);
         }
     }
 
@@ -162,7 +172,7 @@ public class CMisPaquetes extends ObligacionControlador implements ActionListene
             if (confirmacion == 0) {
                 int key = Integer.parseInt(this.vista.tblDatos.getValueAt(indexTable, 0).toString());
                 miPaqueteDAO.delete(key);
-                PMisPaquetes.completarTabla(this.vista.tblDatos);
+                PMisPaquetes.construirTabla(this.vista);
             }
         } else {
             System.out.println("Aca va una entrada de texto para buscarlo");

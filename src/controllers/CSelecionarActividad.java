@@ -62,7 +62,7 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.btnAgregar) {
             this.agregarActividad();
-            PMisPaquetes.completarTablaConDependencias(CMisPaquetes.vista.tblDatos);
+            PMisPaquetes.construirTabla(CMisPaquetes.vista);
         } else if (e.getSource() == this.vista.btnLeft) {
             this.moveLeft();
         } else if (e.getSource() == this.vista.btnRight) {
@@ -111,7 +111,6 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
         portadaDTO = portadaDAO.read(actividadDTO.getPortadaSecundaria());
         Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/actividades/" + portadaDTO.getPath());
         CategoriaDTO categoriaDTO = categoriaDAO.read(actividadDTO.getIdCategoria());
-        System.out.println(categoriaDTO);
         if (categoriaDTO.getIdCategoria()== 0 || categoriaDTO.getTipoCategoria().isBlank()) {
             this.vista.txaDatosExtra.setText("Datos de la categoria no registrados aun");
         } else {
