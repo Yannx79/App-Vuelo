@@ -19,6 +19,7 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
 
     private ActividadDAO actividadDAO;
     private PortadaDAO portadaDAO;
+    private CategoriaDAO categoriaDAO;
 
     private int index = 0;
 
@@ -48,6 +49,7 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
     public void inicializarObjetos() {
         actividadDAO = new ActividadDAO();
         portadaDAO = new PortadaDAO();
+        categoriaDAO = new CategoriaDAO();
         this.list = new LinkedList<>();
         this.list = actividadDAO.readAll();
         this.index = 0;
@@ -108,6 +110,13 @@ public class CSelecionarActividad extends ObligacionControlador implements Actio
         Imagen.ajustar(this.vista.lblPortadaPrincipal, "imagenes/actividades/" + portadaDTO.getPath());
         portadaDTO = portadaDAO.read(actividadDTO.getPortadaSecundaria());
         Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/actividades/" + portadaDTO.getPath());
+        CategoriaDTO categoriaDTO = categoriaDAO.read(actividadDTO.getIdCategoria());
+        System.out.println(categoriaDTO);
+        if (categoriaDTO.getIdCategoria()== 0 || categoriaDTO.getTipoCategoria().isBlank()) {
+            this.vista.txaDatosExtra.setText("Datos de la categoria no registrados aun");
+        } else {
+            this.vista.txaDatosExtra.setText(categoriaDTO.toString());
+        }
     }
 
 }

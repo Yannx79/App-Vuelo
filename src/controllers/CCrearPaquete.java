@@ -6,14 +6,17 @@ import java.awt.event.ActionEvent;
 import views.*;
 import dao.*;
 import dto.*;
+import formato.Desktop;
 import formato.Imagen;
 import formato.Mensaje;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.List;
 import javax.swing.ImageIcon;
 import process.PCrearPaquete;
 import process.Parse;
 
-public class CCrearPaquete extends ObligacionControlador implements ActionListener {
+public class CCrearPaquete extends ObligacionControlador implements ActionListener, MouseListener{
 
     private VCrearPaquete vista;
 
@@ -68,6 +71,7 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         this.vista.btnCrearPaquete.addActionListener(this);
         this.vista.btnActualizar.addActionListener(this);
         this.vista.btnConsultar.addActionListener(this);
+        this.vista.lblVerPaquetes.addMouseListener(this);
     }
 
     @Override
@@ -113,15 +117,14 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
     private void actualizar() {
         PaqueteDTO paqueteDTO = PCrearPaquete.instanciar(vista);
         paqueteDTO.setIdPaquete(Integer.parseInt(codigoActualizar));
-        System.out.println(paqueteDTO);
         paqueteDTO.setIdActividad(listActividades.get(indexActividad).getIdActividad());
         paqueteDTO.setIdAlojamiento(listAlojamientos.get(indexAlojamiento).getIdAlojamiento());
         paqueteDTO.setIdVuelo(listVuelos.get(indexVuelo).getIdVuelo());
         paqueteDAO.update(paqueteDTO);
-        System.out.println(paqueteDTO);
         this.vista.btnActualizar.setEnabled(false);
         PCrearPaquete.limpiar(vista);
         Mensaje.mostrar("Actualizado satisfactoriamente");
+        CRegistro.completarTablaPaquetes(CRegistro.vista.tblDatos);
     }
 
     private void consultar() {
@@ -207,6 +210,32 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         //establecer img actividad
         portadaDTO = portadaDAO.read(listActividades.get(indexActividad).getPortadoPrincipal());
         Imagen.ajustar(this.vista.lblActividad, "imagenes/actividades/" + portadaDTO.getPath());
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if (e.getSource() == vista.lblVerPaquetes) {
+            VRegistro vr = new VRegistro();
+            CRegistro cr = new CRegistro(vr);
+            vista.toBack();
+            Desktop.agregarAlDesktop(CMenu.vista.desktopMenu, vr);
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
     }
 
 }

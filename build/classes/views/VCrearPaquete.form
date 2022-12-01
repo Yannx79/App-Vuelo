@@ -539,7 +539,7 @@
               </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-                <Property name="columns" type="int" value="3"/>
+                <Property name="columns" type="int" value="4"/>
                 <Property name="rows" type="int" value="1"/>
               </Layout>
               <SubComponents>
@@ -580,6 +580,20 @@
                       <Color blue="a" green="a" red="cf" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jLabel2"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblVerPaquetes">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Yu Gothic UI Semilight" size="18" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="a" green="a" red="cf" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Ver Paquetes"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

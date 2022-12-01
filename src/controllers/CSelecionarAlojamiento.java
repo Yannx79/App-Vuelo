@@ -19,6 +19,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
 
     private AlojamientoDAO alojamientoDAO;
     private PortadaDAO portadaDAO;
+    private HotelDAO hotelDAO;
 
     private int index;
 
@@ -51,6 +52,7 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
         this.vista.lblPortadaSecundaria.setSize(510, 250);
         alojamientoDAO = new AlojamientoDAO();
         portadaDAO = new PortadaDAO();
+        hotelDAO = new HotelDAO();
         this.list = new LinkedList<>();
         this.list = alojamientoDAO.readAll();
         this.index = 0;
@@ -111,6 +113,13 @@ public class CSelecionarAlojamiento extends ObligacionControlador implements Act
         Imagen.ajustar(this.vista.lblPortadaPrincipal, "imagenes/alojamientos/" + portadaDTO.getPath());
         portadaDTO = portadaDAO.read(alojamientoDTO.getPortadaSecundaria());
         Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/alojamientos/" + portadaDTO.getPath());
+        HotelDTO hotelDTO = hotelDAO.read(alojamientoDTO.getIdHotel());
+        System.out.println(hotelDTO);
+        if (hotelDTO.getIdHotel()== 0 || hotelDTO.getNombreHotel().isBlank()) {
+            this.vista.txaDatosExtra.setText("Datos del hotel no registrados aun");
+        } else {
+            this.vista.txaDatosExtra.setText(hotelDTO.toString());
+        }
     }
 
 }

@@ -21,6 +21,7 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
 
     private VueloDAO vueloDAO;
     private PortadaDAO portadaDAO;
+    private AvionDAO avionDAO;
 
     private int index;
 
@@ -51,6 +52,7 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
     public void inicializarObjetos() {
         vueloDAO = new VueloDAO();
         portadaDAO = new PortadaDAO();
+        avionDAO = new AvionDAO();
         this.list = new LinkedList<>();
         this.list = vueloDAO.readAll();
         this.index = 0;
@@ -111,6 +113,13 @@ public class CSelecionarVuelo extends ObligacionControlador implements ActionLis
         Imagen.ajustar(this.vista.lblPortadoPrincipal, "imagenes/vuelos/" + portadaDTO.getPath());
         portadaDTO = portadaDAO.read(vueloDTO.getPortadaSecundaria());
         Imagen.ajustar(this.vista.lblPortadaSecundaria, "imagenes/vuelos/" + portadaDTO.getPath());
+        AvionDTO avionDTO = avionDAO.read(vueloDTO.getIdAvion());
+        System.out.println(avionDTO);
+        if (avionDTO.getIdAvion() == 0 || avionDTO.getNombreAvion().isBlank()) {
+            this.vista.txaDatosExtra.setText("Datos del avion no registrados aun");
+        } else {
+            this.vista.txaDatosExtra.setText(avionDTO.toString());
+        }
     }
 
 }
