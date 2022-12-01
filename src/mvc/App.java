@@ -2,9 +2,6 @@ package mvc;
 
 import views.VMenu;
 import controllers.CMenu;
-import dao.MiPaqueteDAO;
-import dto.MiPaqueteDTO;
-import java.util.List;
 
 public class App {
 

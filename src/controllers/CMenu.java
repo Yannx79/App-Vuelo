@@ -9,9 +9,6 @@ import interfaces.*;
 import formato.Desktop;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.beans.PropertyVetoException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import process.PMenu;
 import views.*;
 
@@ -163,7 +160,6 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
 
     @Override
     public void windowClosing(WindowEvent e) {
-
     }
 
     @Override

@@ -2,6 +2,7 @@ package controllers;
 
 import dao.PaqueteDAO;
 import dto.*;
+import formato.ManejadorTablas;
 import static java.util.Collections.list;
 import java.util.List;
 import views.*;
@@ -32,6 +33,7 @@ public class CRegistro {
         for (PaqueteDTO x : list) {
             dtm.addRow(x.vectorizar());
         }
+        ManejadorTablas.setFormatoTablaPaquetes(jTable);
     }
 
 }
