@@ -43,6 +43,7 @@ public class VMenu extends javax.swing.JFrame {
         miCrearAlojamiento = new javax.swing.JMenuItem();
         miCrearVuelo = new javax.swing.JMenuItem();
         miCrearActividad = new javax.swing.JMenuItem();
+        miListar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,6 +103,9 @@ public class VMenu extends javax.swing.JFrame {
 
         miCrearActividad.setText("Crear una actividad");
         jmOperacionesEmpleado.add(miCrearActividad);
+
+        miListar.setText("Listar");
+        jmOperacionesEmpleado.add(miListar);
 
         jMenuBar1.add(jmOperacionesEmpleado);
 
@@ -167,6 +171,7 @@ public class VMenu extends javax.swing.JFrame {
     public javax.swing.JMenuItem miCrearAlojamiento;
     public javax.swing.JMenuItem miCrearPaquete;
     public javax.swing.JMenuItem miCrearVuelo;
+    public javax.swing.JMenuItem miListar;
     public javax.swing.JMenuItem miLogin;
     public javax.swing.JMenuItem miLogout;
     public javax.swing.JMenuItem miPaquetesPersonalizados;

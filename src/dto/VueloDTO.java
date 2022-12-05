@@ -1,6 +1,8 @@
 package dto;
+import dao.AvionDAO;
+import interfaces.*;
 
-public class VueloDTO {
+public class VueloDTO implements ObligacionModelo {
 
     private int idVuelo;
     private int numeroPasajeros;
@@ -97,6 +99,18 @@ public class VueloDTO {
             idAvion,
             portadaPrincipal,
             portadaSecundaria
+        };
+        return values;
+    }
+
+    @Override
+    public Object[] vectorizarResumen() {
+        AvionDAO avionDAO = new AvionDAO();
+        Object[] values = {
+            idVuelo,
+            numeroPasajeros,
+            costoVuelo,
+            avionDAO.read(idAvion).getNombreAvion()
         };
         return values;
     }

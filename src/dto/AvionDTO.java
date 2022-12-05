@@ -1,6 +1,8 @@
 package dto;
 
-public class AvionDTO {
+import interfaces.ObligacionModelo;
+
+public class AvionDTO implements ObligacionModelo{
 
     private int idAvion;
     private String nombreAvion;
@@ -39,6 +41,22 @@ public class AvionDTO {
 
     public void setNombreAvion(String nombreAvion) {
         this.nombreAvion = nombreAvion;
+    }
+
+    @Override
+    public Object[] vectorizarResumen() {
+        Object[] value = {
+            idAvion, nombreAvion
+        };
+        return value;
+    }
+
+    @Override
+    public Object[] vectorizar() {
+        Object[] value = {
+            idAvion, nombreAvion, "Si"
+        };
+        return value;
     }
 
 }

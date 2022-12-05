@@ -1,6 +1,10 @@
 package dto;
 
-public class AlojamientoDTO {
+import dao.HotelDAO;
+import interfaces.ObligacionModelo;
+import static javax.swing.GroupLayout.Alignment.values;
+
+public class AlojamientoDTO implements ObligacionModelo {
 
     private int idAlojamiento;
     private double costoAlojamiento;
@@ -37,7 +41,19 @@ public class AlojamientoDTO {
             numeroHabitaciones,
             idHotel,
             portadoPrincipal,
-            portadaSecundaria,};
+            portadaSecundaria};
+        return values;
+    }
+
+    @Override
+    public Object[] vectorizarResumen() {
+        HotelDAO hotelDAO = new HotelDAO();
+        Object[] values = {
+            idAlojamiento,
+            costoAlojamiento,
+            numeroPersonas,
+            numeroHabitaciones,
+            hotelDAO.read(idHotel).getNombreHotel()};
         return values;
     }
 
@@ -106,4 +122,5 @@ public class AlojamientoDTO {
     public void setIdHotel(int idHotel) {
         this.idHotel = idHotel;
     }
+
 }

@@ -1,6 +1,8 @@
 package dto;
 
-public class ClienteDTO {
+import interfaces.ObligacionModelo;
+
+public class ClienteDTO implements ObligacionModelo {
 
     private int idUsuario;
     private String nombres;
@@ -28,6 +30,22 @@ public class ClienteDTO {
 
     public ClienteDTO() {
 
+    }
+
+    @Override
+    public Object[] vectorizarResumen() {
+        Object[] values = {
+            idUsuario, nombres, email
+        };
+        return values;
+    }
+
+    @Override
+    public Object[] vectorizar() {
+        Object[] values = {
+            idUsuario, nombres, apellidoPaterno, apellidoMaterno, email
+        };
+        return values;
     }
 
     @Override

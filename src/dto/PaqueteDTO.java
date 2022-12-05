@@ -4,8 +4,9 @@ import dao.ActividadDAO;
 import dao.AlojamientoDAO;
 import dao.PaisDAO;
 import dao.VueloDAO;
+import interfaces.ObligacionModelo;
 
-public class PaqueteDTO {
+public class PaqueteDTO implements ObligacionModelo {
 
     private int idPaquete;
     private int idAlojamiento;
@@ -76,6 +77,7 @@ public class PaqueteDTO {
                 + "\n Id Portada Secundaria  : " + portadaSecundaria;
     }
 
+    @Override
     public Object[] vectorizar() {
         Object[] values = {
             getIdPaquete(),
@@ -92,7 +94,7 @@ public class PaqueteDTO {
         };
         return values;
     }
-    
+
     public Object[] vectorizarConDependencias() {
         //daos
         AlojamientoDAO alojamientoDAO = new AlojamientoDAO();
@@ -121,8 +123,8 @@ public class PaqueteDTO {
         };
         return values;
     }
-    
-    public Object[] vectorizarParaCliente(){
+
+    public Object[] vectorizarParaCliente() {
         //daos
         AlojamientoDAO alojamientoDAO = new AlojamientoDAO();
         ActividadDAO actividadDAO = new ActividadDAO();
@@ -149,7 +151,7 @@ public class PaqueteDTO {
         };
         return values;
     }
-    
+
     public String getNombrePaquete() {
         return nombrePaquete;
     }
@@ -236,6 +238,35 @@ public class PaqueteDTO {
 
     public void setFechaRegreso(String fechaRegreso) {
         this.fechaRegreso = fechaRegreso;
+    }
+
+    @Override
+    public Object[] vectorizarResumen() {
+        //daos
+        AlojamientoDAO alojamientoDAO = new AlojamientoDAO();
+        ActividadDAO actividadDAO = new ActividadDAO();
+        VueloDAO vueloDAO = new VueloDAO();
+        PaisDAO paisDAO = new PaisDAO();
+        //dtos
+        AlojamientoDTO alojamientoDTO = alojamientoDAO.read(getIdAlojamiento());
+        ActividadDTO actividadDTO = actividadDAO.read(getIdActividad());
+        VueloDTO vueloDTO = vueloDAO.read(getIdVuelo());
+        if (actividadDTO.getNombreActividad() == null) {
+            actividadDTO.setNombreActividad("Sin asignar");
+        }
+        //vector
+        Object[] values = {
+            getIdPaquete(),
+            "Alojamiento " + alojamientoDTO.getIdAlojamiento() + "" + alojamientoDTO.getIdHotel(),
+            "Vuelo " + vueloDTO.getIdVuelo() + "" + vueloDTO.getIdAvion(),
+            paisDAO.read(getIdOrigen()).getNombrePais(),
+            paisDAO.read(getIdDestino()).getNombrePais(),
+            getFechaSalida(),
+            getFechaRegreso(),
+            "Actividad " + actividadDTO.getNombreActividad(),
+            getNombrePaquete()
+        };
+        return values;
     }
 
 }

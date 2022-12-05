@@ -26,9 +26,14 @@ public class VRegistro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bgMostrar = new javax.swing.ButtonGroup();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDatos = new javax.swing.JTable();
+        rbMostrarTodo = new javax.swing.JRadioButton();
+        rbMostrarResumen = new javax.swing.JRadioButton();
+        rbMostrarMuyResumido = new javax.swing.JRadioButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setClosable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -51,14 +56,33 @@ public class VRegistro extends javax.swing.JInternalFrame {
         tblDatos.setSelectionBackground(new java.awt.Color(220, 95, 0));
         jScrollPane1.setViewportView(tblDatos);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 520));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 1140, 520));
+
+        bgMostrar.add(rbMostrarTodo);
+        rbMostrarTodo.setText("Mostrar toda la informacion");
+        rbMostrarTodo.setContentAreaFilled(false);
+        getContentPane().add(rbMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 360, -1));
+
+        bgMostrar.add(rbMostrarResumen);
+        rbMostrarResumen.setText("Mostrar resumido");
+        rbMostrarResumen.setContentAreaFilled(false);
+        getContentPane().add(rbMostrarResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 320, -1));
+
+        bgMostrar.add(rbMostrarMuyResumido);
+        rbMostrarMuyResumido.setText("Mostrar muy resumido");
+        rbMostrarMuyResumido.setContentAreaFilled(false);
+        getContentPane().add(rbMostrarMuyResumido, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, 360, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bgMostrar;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JRadioButton rbMostrarMuyResumido;
+    public javax.swing.JRadioButton rbMostrarResumen;
+    public javax.swing.JRadioButton rbMostrarTodo;
     public javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
 }

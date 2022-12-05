@@ -28,6 +28,7 @@ public class PMenu {
         f.miCrearAlojamiento.setIcon(new ImageIcon("imagenes/iconos/create.png"));
         f.miCrearVuelo.setIcon(new ImageIcon("imagenes/iconos/create.png"));
         f.miCrearActividad.setIcon(new ImageIcon("imagenes/iconos/create.png"));
+        f.miListar.setIcon(new ImageIcon("imagenes/iconos/detail1.png"));
     }
     
 }

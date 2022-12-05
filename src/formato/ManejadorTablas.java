@@ -20,7 +20,7 @@ public class ManejadorTablas {
         modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
         t.getColumnModel().getColumn(numcolumna).setCellRenderer(modelocentrar);
     }
-
+    
     public static void setFormatoTablaPaquetes(JTable table) {
         for (int i = 0; i < 10; i++) {
             if (i != 5 && i != 6 && i != 10) {

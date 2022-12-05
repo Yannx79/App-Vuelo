@@ -7,6 +7,7 @@ import views.*;
 import dao.*;
 import dto.*;
 import formato.Imagen;
+import formato.ManejadorTablas;
 import java.util.List;
 import process.*;
 
@@ -82,6 +83,7 @@ public class CCrearVuelo extends ObligacionControlador implements ActionListener
         String header[] = {"ID VUELO", "NRO PASAJERO", "COSTO VUELO", "ID AVION",
             "ID PORTADA PRINCIPAL", "ID PORTADA SECUNDARIA"};
         ProcesoTable.completarTabla(this.vista.tblDatos, header, vueloDAO.readAll());
+        ManejadorTablas.centrarTodo(vista.tblDatos);
     }
 
 }

@@ -16,12 +16,12 @@ public class ClienteDAO implements ObjectIDAO<ClienteDTO> {
 
     @Override
     public boolean create(ClienteDTO t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return true;
     }
 
     @Override
     public ClienteDTO read(Object key) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return null;
     }
 
     @Override
@@ -48,12 +48,12 @@ public class ClienteDAO implements ObjectIDAO<ClienteDTO> {
 
     @Override
     public boolean update(ClienteDTO t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return false;
     }
 
     @Override
     public boolean delete(Object key) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return true;
     }
 
 }

@@ -1,6 +1,9 @@
 package dto;
 
-public class ActividadDTO {
+import dao.CategoriaDAO;
+import interfaces.ObligacionModelo;
+
+public class ActividadDTO implements ObligacionModelo {
 
     private int idActividad;
     private String nombreActividad;
@@ -28,6 +31,7 @@ public class ActividadDTO {
     public ActividadDTO() {
     }
 
+    @Override
     public Object[] vectorizar() {
         Object[] values = {
             idActividad,
@@ -36,7 +40,19 @@ public class ActividadDTO {
             idCategoria,
             costoActividad,
             portadoPrincipal,
-            portadaSecundaria,};
+            portadaSecundaria};
+        return values;
+    }
+
+    @Override
+    public Object[] vectorizarResumen() {
+        CategoriaDAO categoriaDAO = new CategoriaDAO();
+        Object[] values = {
+            idActividad,
+            nombreActividad,
+            descripcion,
+            costoActividad,
+            categoriaDAO.read(idCategoria).getTipoCategoria()};
         return values;
     }
 

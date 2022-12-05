@@ -14,12 +14,13 @@ import java.awt.event.MouseListener;
 import java.util.List;
 import javax.swing.ImageIcon;
 import process.PCrearPaquete;
+import process.PRegistro;
 import process.Parse;
 
-public class CCrearPaquete extends ObligacionControlador implements ActionListener, MouseListener{
-
+public class CCrearPaquete extends ObligacionControlador implements ActionListener, MouseListener {
+    
     private VCrearPaquete vista;
-
+    
     private AlojamientoDAO alojamientoDAO;
     private VueloDAO vueloDAO;
     private ActividadDAO actividadDAO;
@@ -28,23 +29,23 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
     private CategoriaDAO categoriaDAO;
     private PortadaDAO portadaDAO;
     private PaqueteDAO paqueteDAO;
-
+    
     private List<AlojamientoDTO> listAlojamientos;
     private List<ActividadDTO> listActividades;
     private List<VueloDTO> listVuelos;
     private List<PaqueteDTO> listPaquetes;
-
+    
     private Integer indexAlojamiento = 0;
     private Integer indexActividad = 0;
     private Integer indexVuelo = 0;
     
     private String codigoActualizar = "";
-
+    
     public CCrearPaquete(VCrearPaquete f) {
         this.vista = f;
         constructor();
     }
-
+    
     @Override
     public void construirVista() {
         this.vista.setVisible(true);
@@ -62,7 +63,7 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         this.vista.lblNombreUsuario.setText("Nombre Usuario: " + CMenu.usuario.getNombres());
         this.mostrarInformacion();
     }
-
+    
     @Override
     public void agregarTodosListeners() {
         this.vista.btnCambiarActividad.addActionListener(this);
@@ -73,11 +74,11 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         this.vista.btnConsultar.addActionListener(this);
         this.vista.lblVerPaquetes.addMouseListener(this);
     }
-
+    
     @Override
     public void inicializarObjetos() {
         PCrearPaquete.construirForma(vista);
-
+        
         alojamientoDAO = new AlojamientoDAO();
         actividadDAO = new ActividadDAO();
         vueloDAO = new VueloDAO();
@@ -86,17 +87,17 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         avionDAO = new AvionDAO();
         hotelDAO = new HotelDAO();
         categoriaDAO = new CategoriaDAO();
-
+        
         listActividades = actividadDAO.readAll();
         listAlojamientos = alojamientoDAO.readAll();
         listVuelos = vueloDAO.readAll();
         listPaquetes = paqueteDAO.readAll();
-
+        
         this.vista.lblActividad.setSize(350, 300);
         this.vista.lblVuelo.setSize(350, 300);
         this.vista.lblAlojamiento.setSize(350, 300);
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vista.btnCambiarActividad) {
@@ -113,7 +114,7 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
             this.actualizar();
         }
     }
-
+    
     private void actualizar() {
         PaqueteDTO paqueteDTO = PCrearPaquete.instanciar(vista);
         paqueteDTO.setIdPaquete(Integer.parseInt(codigoActualizar));
@@ -124,9 +125,9 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         this.vista.btnActualizar.setEnabled(false);
         PCrearPaquete.limpiar(vista);
         Mensaje.mostrar("Actualizado satisfactoriamente");
-        CRegistro.completarTablaPaquetes(CRegistro.vista.tblDatos);
+        PRegistro.completar(CRegistro.vista);
     }
-
+    
     private void consultar() {
         codigoActualizar = Mensaje.capturar("¿Que paquete desea consultar?");
         PaqueteDTO paqueteDTO = paqueteDAO.read(codigoActualizar);
@@ -142,7 +143,7 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
             alojamientoDTO = alojamientoDAO.read(paqueteDTO.getIdAlojamiento());
             actividadDTO = actividadDAO.read(paqueteDTO.getIdActividad());
             vueloDTO = vueloDAO.read(paqueteDTO.getIdVuelo());
-
+            
             String mensajeActividad = "" + actividadDTO;
             this.vista.txaDatosActividad.setText(mensajeActividad);
             String mensajeAlojamiento = "" + alojamientoDTO + "\n" + hotelDAO.read(alojamientoDTO.getIdHotel());
@@ -160,8 +161,9 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         paqueteDTO.setIdAlojamiento(listAlojamientos.get(indexAlojamiento).getIdAlojamiento());
         paqueteDTO.setIdVuelo(listVuelos.get(indexVuelo).getIdAvion());
         paqueteDAO.create(paqueteDTO);
+        PRegistro.completar(CRegistro.vista);
     }
-
+    
     private void cambiar(List list) {
         if (list.get(0) instanceof VueloDTO) {
             if (indexVuelo < list.size() - 1) {
@@ -184,22 +186,22 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         }
         mostrarInformacion();
     }
-
+    
     private void mostrarInformacion() {
         ActividadDTO actividadDTO = listActividades.get(indexActividad);
         String mensajeActividad = "" + actividadDTO;
         this.vista.txaDatosActividad.setText(mensajeActividad);
-
+        
         AlojamientoDTO alojamientoDTO = listAlojamientos.get(indexAlojamiento);
         String mensajeAlojamiento = "" + alojamientoDTO + "\n" + hotelDAO.read(alojamientoDTO.getIdHotel());
         this.vista.txaDatosAlojamiento.setText(mensajeAlojamiento);
-
+        
         VueloDTO vueloDTO = listVuelos.get(indexVuelo);
         String mensajeVuelo = "" + vueloDTO + "\n" + avionDAO.read(vueloDTO.getIdAvion());
         this.vista.txaDatosVuelo.setText(mensajeVuelo);
         this.mostrarImagen();
     }
-
+    
     private void mostrarImagen() {
         //establecer img alojamiento
         PortadaDTO portadaDTO = portadaDAO.read(listAlojamientos.get(indexAlojamiento).getPortadoPrincipal());
@@ -211,31 +213,31 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
         portadaDTO = portadaDAO.read(listActividades.get(indexActividad).getPortadoPrincipal());
         Imagen.ajustar(this.vista.lblActividad, "imagenes/actividades/" + portadaDTO.getPath());
     }
-
+    
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == vista.lblVerPaquetes) {
             VRegistro vr = new VRegistro();
             CRegistro cr = new CRegistro(vr);
-            vista.toBack();
             Desktop.agregarAlDesktop(CMenu.vista.desktopMenu, vr);
+            vista.toBack();
         }
     }
-
+    
     @Override
     public void mousePressed(MouseEvent e) {
     }
-
+    
     @Override
     public void mouseReleased(MouseEvent e) {
     }
-
+    
     @Override
     public void mouseEntered(MouseEvent e) {
     }
-
+    
     @Override
     public void mouseExited(MouseEvent e) {
     }
-
+    
 }

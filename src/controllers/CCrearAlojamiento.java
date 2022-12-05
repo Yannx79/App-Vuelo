@@ -8,6 +8,7 @@ import dto.AlojamientoDTO;
 import dto.HotelDTO;
 import dto.PortadaDTO;
 import formato.Imagen;
+import formato.ManejadorTablas;
 import views.VCrearAlojamiento;
 import interfaces.*;
 import java.awt.event.ActionEvent;
@@ -88,6 +89,7 @@ public class CCrearAlojamiento extends ObligacionControlador implements  ActionL
         String header[] = {"ID ALOJAMIENTO","COSTO ALOJAMIENTO","NRO DE PERSONAS",
             "NRO DE HABITACIONES","ID HOTEL","ID PORTADA PRINCIPAL","ID PORTADA SECUNDARIA"};
         PCrearAlojamiento.completarTabla(this.vista.tblDatos, header, alojamientoDAO.readAll());
+        ManejadorTablas.centrarTodo(vista.tblDatos);
     }
     
 }

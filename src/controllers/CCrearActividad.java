@@ -4,6 +4,7 @@ import views.*;
 import dao.*;
 import dto.*;
 import formato.Imagen;
+import formato.ManejadorTablas;
 import process.*;
 import interfaces.*;
 import java.awt.event.ActionEvent;
@@ -81,6 +82,7 @@ public class CCrearActividad extends ObligacionControlador implements ActionList
             "ID CATEGORIA", "COSTO ACTIVIDAD", "ID PORTADA PRINCIPAL",
             "ID PORTADA PRINCIPAL"};
         PCrearActividad.completarTabla(this.vista.tblDatos, header, actividadDAO.readAll());
+        ManejadorTablas.centrarTodo(vista.tblDatos);
     }
 
 }

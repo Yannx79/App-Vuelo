@@ -49,7 +49,15 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
             this.actionPerformedCrearVuelo();
         } else if (e.getSource() == this.vista.miCrearActividad) {
             this.actionPerformedCrearActividad();
+        } else if (e.getSource() == this.vista.miListar) {
+            this.actionPerformedListar();
         }
+    }
+
+    private void actionPerformedListar() {
+        VListar vl = new VListar();
+        CListar cl = new CListar(vl);
+        Desktop.agregarAlDesktop(vista.desktopMenu, vl);
     }
 
     private void actionPerformedVerMisPaquetes() {
@@ -143,6 +151,7 @@ public class CMenu extends ObligacionControlador implements ActionListener, Wind
         this.vista.miCrearAlojamiento.addActionListener(this);
         this.vista.miCrearVuelo.addActionListener(this);
         this.vista.miCrearActividad.addActionListener(this);
+        this.vista.miListar.addActionListener(this);
     }
 
     private void cargarLogin() {

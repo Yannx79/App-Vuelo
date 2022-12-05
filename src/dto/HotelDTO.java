@@ -1,6 +1,8 @@
 package dto;
 
-public class HotelDTO {
+import interfaces.ObligacionModelo;
+
+public class HotelDTO implements ObligacionModelo {
 
     private int idHotel;
     private String nombreHotel;
@@ -50,6 +52,22 @@ public class HotelDTO {
 
     public void setCantidadEstrellas(int cantidadEstrellas) {
         this.cantidadEstrellas = cantidadEstrellas;
+    }
+
+    @Override
+    public Object[] vectorizarResumen() {
+        Object[] value = {
+            idHotel, nombreHotel
+        };
+        return value;
+    }
+
+    @Override
+    public Object[] vectorizar() {
+        Object[] value = {
+            idHotel, nombreHotel, cantidadEstrellas
+        };
+        return value;
     }
 
 }

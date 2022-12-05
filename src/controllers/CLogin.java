@@ -114,6 +114,7 @@ public class CLogin extends ObligacionControlador implements ActionListener {
         CMenu.vista.miCrearAlojamiento.setEnabled(estado);
         CMenu.vista.miCrearPaquete.setEnabled(estado);
         CMenu.vista.miCrearVuelo.setEnabled(estado);
+        CMenu.vista.miListar.setEnabled(estado);
     }
 
     private void habilitarOperacionesCliente(boolean estado) {
