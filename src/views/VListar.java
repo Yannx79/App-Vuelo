@@ -59,8 +59,9 @@ public class VListar extends javax.swing.JInternalFrame {
         jRadioButton33 = new javax.swing.JRadioButton();
         jRadioButton34 = new javax.swing.JRadioButton();
         jRadioButton35 = new javax.swing.JRadioButton();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtParametro = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
+        cbxFiltro = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setClosable(true);
@@ -243,37 +244,43 @@ public class VListar extends javax.swing.JInternalFrame {
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 310, 70));
 
-        jTextField1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PARAMETRO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 16))); // NOI18N
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 490, 70));
+        txtParametro.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
+        txtParametro.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PARAMETRO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 16))); // NOI18N
+        jPanel3.add(txtParametro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 230, 70));
 
-        jButton1.setBackground(new java.awt.Color(250, 250, 250));
-        jButton1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 16)); // NOI18N
-        jButton1.setText("BUSCAR");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jButton1.setContentAreaFilled(false);
-        jButton1.setOpaque(true);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBuscar.setBackground(new java.awt.Color(250, 250, 250));
+        btnBuscar.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 16)); // NOI18N
+        btnBuscar.setText("BUSCAR");
+        btnBuscar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        btnBuscar.setContentAreaFilled(false);
+        btnBuscar.setOpaque(true);
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnBuscarActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 140, 320, 60));
+        jPanel3.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 140, 320, 60));
+
+        cbxFiltro.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 14)); // NOI18N
+        cbxFiltro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxFiltro.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FILTRO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic UI Semilight", 1, 16))); // NOI18N
+        jPanel3.add(cbxFiltro, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 250, 60));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bgMostrarEntidad;
     private javax.swing.ButtonGroup bgMostrarInformacion;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btnBuscar;
+    public javax.swing.JComboBox<String> cbxFiltro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -295,7 +302,6 @@ public class VListar extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     public javax.swing.JRadioButton rbActividades;
     public javax.swing.JRadioButton rbAlojamiento;
     public javax.swing.JRadioButton rbAviones;
@@ -306,5 +312,6 @@ public class VListar extends javax.swing.JInternalFrame {
     public javax.swing.JRadioButton rbUsuarios;
     public javax.swing.JRadioButton rbVuelos;
     public javax.swing.JTable tblDatos;
+    public javax.swing.JTextField txtParametro;
     // End of variables declaration//GEN-END:variables
 }

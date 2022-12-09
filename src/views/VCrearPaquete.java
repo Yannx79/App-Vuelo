@@ -59,6 +59,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         lblNombreUsuario = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
         lblVerPaquetes = new javax.swing.JLabel();
+        lblEliminarPaquete = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         btnCrearPaquete = new javax.swing.JButton();
         btnCambiarAlojamiento = new javax.swing.JButton();
@@ -204,7 +205,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         jPanel1.add(lblTitulo);
 
         jPanel5.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel5.setLayout(new java.awt.GridLayout(1, 4));
+        jPanel5.setLayout(new java.awt.GridLayout(1, 5));
 
         lblCantidadRegistros.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
         lblCantidadRegistros.setForeground(new java.awt.Color(207, 10, 10));
@@ -224,7 +225,14 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
         lblVerPaquetes.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
         lblVerPaquetes.setForeground(new java.awt.Color(207, 10, 10));
         lblVerPaquetes.setText("Ver Paquetes");
+        lblVerPaquetes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel5.add(lblVerPaquetes);
+
+        lblEliminarPaquete.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 18)); // NOI18N
+        lblEliminarPaquete.setForeground(new java.awt.Color(207, 10, 10));
+        lblEliminarPaquete.setText("Eliminar Paquete");
+        lblEliminarPaquete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel5.add(lblEliminarPaquete);
 
         jPanel1.add(jPanel5);
 
@@ -334,6 +342,7 @@ public class VCrearPaquete extends javax.swing.JInternalFrame {
     public javax.swing.JLabel lblActividad;
     public javax.swing.JLabel lblAlojamiento;
     public javax.swing.JLabel lblCantidadRegistros;
+    public javax.swing.JLabel lblEliminarPaquete;
     public javax.swing.JLabel lblEmail;
     public javax.swing.JLabel lblNombreUsuario;
     public javax.swing.JLabel lblTitulo;

@@ -3,6 +3,8 @@ package controllers;
 import interfaces.ObligacionControlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import process.PListar;
 import views.*;
 
@@ -28,6 +30,9 @@ public class CListar extends ObligacionControlador implements ActionListener {
                 || e.getSource() == vista.rbVuelos) {
             PListar.mostrarInformacion(vista);
         }
+        if (e.getSource() == vista.btnBuscar) {
+            PListar.filtrarPaquetes(vista);
+        }
     }
 
     @Override
@@ -46,6 +51,13 @@ public class CListar extends ObligacionControlador implements ActionListener {
         vista.rbTodaInformacion.addActionListener(this);
         vista.rbUsuarios.addActionListener(this);
         vista.rbVuelos.addActionListener(this);
+        vista.btnBuscar.addActionListener(this);
+    }
+
+    private void habilitarFiltrosAvanzados(boolean state) {
+        vista.txtParametro.setEnabled(state);
+        vista.btnBuscar.setEnabled(state);
+        vista.cbxFiltro.setEnabled(state);
     }
 
     @Override

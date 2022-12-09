@@ -64,4 +64,7 @@ public interface IHeaders {
     public static final String[] HEADER_CLIENTE_RESUMEN = {
         "ID", "NOMBRES", "EMAIL"
     };
+    
+    public static final String[] ITEMS_FILTRO = {"CODIGO", "NOMBRE"};
+    
 }

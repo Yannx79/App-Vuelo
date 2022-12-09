@@ -5,6 +5,9 @@ import dao.*;
 import dto.*;
 import formato.*;
 import interfaces.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class PListar implements IHeaders {
 
@@ -13,6 +16,7 @@ public class PListar implements IHeaders {
         f.setTitle("Listar");
         f.setVisible(true);
         mostrarInformacion(f);
+        completarComboBox(f);
     }
 
     private static void defaultRadioButton(VListar f) {
@@ -65,6 +69,70 @@ public class PListar implements IHeaders {
             FormatoModelo.listar(dao.readAll(), f.tblDatos, headerCompleto, completo);
         } else {
             FormatoModelo.listar(dao.readAll(), f.tblDatos, headerResumen, completo);
+        }
+    }
+
+    public static void filtrarPaquetes(VListar f) {
+        if (f.rbPaquetes.isSelected()) {
+            //0: codigo, 1: nombres, 2: origen, 3: destino
+            switch (f.cbxFiltro.getSelectedIndex()) {
+                case 0:
+                    fitrarPorCodigo(f);
+                    break;
+                case 1:
+                    filtrarPorNombres(f);
+                    break;
+                case 2:
+                    break;
+                default:
+                    Mensaje.mostrar("Opcion no valida");
+                    break;
+            }
+            f.txtParametro.setText("");
+        } else {
+            Mensaje.mostrar("El fitro solo esta habilitado para los "
+                    + "paquetes");
+        }
+    }
+
+    private static void filtrarPorNombres(VListar f) {
+        PaqueteDAO paqueteDAO = new PaqueteDAO();
+        List<PaqueteDTO> listPaquetes = new LinkedList<>();
+        listPaquetes = paqueteDAO.readAll();
+        String parametro = f.txtParametro.getText().trim().toUpperCase();
+        listPaquetes = listPaquetes.stream().
+                filter(x -> x.getNombrePaquete().toUpperCase().contains(parametro)).
+                collect(Collectors.toList());
+        if (!listPaquetes.isEmpty()) {
+            if (f.rbTodaInformacion.isSelected()) {
+                FormatoModelo.listar(listPaquetes, f.tblDatos, HEADER_PAQUETE, true);
+            } else {
+                FormatoModelo.listar(listPaquetes, f.tblDatos, HEADER_PAQUETE_RESUMEN, false);
+            }
+        } else {
+            Mensaje.mostrar("No hay ningun paquete que contenga en su nombre el parametro: " + parametro);
+        }
+    }
+
+    private static void fitrarPorCodigo(VListar f) {
+        PaqueteDAO paqueteDAO = new PaqueteDAO();
+        List<PaqueteDTO> listPaquetes = new LinkedList<>();
+        listPaquetes.add(paqueteDAO.read(f.txtParametro.getText().trim()));
+        if (listPaquetes.get(0).getIdPaquete() != 0) {
+            if (f.rbTodaInformacion.isSelected()) {
+                FormatoModelo.listar(listPaquetes, f.tblDatos, HEADER_PAQUETE, true);
+            } else {
+                FormatoModelo.listar(listPaquetes, f.tblDatos, HEADER_PAQUETE_RESUMEN, false);
+            }
+        } else {
+            Mensaje.mostrar("El codigo de paquete: " + f.txtParametro.getText() + ". No existe");
+        }
+    }
+
+    private static void completarComboBox(VListar f) {
+        f.cbxFiltro.removeAllItems();
+        for (String x : ITEMS_FILTRO) {
+            f.cbxFiltro.addItem(x);
         }
     }
 
