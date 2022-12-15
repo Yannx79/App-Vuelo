@@ -11,7 +11,6 @@ import dao.*;
 import java.awt.Image;
 import process.*;
 import java.util.LinkedList;
-import rsscalelabel.RSScaleLabel;
 
 public class CVerPaquetes extends ObligacionControlador implements ActionListener {
 
