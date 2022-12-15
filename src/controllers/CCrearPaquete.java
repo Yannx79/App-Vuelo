@@ -40,10 +40,13 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
     private Integer indexVuelo = 0;
 
     private String codigoActualizar = "";
-
+    
     public CCrearPaquete(VCrearPaquete f) {
         this.vista = f;
         constructor();
+        VRegistro vRegistro = new VRegistro();
+        vRegistro.setVisible(false);
+        CRegistro.vista = vRegistro;
     }
 
     @Override
@@ -157,12 +160,16 @@ public class CCrearPaquete extends ObligacionControlador implements ActionListen
     }
 
     private void crearPaquete() {
-        PaqueteDTO paqueteDTO = PCrearPaquete.instanciar(vista);
-        paqueteDTO.setIdActividad(listActividades.get(indexActividad).getIdActividad());
-        paqueteDTO.setIdAlojamiento(listAlojamientos.get(indexAlojamiento).getIdAlojamiento());
-        paqueteDTO.setIdVuelo(listVuelos.get(indexVuelo).getIdAvion());
-        paqueteDAO.create(paqueteDTO);
-        PRegistro.completar(CRegistro.vista);
+        try {
+            PaqueteDTO paqueteDTO = PCrearPaquete.instanciar(vista);
+            paqueteDTO.setIdActividad(listActividades.get(indexActividad).getIdActividad());
+            paqueteDTO.setIdAlojamiento(listAlojamientos.get(indexAlojamiento).getIdAlojamiento());
+            paqueteDTO.setIdVuelo(listVuelos.get(indexVuelo).getIdAvion());
+            paqueteDAO.create(paqueteDTO);
+            PRegistro.completar(CRegistro.vista);
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
     }
 
     private void cambiar(List list) {
